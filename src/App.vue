@@ -6,6 +6,9 @@
       </router-link> |
       <router-link to="/about">
         About
+      </router-link>|
+      <router-link to="/artwork">
+        Artwork
       </router-link>
     </div>
     <router-view />
