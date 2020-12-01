@@ -25,47 +25,55 @@ export default {
     notes () {
       return this.$store.state.notes
     },
-    typeListCh () {
+    typeList () {
       const obj = {
         sort: [],
-        map: {}
+        map: { }
       }
       this.artworks.forEach(({ type, title, src, year, material, size, sell, soldout, price }, index) => {
-        if (!obj.map[type[0]]) {
-          obj.sort.push(type[0])
-          obj.map[type[0]] = {
-            sort: [],
-            map: {}
+        if (!this.engControl) {
+          if (!obj.map[type[0]]) {
+            obj.sort.push(type[0])
+            obj.map[type[0]] = {
+              sort: [],
+              map: {}
+            }
           }
+          obj.map[type[0]].sort.push(title[0])
+          obj.map[type[0]].map[title[0]] = { index, src, year, material, size, sell, soldout, price }
+        } else {
+          if (!obj.map[type[1]]) {
+            obj.sort.push(type[1])
+            obj.map[type[1]] = {
+              sort: [],
+              map: {}
+            }
+          }
+          obj.map[type[1]].sort.push(title[1])
+          obj.map[type[1]].map[title[1]] = { index, src, year, material, size, sell, soldout, price }
         }
-        obj.map[type[0]].sort.push(title[0])
-        obj.map[type[0]].map[title[0]] = { index, src, year, material, size, sell, soldout, price }
       })
+
       return obj
     },
-    typeListEg () {
-      const obj = {
-        sort: [],
-        map: {}
-      }
-      this.artworks.forEach(({ type, title, src, year, material, size, sell, soldout, price }, index) => {
-        if (!obj.map[type[1]]) {
-          obj.sort.push(type[1])
-          obj.map[type[1]] = {
-            sort: [],
-            map: {}
-          }
-        }
-        obj.map[type[1]].sort.push(title[1])
-        obj.map[type[1]].map[title[1]] = { index, src, year, material, size, sell, soldout, price }
-      })
-      return obj
-    },
-    filter () {
-      if (this.engControl) {
-        return this.typeListEg
+    artworkMenu () {
+      if (this.type != null) {
+        return this.typeList.map[this.type]
       } else {
-        return this.typeListCh
+        const el = {
+          sort: [],
+          map: {}
+        }
+        this.artworks.forEach(({ title, src, year, material, size, sell, soldout, price }, index) => {
+          if (!this.engControl) {
+            el.sort.push(title[0])
+            el.map[title[0]] = { index, src, year, material, size, sell, soldout, price }
+          } else {
+            el.sort.push(title[1])
+            el.map[title[1]] = { index, src, year, material, size, sell, soldout, price }
+          }
+        })
+        return el
       }
     }
 
