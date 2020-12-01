@@ -1,5 +1,19 @@
-<template>
+
   <div class="Artwork">
+    <label class="translateControl"><img
+        src="https://d338t8kmirgyke.cloudfront.net/icons/icon_pngs/000/008/524/original/translate.png"
+      />
+      <input
+        type="checkbox"
+        v-model="engControl"
+        @click="type=null"
+      />
+    </label>
     <h1>This is a Artwork Page.</h1>
+    <h2>{{engControl?'WORKS':'作品集'}}</h2>
+
+    <select v-model="type">
+      <option :value="null">{{engControl?'All':'全部'}}</option>
+      <option v-for="item in filter.sort">{{item}}</option>
+    </select>
   </div>
-</template>

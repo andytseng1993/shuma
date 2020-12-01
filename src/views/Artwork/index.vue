@@ -7,12 +7,21 @@ export default {
         return this.$store.state.engControl
       },
       set (val) {
-        this.$store.state.engControl = val
+        this.$store.commit('SETLANGUAGE', val)
       }
     },
     artworks () {
       return this.$store.state.artworks
     },
+    type: {
+      get () {
+        return this.$store.state.type
+      },
+      set (val) {
+        this.$store.commit('SETTYPE', val)
+      }
+    },
+
     notes () {
       return this.$store.state.notes
     },
@@ -51,7 +60,17 @@ export default {
         obj.map[type[1]].map[title[1]] = { index, src, year, material, size, sell, soldout, price }
       })
       return obj
+    },
+    filter () {
+      if (this.engControl) {
+        return this.typeListEg
+      } else {
+        return this.typeListCh
+      }
     }
+
+  },
+  watch: {
 
   },
   mounted () {
@@ -59,5 +78,6 @@ export default {
   }
 }
 </script>
+
 <template src="./template.html" />
 <style  scr="./style.css" scoped></style>

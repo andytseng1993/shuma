@@ -5,12 +5,11 @@ import axios from 'axios'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
+  strict: true,
   state: {
     artworks: [],
     engControl: true,
-    // filter datatype
-    // filterCh: "全部",
-    show: 'All',
+    type: null,
     // light box
     notes: {},
     isLightboxOpen: false,
@@ -22,6 +21,12 @@ export default new Vuex.Store({
   mutations: {
     SETARTWORK (state, artworks) {
       state.artworks = artworks
+    },
+    SETTYPE (state, type) {
+      state.type = type
+    },
+    SETLANGUAGE (state, language) {
+      state.engControl = language
     }
   },
   actions: {
