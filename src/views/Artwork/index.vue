@@ -1,6 +1,11 @@
 
 <script>
+import FilterType from '@/components/SelectType/index.vue'
+
 export default {
+  components: {
+    FilterType
+  },
   computed: {
     engControl: {
       get () {
@@ -83,7 +88,10 @@ export default {
   },
   mounted () {
     this.$store.dispatch('GETARTWORK')
+  },
+  methods: {
   }
+
 }
 </script>
 

@@ -1,0 +1,156 @@
+* {
+  font-family: "Times New Roman", 微軟正黑體;
+}
+
+#TypeHandler {
+  position: absolute;
+}
+
+.selectBox {
+  left: 20px;
+  top: 20px;
+  position: relative;
+  display: -webkit-box;
+  display: flex;
+  width: calc(5vw + 200px);
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  text-align: center;
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: 1.5px;
+  border-radius: 4px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+.selectBox:hover {
+  box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.selectBox .selectbtn {
+  padding: 5px 0px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  -webkit-transition: 0.2s, background-color 0.4s;
+  transition: 0.2s, background-color 0.4s;
+}
+.selectBox .selectbtn:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.selectBox .selectbtn .down {
+  width: 0;
+  height: 0;
+  border: 8px solid transparent;
+  border-color: rgba(0, 0, 0, 0.4) transparent transparent transparent;
+  position: absolute;
+  right: 10px;
+  top: 12px;
+}
+.selectBox .options {
+  padding: 0px;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  height: 0px;
+  -webkit-transition: 0.4s, background-color 0.2s;
+  transition: 0.4s, background-color 0.2s;
+  overflow: hidden;
+  -webkit-animation: text-blur 0.4s ease-in-out both;
+          animation: text-blur 0.4s ease-in-out both;
+  color: rgba(0, 0, 0, 0.7);
+  white-space: nowrap;
+}
+
+@-webkit-keyframes text-blur {
+  0% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+  100% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+}
+
+@keyframes text-blur {
+  0% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+  }
+  100% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+}
+#viewbtn {
+  display: none;
+}
+
+#viewbtn:checked ~ .options {
+  height: 30px;
+  -webkit-animation: focus 0.3s ease-in-out both;
+          animation: focus 0.3s ease-in-out both;
+}
+#viewbtn:checked ~ .options:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  color: #03071e;
+}
+@-webkit-keyframes focus {
+  0% {
+    letter-spacing: 1em;
+    -webkit-filter: blur(10px);
+            filter: blur(10px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes focus {
+  0% {
+    letter-spacing: 1em;
+    -webkit-filter: blur(10px);
+            filter: blur(10px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+#viewbtn:checked ~ .options.selectName {
+  color: #ef233c;
+}
+
+#viewbtn:checked ~ .selectbtn {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #f7fff7;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.4);
+}
+#viewbtn:checked ~ .selectbtn .down {
+  border: 8px solid transparent;
+  border-color: transparent transparent rgba(247, 255, 247, 0.9) transparent;
+  position: absolute;
+  right: 10px;
+  top: 3px;
+}

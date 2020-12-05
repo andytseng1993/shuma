@@ -1,0 +1,27 @@
+<div id="TypeHandler">
+  <div class="selectBox">
+    <label>
+      <input
+        id="viewbtn"
+        type="checkbox"
+      />
+      <div class="selectbtn">
+        <span>{{filterType?filterType:selectAll}}</span>
+        <span class="down"> </span>
+      </div> 
+      <div class="options" @click="chooseType(null)" :class="{selectName:filterType==null}" >
+        {{selectAll}}
+      </div>
+      <div
+        class="options"
+        v-for="Type in typeList.sort"
+        :key="Type"
+        @click="chooseType(Type)"
+        :class="{selectName:filterType==Type}"
+        
+      > 
+      <span>{{Type}}</span>
+      </div> 
+    </label>
+  </div>
+</div>
