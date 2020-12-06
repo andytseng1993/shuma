@@ -32,6 +32,7 @@
   box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 .selectBox .selectbtn {
+  height: 23px;
   padding: 5px 0px;
   cursor: pointer;
   -webkit-user-select: none;

@@ -14,11 +14,10 @@
       </div>
       <div
         class="options"
-        v-for="Type in typeList.sort"
+        v-for="Type in typeMenu"
         :key="Type"
         @click="chooseType(Type)"
         :class="{selectName:filterType==Type}"
-        
       > 
       <span>{{Type}}</span>
       </div> 

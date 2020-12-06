@@ -1,6 +1,5 @@
 
   <div class="Artwork">
-    <FilterType :filterType.sync="type" :engControl="engControl" :artworks="artworks"></FilterType>
     <label class="translateControl"><img
         src="https://d338t8kmirgyke.cloudfront.net/icons/icon_pngs/000/008/524/original/translate.png"
       />
@@ -12,9 +11,6 @@
     </label>
     <h1>This is a Artwork Page.</h1>
     <h2>{{engControl?'WORKS':'作品集'}}</h2>
-
-    <select v-model="type">
-      <option :value="null">{{engControl?'All':'全部'}}</option>
-      <option v-for="item in typeList.sort">{{item}}</option>
-    </select>
+    <FilterType :filterType.sync="type" :typeMenu="typeList.sort" :engControl="engControl"></FilterType>
+    
   </div>
