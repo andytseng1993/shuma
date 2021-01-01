@@ -1,10 +1,12 @@
 
 <script>
 import FilterType from '@/components/SelectType/index.vue'
+import lightBox from '@/components/LightBox/index.vue'
 
 export default {
   components: {
-    FilterType
+    FilterType,
+    lightBox
   },
   computed: {
     engControl: {
@@ -26,10 +28,23 @@ export default {
         this.$store.commit('SETTYPE', val)
       }
     },
-
-    notes () {
-      return this.$store.state.notes
+    isLightboxOpen: {
+      get () {
+        return this.$store.state.isLightboxOpen
+      },
+      set (val) {
+        this.$store.commit('SETLIGHTBOX', val)
+      }
     },
+    nowPlayId: {
+      get () {
+        return this.$store.state.nowPlayId
+      },
+      set (val) {
+        this.$store.commit('SETPLAYID', val)
+      }
+    },
+
     typeList () {
       const obj = {
         sort: [],

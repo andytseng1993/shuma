@@ -68,11 +68,11 @@
       -ms-user-select: none;
           user-select: none;
   height: 0px;
-  -webkit-transition: 0.4s, background-color 0.2s;
-  transition: 0.4s, background-color 0.2s;
+  -webkit-transition: 0.2s, background-color 0.2s;
+  transition: 0.2s, background-color 0.2s;
   overflow: hidden;
-  -webkit-animation: text-blur 0.4s ease-in-out both;
-          animation: text-blur 0.4s ease-in-out both;
+  -webkit-animation: text-blur 0.1s ease-in-out both;
+          animation: text-blur 0.1s ease-in-out both;
   color: rgba(0, 0, 0, 0.7);
   white-space: nowrap;
 }

@@ -11,9 +11,8 @@ export default new Vuex.Store({
     engControl: true,
     type: null,
     // light box
-    notes: {},
     isLightboxOpen: false,
-    now_play_id: 0,
+    nowPlayId: 0,
     scroll: 0,
     touchDown: 0,
     touchUp: 0
@@ -27,6 +26,12 @@ export default new Vuex.Store({
     },
     SETLANGUAGE (state, language) {
       state.engControl = language
+    },
+    SETLIGHTBOX (state, lightbox) {
+      state.isLightboxOpen = lightbox
+    },
+    SETPLAYID (state, id) {
+      state.nowPlayId = id
     }
   },
   actions: {
