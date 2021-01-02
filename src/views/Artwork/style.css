@@ -1,6 +1,24 @@
-.Artwork h1{
-  background-color: blue;
+#works{
+  margin-top: 80px;
 }
-#type-handler{
-  left: 60px;
+#TypeHandler {
+  position: relative;
+  left: 8%;
+  transition: left 0.1s;
+}
+@media only screen and (max-width: 480px) {
+  #TypeHandler{
+    left: 2%;
+  }
+}
+.translateControl img{
+  position: absolute;
+  height:50px;
+  width: 50px;
+  top: 15px;
+  left:20px;
+  cursor: pointer;
+}
+.translateControl input{
+  display: none;
 }

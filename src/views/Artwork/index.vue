@@ -111,4 +111,4 @@ export default {
 </script>
 
 <template src="./template.html" />
-<style  scr="./style.css" scoped></style>
+<style  src="./style.css" scoped></style>

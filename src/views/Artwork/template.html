@@ -1,7 +1,7 @@
 
 <div class="Artwork">
     <label class="translateControl"><img
-        src="https://d338t8kmirgyke.cloudfront.net/icons/icon_pngs/000/008/524/original/translate.png"
+        src="https://d338t8kmirgyke.cloudfront.net/icons/icon_pngs/000/008/524/original/translate.png" alt="Translate"
       />
       <input
         type="checkbox"
@@ -9,8 +9,8 @@
         @click="type=null"
       />
     </label>
-    <h1>This is a Artwork Page.</h1>
-    <h2>{{engControl?'WORKS':'作品集'}}</h2>
+
+    <h1>{{engControl?'WORKS':'作品集'}}</h1>
     <FilterType :filterType.sync="type" :typeMenu="typeList.sort" :engControl="engControl"></FilterType>
     <light-box :isLightboxOpen.sync="isLightboxOpen" :artworkMenu="artworkMenu" :engControl="engControl" :nowPlayId.sync="nowPlayId"></light-box>
 </div>

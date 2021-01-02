@@ -6,7 +6,7 @@
         type="checkbox"
       />
       <div class="selectbtn">
-        <span>{{filterType?filterType:selectAll}}</span>
+        <span class="select">{{filterType?filterType:selectAll}}</span>
         <span class="down"> </span>
       </div> 
       <div class="options" @click="chooseType(null)" :class="{selectName:filterType==null}" >
