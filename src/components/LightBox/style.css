@@ -1,4 +1,4 @@
-#works .artworks {
+#lightBox .artworks {
   margin: 0px 8%;
   height: 100%;
   flex-wrap: wrap;
@@ -9,10 +9,10 @@
   border: solid 0.1px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 }
-#works .artworks.isLightboxOpen {
+#lightBox .artworks.isLightboxOpen {
   transform: scale(0.98);
 }
-#works .artworks .cover {
+#lightBox .artworks .cover {
   margin: calc(1px + 1%);
   width: 100%;
   height: 340px;
@@ -25,7 +25,7 @@
   filter: drop-shadow(3px 7px 3px rgba(0, 0, 0, 0.4));
   transition: 0.3s ease-in-out;
 }
-#works .artworks .cover .box {
+#lightBox .artworks .cover .box {
   position: relative;
   width: 100%;
   height: 100%;
@@ -35,7 +35,7 @@
   justify-content: center;
   align-items: center;
 }
-#works .artworks .cover .box h3 {
+#lightBox .artworks .cover .box h3 {
   margin: 0;
   display: block;
   transform: translateY(20px);
@@ -47,32 +47,32 @@
       -ms-user-select: none;
           user-select: none;
 }
-#works .artworks .cover:hover {
+#lightBox .artworks .cover:hover {
   transform: translate(-5px, -5px);
   cursor: pointer;
   filter: drop-shadow(8px 14px 6px rgba(0, 0, 0, 0.2));
 }
-#works .artworks .cover:hover .box {
+#lightBox .artworks .cover:hover .box {
   background-color: rgba(0, 0, 0, 0.5);
 }
-#works .artworks .cover:hover .box h3 {
+#lightBox .artworks .cover:hover .box h3 {
   color: white;
   opacity: 1;
   transform: translateY(0px);
 }
 @media only screen and (max-width: 480px) {
-  #works .artworks {
+  #lightBox .artworks {
     margin: 0px;
   }
-  #works .artworks .cover {
+  #lightBox .artworks .cover {
     margin-bottom: 30px;
     filter: none;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
   }
-  #works .artworks .cover .box {
+  #lightBox .artworks .cover .box {
     align-items: flex-end;
   }
-  #works .artworks .cover .box h3 {
+  #lightBox .artworks .cover .box h3 {
     bottom: 0px;
     color: black;
     position: relative;
@@ -81,12 +81,12 @@
     opacity: 1;
     transition: 0.2s ease-out;
   }
-  #works .artworks .cover:hover {
+  #lightBox .artworks .cover:hover {
     transform: translate(-2px, -2px);
     filter: none;
     box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
   }
-  #works .artworks .cover:hover .box h3 {
+  #lightBox .artworks .cover:hover .box h3 {
     color: black;
     transform: translateY(25px);
   }
