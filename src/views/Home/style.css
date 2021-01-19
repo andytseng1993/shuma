@@ -1,0 +1,18 @@
+
+h1{
+  font-family: 'Gugi', cursive
+}
+#nav2 {
+  padding: 15px 0px;
+}
+
+#nav2 a {
+  margin: 0px 5px;
+  font-weight: bold;
+  color: #c00000;
+  font-size: 23px;
+}
+
+#nav2 a.router-link-exact-active {
+  color: #1023cf;
+}

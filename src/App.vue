@@ -1,21 +1,15 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">
-        Home
-      </router-link> |
-      <router-link to="/about">
-        About
-      </router-link>|
-      <router-link to="/artwork">
-        Artwork
-      </router-link>
-    </div>
     <router-view />
   </div>
 </template>
 
 <style>
+@font-face {
+  font-family: 'Gugi';
+  src: local("Gugi"),
+  url(./fonts/Gugi/Gugi-Regular.ttf) format('truetype');
+}
 html{
   width:100%;
   overflow-x:hidden;
