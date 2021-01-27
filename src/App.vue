@@ -1,23 +1,27 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">
-        Home
-      </router-link> |
-      <router-link to="/about">
-        About
-      </router-link>|
-      <router-link to="/artwork">
-        Artwork
-      </router-link>
-    </div>
     <router-view />
   </div>
 </template>
 
 <style>
-html{
+@font-face {
+  font-family: 'Gugi';
+  src: local("Gugi"),
+  url(./fonts/Gugi/Gugi-Regular.ttf) format('truetype');
+  }
+@font-face {
+  font-family:'Press Start 2P';
+  src: local("Press Start 2P"), url(./fonts/Press_Start_2P/PressStart2P-Regular.ttf) format('truetype');
+}
+@font-face {
+  font-family:'SweiAliasSans' ;
+  src: local('SweiAliasSans'),url(./fonts/CJK_TC/SweiAliasSansCJKtc-Bold.ttf) format('truetype');
+}
+html,body{
+  margin: 0%;
   width:100%;
+  height: 100%;
   overflow-x:hidden;
 }
 #app {
@@ -39,7 +43,4 @@ html{
   font-size: 23px;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>

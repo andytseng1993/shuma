@@ -1,0 +1,45 @@
+
+<div id="Home">
+  <div class="translate">
+    <input
+      type="checkbox"
+      v-model="engControl"
+      id="Language"
+    />
+    <label for="Language">
+      <div class="ch">中</div>
+      <span>/</span>
+      <div class="eg">Eg</div>
+    </label>
+  </div>
+  <div class="word">
+    <span class="name">S</span>
+    <span class="name">H</span>
+    <span class="name">U</span>
+    <img
+      src="@/assets/Untitled_Artwork.gif"
+      alt=""
+    />
+    <span class="name">M</span>
+    <span class="name">A</span></div>
+  <div class="image">
+    <img
+      src="@/assets/Untitled_Artwork.gif"
+      alt=""
+    /></div>
+
+  <div class="nav" >
+    <router-link to="/" :class={ch:!engControl}>
+      {{engControl?'Home':'首頁'}}
+    </router-link>
+    <router-link to="/about" :class={ch:!engControl}>
+      {{engControl?'About':'關於'}}
+    </router-link>
+    <router-link to="/artwork" :class={ch:!engControl}>
+      {{engControl?'WORKS':'作品集'}}
+    </router-link>
+    <router-link to="/shop" :class={ch:!engControl}>
+      {{engControl?'Shop':'商店'}}
+    </router-link>
+  </div>
+</div>
