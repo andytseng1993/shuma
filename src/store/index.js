@@ -8,7 +8,7 @@ export default new Vuex.Store({
   strict: true,
   state: {
     artworks: [],
-    engControl: true,
+    engControl: true, // true=eg
     type: null,
     // light box
     isLightboxOpen: false,
