@@ -132,7 +132,8 @@
   background-image: url(https://i.imgur.com/KeUH5nP.jpg);
 }
 #Home .word img {
-  width: max(22vw, 200px);
+  width: auto;
+  height: 60vmin;
 }
 #Home .image {
   z-index: 5;
@@ -179,7 +180,7 @@
   top: initial
 }
   #Home .word .name {
-    font-size: 21vw;
+    font-size: 10vh;
   }
   #Home .word img {
     display: none;
@@ -192,24 +193,23 @@
   }
   #Home .image img {
     margin-top: 2.5vh;
-    width: 60vw;
+    height: 40vh;
   }
   #Home .nav{
     flex-direction: column;
     margin: 0px;
-    margin-top: 20px;
   }
   #Home .nav a{
     padding: 10px 20px;
     font-size: 4vw;
     margin: 0px;
-    margin-top: 2.5vh;
+    margin-top: 2vh;
     text-align: center;
   }
   #Home .nav .ch{
   font-family: 'SweiAliasSans';
   margin-left: 0px;
-  margin-top: 2.5vh;
+  margin-top: 2vh;
   padding: 8px 30px;
   font-size: 4.5vw;
 }
