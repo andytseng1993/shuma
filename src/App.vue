@@ -18,6 +18,12 @@
   font-family:'SweiAliasSans' ;
   src: local('SweiAliasSans'),url(./fonts/CJK_TC/SweiAliasSansCJKtc-Bold.ttf) format('truetype');
 }
+@font-face {
+  font-family:'Taipei Sans';
+  src:  local('Taipei Sans'),url(./fonts/Taipei_Sans _TC/TaipeiSansTCBeta-Regular.ttf) format('truetype');
+  font-weight: normal;
+}
+
 html,body{
   margin: 0%;
   width:100%;
@@ -28,8 +34,9 @@ html,body{
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
+  width:100%;
+  height: 100%;
 }
 
 #nav {

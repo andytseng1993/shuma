@@ -1,0 +1,244 @@
+#about {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow-y: hidden;
+  flex-direction: column;
+  background: no-repeat url("../../assets/selfi.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+#nav{
+  display: flex;
+  padding: 0px;
+  background-color:rgba(0, 0, 0, 0.5);
+  justify-content: center;
+}
+#nav .pc{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 10px 0px;
+  font-size: min(3vw, 30px);
+}
+#nav .pc a{
+  margin: 0px;
+  border-radius: 5px;
+  margin-left: 7px;
+  padding: 5px 10px;
+  font-size: max(20px, 1.5vw);
+  letter-spacing: 0.2vw;
+  color:rgba(255, 255, 255, 0.8);
+  text-decoration-line: none;
+}
+
+#nav .mobile{
+  position: absolute;
+  transform: translate(-9999px, 0px);
+}
+#nav a:hover{
+  color: white;
+  box-shadow: 0px 0px 20px #0adaff;
+  background-color:rgba(0, 0, 0, 0.8);
+}
+#nav .pc a.router-link-exact-active{
+  color:white;
+  text-decoration-line: underline ;
+  text-decoration-color: rgb(246, 232, 0);
+  background-color:rgba(0, 0, 0, 0.4);
+}
+
+.title {
+  font-family:'Times New Roman';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: inherit;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  filter: invert(1) grayscale(1) contrast(10);
+  margin-top: 10px;
+}
+.title .beforeLine {
+  flex: 1 1;
+  height: 0;
+  width: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 3px solid white;
+  margin-right: 10px;
+}
+.title .afterLine {
+  flex: 1 1;
+  height: 0;
+  width: 10%;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 3px solid white;
+  margin-left: 10px;
+}
+.title h1{
+  margin:0px;
+  font-size: max(4vw,45px);
+}
+.name {
+  font-family:'Times New Roman';
+  position: absolute;
+  bottom: 3vh;
+  left: 6vw;
+  font-weight: bold;
+  font-size: max(8vw,50px);
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.aboutme {
+  position: absolute;
+  top: 60vh;
+  width: 100vw;
+  height: 40vh;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aboutme img {
+  width: 35vw;
+  position: relative;
+}
+.aboutme h4 {
+  position: absolute;
+  right: 2vw;
+  top: 18vh;
+  width: 39vw;
+  margin: 0px;
+  font-family:'Times New Roman','Taipei Sans';
+  font-weight: 600;
+  line-height: 1.4em;
+  letter-spacing: 2px;
+  text-align: justify;
+  font-size: min(1.6vw,23px);
+  color: black;
+}
+@media screen and (max-width: 1200px) and (min-width: 481px) {
+  #about .name {
+    bottom: 53vh;
+    left:auto;
+    right: 7vw;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  #about .aboutme h4 {
+    position: relative;
+    top: auto;
+    right: auto;
+    text-align: justify;
+    width: 80vw;
+    bottom: auto;
+    font-size: min(2vmax,30px);
+    padding: 10px 25px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    color: white;
+  }
+}
+@media screen and (max-width: 480px) {
+  #about {
+    background-position: 30% 100%;
+    justify-content: space-between;
+  }
+  #nav{
+    
+    height: 45px;
+    order: 2;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  #nav .pc{
+    position: absolute;;
+    transform: translate(-9999px, 0px);
+  }
+  #nav .mobile{
+    position: relative;
+    transform: initial;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+  #nav .mobile a{
+    color: rgba(255, 255, 255, 0.7);
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-decoration-line: none;
+    padding: 5px 5vw;
+    margin: 0px;
+  }
+  #nav .mobile svg{
+    font-size: 22px;
+  }
+  #nav .mobile span{
+    margin-top: 2px;
+    font-size: 10px;
+    letter-spacing: 1px;
+    
+  }
+  #nav a.router-link-exact-active{
+    border-top: 3px solid #f6e800;
+    color:white;
+    background-color:rgba(0, 0, 0, 0.4);
+    transform: translateY(-3px);
+  }
+  #nav a:hover{
+    color: white;
+    background-color:rgba(0, 0, 0, 0.5);
+  }
+  .title {
+    justify-content: start;
+    font-size: 30px;
+    margin-top: 20px;
+  }
+  .title h1 {
+    font-size: 40px;
+  }
+  .name {
+    top: 10vh;
+    bottom: initial;
+    right: 15px;
+    left: initial;
+    font-size: 45px;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  .title .beforeLine {
+    flex: none;
+    width: 70px;
+    border-top: 4px solid black;
+  }
+  .title .afterLine {
+    display: none;
+  }
+
+  .aboutme h4 {
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-weight: 500;
+    position: absolute;
+    width: 90vw;
+    font-size: 3.8vw;
+    left: auto;
+    top: auto;
+    bottom: 60px;
+    color: white;
+  }
+}
