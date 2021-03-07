@@ -12,12 +12,15 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  background-position: 100% 44%;
 }
 #nav{
+  position: relative;
   display: flex;
   padding: 0px;
   background-color:rgba(0, 0, 0, 0.5);
   justify-content: center;
+  z-index: 1;
 }
 #nav .pc{
   display: flex;
@@ -37,7 +40,10 @@
   color:rgba(255, 255, 255, 0.8);
   text-decoration-line: none;
 }
-
+#nav .pc .ch{
+  padding: 5px 25px;
+  font-size: max(23px, 1.6vw);
+}
 #nav .mobile{
   position: absolute;
   transform: translate(-9999px, 0px);
@@ -107,16 +113,16 @@
   flex-grow: 1;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
 }
 .aboutme img {
   width: 35vw;
   position: relative;
 }
 .aboutme h4 {
-  position: absolute;
-  right: 2vw;
-  top: 18vh;
+  position: relative;
+  right: 3vw;
+  top: -380px;
   width: 39vw;
   margin: 0px;
   font-family:'Times New Roman','Taipei Sans';
@@ -128,6 +134,9 @@
   color: black;
 }
 @media screen and (max-width: 1200px) and (min-width: 481px) {
+  #about .aboutme{
+    justify-content: center;
+  }
   #about .name {
     bottom: 53vh;
     left:auto;
@@ -141,7 +150,7 @@
     text-align: justify;
     width: 80vw;
     bottom: auto;
-    font-size: min(2vmax,30px);
+    font-size: max(1.9vh,2vw);
     padding: 10px 25px;
     font-weight: 500;
     letter-spacing: 1px;
@@ -162,7 +171,7 @@
     background-color: rgba(0, 0, 0, 0.6);
   }
   #nav .pc{
-    position: absolute;;
+    position: absolute;
     transform: translate(-9999px, 0px);
   }
   #nav .mobile{
@@ -209,14 +218,14 @@
     margin-top: 20px;
   }
   .title h1 {
-    font-size: 40px;
+    font-size: 9vw;
   }
   .name {
-    top: 10vh;
+    top: 13vh;
     bottom: initial;
     right: 15px;
     left: initial;
-    font-size: 45px;
+    font-size: 12vw;
     color: rgba(0, 0, 0, 0.6);
   }
   .title .beforeLine {
@@ -228,17 +237,21 @@
     display: none;
   }
 
+  #about .aboutme{
+    justify-content: center;
+  }
   .aboutme h4 {
+    position: absolute;;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
     padding: 5px 10px;
     font-weight: 500;
-    position: absolute;
+
     width: 90vw;
     font-size: 3.8vw;
-    left: auto;
+    right:auto;
     top: auto;
-    bottom: 60px;
+    bottom: 55px;
     color: white;
   }
 }

@@ -1,50 +1,51 @@
 <div id="about">
   <div id="nav">
     <div class="pc">
-        <router-link to="/">
-          Home
+        <router-link to="/" :class={ch:!engControl}>
+          {{engControl?'Home':'首頁'}}
         </router-link> 
-        <router-link to="/about">
-          About
+        <router-link to="/about" :class={ch:!engControl}>
+          {{engControl?'About':'關於'}}
         </router-link>
-        <router-link to="/artwork">
-          Artwork
+        <router-link to="/artwork" :class={ch:!engControl}>
+          {{engControl?'Artwork':'作品集'}}
         </router-link>
-        <router-link to="shop">
-          Shop
+        <router-link to="shop" :class={ch:!engControl}>
+          {{engControl?'Shop':'商店'}}
         </router-link>
     </div>
+  
     <div class="mobile">
       <router-link
         to="/"
       >
         <font-awesome-icon icon=home />
-        <span>Home</span>
+        <span>{{engControl?'Home':'首頁'}}</span>
       </router-link>
       <router-link
         to="/about"
       >
         <font-awesome-icon icon=user-circle />
-        <span>About</span>
+        <span>{{engControl?'About':'關於'}}</span>
       </router-link>
       <router-link
         to="/artwork"
       >
         <font-awesome-icon icon=palette />
-        <span>Artwork</span>
+        <span>{{engControl?'Artwork':'作品集'}}</span>
       </router-link>
       <router-link
         to="shop"
       >
         <font-awesome-icon icon=shopping-cart />
-        <span>Shop</span>
+        <span>{{engControl?'Shop':'商店'}}</span>
       </router-link>
     </div>
     
   </div>
   <div class="title">
     <div class="beforeLine"></div>
-    <h1>ABOUT</h1>
+    <h1>{{engControl?'About':'關於'}}</h1>
     <div class="afterLine"></div>
   </div>
   <span class="name">SHUMA</span>

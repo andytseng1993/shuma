@@ -8,6 +8,16 @@ library.add(faHome, faUserCircle, faPalette, faShoppingCart)
 export default {
   components: {
     FontAwesomeIcon
+  },
+  computed: {
+    engControl: {
+      get () {
+        return this.$store.state.engControl
+      },
+      set (val) {
+        this.$store.commit('SETLANGUAGE', val)
+      }
+    }
   }
 
 }
