@@ -3,28 +3,21 @@
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faHome, faUserCircle, faPalette, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
-import Navigation from '@/components/Navigation/index.vue'
 library.add(faHome, faUserCircle, faPalette, faShoppingCart)
 
 export default {
+  name: 'Navigation',
   components: {
-    FontAwesomeIcon,
-    Navigation
-
+    FontAwesomeIcon
   },
-  computed: {
+  props: {
     engControl: {
-      get () {
-        return this.$store.state.engControl
-      },
-      set (val) {
-        this.$store.commit('SETLANGUAGE', val)
-      }
+      type: Boolean,
+      required: true
     }
   }
 
 }
 </script>
 <template src="./template.html" />
-
-<style src="./style.css" scoped/>
+<style src ="./style.css" scoped></style>

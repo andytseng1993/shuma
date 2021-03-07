@@ -1,27 +1,12 @@
 
 <div class="Artwork">
-  <div id="nav">
-    <router-link to="/">
-      Home
-    </router-link> |
-    <router-link to="/about">
-      About
-    </router-link>|
-    <router-link to="/artwork">
-      Artwork
-    </router-link>
-  </div>
-    <label class="translateControl"><img
-        src="https://d338t8kmirgyke.cloudfront.net/icons/icon_pngs/000/008/524/original/translate.png" alt="Translate"
-      />
-      <input
-        type="checkbox"
-        v-model="engControl"
-        @click="type=null"
-      />
-    </label>
-
-    <h1>{{engControl?'WORKS':'作品集'}}</h1>
+    <Navigation :engControl="engControl"></Navigation>
+    <div class="title">
+        <div class="beforeLine"></div>
+        <h1>{{engControl?'Artwork':'作品集'}}</h1>
+        <div class="afterLine"></div>
+    </div>
     <FilterType :filterType.sync="type" :typeMenu="typeList.sort" :engControl="engControl"></FilterType>
-    <light-box :isLightboxOpen.sync="isLightboxOpen" :artworkMenu="artworkMenu" :engControl="engControl" :nowPlayId.sync="nowPlayId"></light-box>
+    <LightBox :isLightboxOpen.sync="isLightboxOpen" :artworkMenu="artworkMenu" :engControl="engControl" :nowPlayId.sync="nowPlayId"></LightBox>
+    <div class="footer"></div>
 </div>

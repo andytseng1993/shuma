@@ -1,12 +1,14 @@
 
 <script>
 import FilterType from '@/components/SelectType/index.vue'
-import lightBox from '@/components/LightBox/index.vue'
+import LightBox from '@/components/LightBox/index.vue'
+import Navigation from '@/components/Navigation/index.vue'
 
 export default {
   components: {
+    Navigation,
     FilterType,
-    lightBox
+    LightBox
   },
   computed: {
     engControl: {

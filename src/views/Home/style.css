@@ -19,8 +19,8 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-animation: change 3s both;
-          animation: change 3s both;
+  -webkit-animation: change 2s both;
+          animation: change 2s both;
   z-index: 0;
 }
 @-webkit-keyframes change {
@@ -173,6 +173,10 @@
   padding: 2px 35px;
   font-size: min(3vw, 40px);
 }
+#Home .nav a.router-link-exact-active{
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+}
 @media screen and (max-width: 480px) {
   #Home .translate {
   right: 27px;
@@ -212,11 +216,6 @@
   margin-top: 2vh;
   padding: 8px 30px;
   font-size: 4.5vw;
-}
-#Home .nav a.router-link-exact-active{
-  color:  #42b983;
-  border: solid 3px #0adaff;
-
 }
 }
 @media screen and (max-width: 1000px) {
