@@ -115,7 +115,7 @@
         "Acrylic,Canvas"
       ],
       "size": "10*10 inch",
-      "sell": true,
+      "sell": false,
       "soldOut": false,
       "price": 6500
     }

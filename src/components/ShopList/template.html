@@ -1,0 +1,73 @@
+<div id="lightBox">
+  <div
+    class="artworks"
+    :class="{isLightboxOpen}"
+  >
+    <div
+      class="cover"
+      v-for="(artwork,artid) in artworkMenu.sort"
+      :key="artwork"
+    >
+      <div
+        class="box"
+        @click="setPlayId(artid),controlLightBox()"
+        :style="bgcss(artworkMenu.map[artwork].src)"
+      >
+      </div>
+      <div class="details">
+        <div class="title">{{artwork}}</div>
+        <div class="price">{{artworkMenu.map[artwork].price}}</div>
+        <div class="year">{{artworkMenu.map[artwork].year}}</div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="lightbox"
+    :class="{isLightboxOpen}"
+  >
+    <div class="closeButton">
+      <div class="circle"></div>
+      <font-awesome-icon icon=times-circle 
+      @click="controlLightBox()"
+      />
+    </div>
+    <div class="nextButton">
+      <font-awesome-icon icon=chevron-right
+      @click="change(nowPlayId+1)"
+      />
+    </div>
+    <div class="preButton">
+      <font-awesome-icon icon=chevron-left
+      @click="change(nowPlayId-1)"
+      />
+    </div>
+    <div
+      class="myPainting"
+      v-if="isLightboxOpen"
+    >
+      <div class="all">
+        <img
+          id="myPaint"
+          :src="artworkDetail.src"
+          @click="change(nowPlayId+1)"
+        >
+        <div
+          class="words"
+        >
+          <div class="name">
+            {{selectArtwork}}
+            <div class="year">
+              , {{artworkDetail.year}}
+            </div>
+          </div>
+          <div class="material">
+            {{artworkMaterials}}
+            <div class="size">
+              , {{artworkDetail.size}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

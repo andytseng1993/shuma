@@ -1,0 +1,275 @@
+#lightBox .artworks {
+  margin: 0px 8%;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  transition: 0.3s ease-in-out;
+}
+#lightBox .artworks.isLightboxOpen {
+  transform: scale(0.98);
+}
+#lightBox .artworks .cover {
+  margin: 15px;
+  position: relative;
+  flex: 1 1 200px;
+  max-width: 380px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+  transition: 0.3s ease-in-out;
+}
+#lightBox .artworks .cover .box {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  height: 300px;
+  max-width: 380px;
+  border: white 7px solid;
+  background-position: center center;
+  background-size: cover;
+  transition: 0.2s ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#lightBox .artworks .cover .box h3 {
+  margin: 0;
+  display: block;
+  transform: translateY(20px);
+  opacity: 0;
+  transition: 0.3s ease-out;
+  letter-spacing: 3px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+#lightBox .artworks .cover:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 3px 5px 6px rgba(0, 0, 0, 0.4);
+}
+#lightBox .artworks .cover:hover .box {
+  background-color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+#lightBox .artworks .cover:hover .box h3 {
+  color: white;
+  opacity: 1;
+  transform: translateY(0px);
+}
+@media only screen and (max-width: 480px) {
+  #lightBox .artworks {
+    margin: 0px;
+  }
+  #lightBox .artworks .cover {
+    margin-bottom: 30px;
+    filter: none;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+  }
+  #lightBox .artworks .cover .box {
+    align-items: flex-end;
+  }
+  #lightBox .artworks .cover .box h3 {
+    bottom: 0px;
+    color: black;
+    position: relative;
+    transform: translateY(25px);
+    letter-spacing: 1px;
+    opacity: 1;
+    transition: 0.2s ease-out;
+  }
+  #lightBox .artworks .cover:hover {
+    transform: translate(-2px, -2px);
+    filter: none;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
+  }
+  #lightBox .artworks .cover:hover .box h3 {
+    color: black;
+    transform: translateY(25px);
+  }
+}
+
+.lightbox {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #eee;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+}
+.lightbox.isLightboxOpen {
+  opacity: 1;
+  pointer-events: initial;
+  z-index: 50;
+}
+
+.closeButton {
+  position: fixed;
+  right: 40px;
+  top: 30px;
+  z-index: 100;
+}
+.closeButton .circle {
+  top: 2.5px;
+  left: 2px;
+  border-radius: 50%;
+  width: calc(10px + 1.5vw);
+  height: calc(10px + 1.5vw);
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  transition: 0.2s ease-out;
+}
+.closeButton .fa-times-circle {
+  font-size: calc(17px + 1.5vw);
+  color: rgba(247, 255, 247, 0.5);
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.closeButton:hover .fa-times-circle {
+  color: #ef233c;
+  transform: rotate(90deg);
+}
+.closeButton:hover .circle {
+  opacity: 1;
+  background-color: #edf2f4;
+}
+
+.nextButton {
+  position: fixed;
+  right: calc(25px + 1.5vw);
+  top: 50vh;
+  transform: translate(50%, -50%);
+}
+.nextButton .fa-chevron-right {
+  font-size: calc(35px + 1.5vw);
+  color: rgba(247, 255, 247, 0.4);
+  cursor: pointer;
+  transition: 0.2s ease-out;
+}
+
+.preButton {
+  position: fixed;
+  left: calc(25px + 1.5vw);
+  top: 50vh;
+  transform: translate(-50%, -50%);
+}
+.preButton .fa-chevron-left {
+  font-size: calc(35px + 1.5vw);
+  color: rgba(247, 255, 247, 0.4);
+  cursor: pointer;
+  transition: 0.2s ease-out;
+}
+
+.nextButton:hover .fa-chevron-right {
+  filter: drop-shadow(-5px 0px 5px black);
+  color: #edf2f4;
+  transform: translateX(4px);
+}
+
+.preButton:hover .fa-chevron-left {
+  filter: drop-shadow(5px 0px 5px black);
+  color: #edf2f4;
+  transform: translateX(-4px);
+}
+
+@media only screen and (max-width: 480px) {
+  .closeButton {
+    right: 10px;
+    top: 10px;
+  }
+  .closeButton .circle {
+    width: 20px;
+    height: 20px;
+  }
+  .closeButton .fa-times-circle {
+    font-size: 28px;
+  }
+
+  .nextButton {
+    top: 94vh;
+  }
+  .nextButton .fa-chevron-right {
+    color: rgba(247, 255, 247, 0.3);
+    font-size: 35px;
+  }
+
+  .preButton {
+    top: 94vh;
+  }
+  .preButton .fa-chevron-left {
+    color: rgba(247, 255, 247, 0.3);
+    font-size: 35px;
+  }
+}
+.myPainting {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.myPainting img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 80vw;
+  max-height: 75vh;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.words {
+  width: 100%;
+  color: white;
+}
+.words .name {
+  text-align: left;
+  margin-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.7);
+  padding: 10px 0px 10px 10px;
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-size: 20px;
+}
+.words .name .year {
+  display: inline-block;
+  font-size: 17px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+.words .material {
+  color: rgba(255, 255, 255, 0.7);
+  text-align: left;
+  padding: 0px 0px 0px 10px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+.words .material .size {
+  display: inline-block;
+  margin-right: 0px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 480px) {
+  .myPainting img {
+    max-width: 85vw;
+    max-height: 78vh;
+  }
+}

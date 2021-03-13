@@ -1,0 +1,94 @@
+*{
+  user-select: none; 
+}
+.title {
+  font-family:'Times New Roman';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  margin-top: 10px;
+}
+.title .beforeLine {
+  flex: 1 1;
+  height: 0;
+  width: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 3px solid black;
+  margin-right: 10px;
+}
+.title .afterLine {
+  flex: 1 1;
+  height: 0;
+  width: 10%;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 3px solid black;
+  margin-left: 10px;
+}
+.title h1{
+  margin:0px;
+  font-size: max(3vw,45px);
+}
+.shopcontrol {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 40px;
+  color: black;
+}
+.shopcontrol:active {
+  transform: translate(2px, 2px);
+}
+.shopcontrol .emptynum {
+  color: rgba(0, 0, 0, 0.4);
+}
+.shopcontrol .num {
+  color: white;
+  width: 25px;
+  height: 25px;
+  font-weight: 700;
+  position: relative;
+  display: flex;
+  top: -50px;
+  left: 15px;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  background-color: red;
+  border-radius: 50%;
+  text-align: center;
+}
+
+
+
+
+
+
+
+#lightBox{
+  margin-top: 70px;
+}
+#TypeHandler {
+  margin-top: 10px;
+  position: relative;
+  left: 8%;
+  transition: left 0.1s;
+}
+@media only screen and (max-width: 480px) {
+  .title h1 {
+    font-size: 9vw;
+  }
+  #TypeHandler{
+    margin-top: 15px;
+    left: 2%;
+  }
+  #lightBox{
+  margin-top: 75px;
+  }
+  .footer{
+    height: 60px;
+  }
+}
+
