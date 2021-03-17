@@ -1,6 +1,6 @@
-<div id="lightBox">
+<div id="shopList">
   <div
-    class="artworks"
+    class="items"
     :class="{isLightboxOpen}"
   >
     <div
@@ -9,17 +9,72 @@
       :key="artwork"
     >
       <div
-        class="box"
+        class="img"
         @click="setPlayId(artid),controlLightBox()"
         :style="bgcss(artworkMenu.map[artwork].src)"
       >
       </div>
-      <div class="details">
-        <div class="title">{{artwork}}</div>
-        <div class="price">{{artworkMenu.map[artwork].price}}</div>
-        <div class="year">{{artworkMenu.map[artwork].year}}</div>
+      <div class="details" >
+        <div class="title" @click="setPlayId(artid),controlLightBox()">{{artwork}}</div>
+
+        <div class="price"><span class="price-symbol">&#36</span>{{artworkMenu.map[artwork].price}}
+        </div>
       </div>
     </div>
+  </div>
+  <div class="orderTotal">
+    <div class="shopCart">Shopping Cart</div>
+    <div class="orderList">
+      <ul>
+        <li v-for="(workart, workid) in shoppingCar">
+          <div
+            class="thumbnail"
+            :style="{ backgroundImage: 'url(' + workart.img + ')' }"
+          ></div>
+          <ul>
+            <li class="name">
+              <div class="title">{{ workart.name }}</div>
+              <div
+                class="remove"
+                @click="shoppingCar.splice(workid, 1)"
+              >&#10006</div>
+              <div class="price">${{ workart.price }}</div>
+            </li>
+            <li>
+              <div class="year">Year: {{ workart.year }}</div>
+              <div class="material">Material: {{ workart.material }}</div>
+              <div class="size">Size: {{ workart.size }}</div>
+            </li>
+          </ul>
+        </li>
+        <li
+          class="empty"
+          v-if="!shoppingCar.length"
+        >
+          <h3>Your cart is empty!</h3>
+        </li>
+        <hr v-if="shoppingCar.length" />
+        <div
+          class="total"
+          v-if="shoppingCar.length"
+        >
+          <h4>Subtotal ({{ totlenum }} item): ${{ totalPrice }}</h4>
+          <div class="submit">
+            <input
+              type="submit"
+              value="Place order"
+            />
+          </div>
+        </div>
+      </ul>
+    </div>
+    <div class="subTotal">Subtotal
+      <div class="submit">submit</div>
+    </div>
+
+  </div>
+  <div class="shoppingcart">
+
   </div>
   <div
     class="lightbox"

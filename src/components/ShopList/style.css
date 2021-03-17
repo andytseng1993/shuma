@@ -1,90 +1,105 @@
-#lightBox .artworks {
-  margin: 0px 8%;
-  flex-wrap: wrap;
+#shopList{
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: flex-start;
-  transition: 0.3s ease-in-out;
 }
-#lightBox .artworks.isLightboxOpen {
+#shopList .items {
+  max-width: 950px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+#shopList .items.isLightboxOpen {
   transform: scale(0.98);
 }
-#lightBox .artworks .cover {
-  margin: 15px;
-  position: relative;
-  flex: 1 1 200px;
-  max-width: 380px;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+#shopList .items .cover {
+  margin: 10px 15px;
+  margin-top: 20px;
+  flex: 1 0 200px;
+  max-width: 200px;
   transition: 0.3s ease-in-out;
 }
-#lightBox .artworks .cover .box {
+#shopList .items .cover .img {
   box-sizing: border-box;
-  position: relative;
   width: 100%;
-  height: 300px;
-  max-width: 380px;
-  border: white 7px solid;
+  height: 200px;
   background-position: center center;
   background-size: cover;
   transition: 0.2s ease-in;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
 }
-#lightBox .artworks .cover .box h3 {
-  margin: 0;
-  display: block;
-  transform: translateY(20px);
-  opacity: 0;
-  transition: 0.3s ease-out;
-  letter-spacing: 3px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+#shopList .items .cover .details{
+  padding: 7px;
 }
-#lightBox .artworks .cover:hover {
+#shopList .items .cover .details .title{
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+#shopList .items .cover .details .price{
+  font-size: 18px;
+  margin-top: 7px;
+  font-weight: 600;
+
+}
+#shopList .items .cover .details .price-symbol{
+  font-size: 12px;
+  position: relative;
+  top: -0.3em;
+}
+#shopList .orderTotal{
+  border: rgba(0, 0, 0, 0.3) 2px solid;
+  position: sticky;
+  top: 20px;
+}
+#shopList .orderTotal .shopCart{
+  
+  width: 350px;
+  height: 100px;
+  padding-top: 10px;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 35px;
+  font-weight: 700;
+  text-align: center;
+}
+#shopList .orderTotal .orderList{
+  width: 350px;
+  height: 100px;
+}
+#shopList .orderTotal .subTotal{
+  width: 350px;
+  height: 100px;
+}
+
+#shopList .items .cover .img:hover {
   transform: translate(-3px, -3px);
-  box-shadow: 3px 5px 6px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+  cursor:pointer;
 }
-#lightBox .artworks .cover:hover .box {
-  background-color: rgba(0, 0, 0, 0.5);
-  cursor: pointer;
+#shopList .items .cover .details .title:hover{
+  cursor:pointer;
+  color: rgba(255, 62, 62, 0.9);
 }
-#lightBox .artworks .cover:hover .box h3 {
-  color: white;
-  opacity: 1;
-  transform: translateY(0px);
-}
+
 @media only screen and (max-width: 480px) {
-  #lightBox .artworks {
+  #shopList .items {
     margin: 0px;
   }
-  #lightBox .artworks .cover {
+  #shopList .items .cover {
     margin-bottom: 30px;
     filter: none;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
   }
-  #lightBox .artworks .cover .box {
+  #shopList .items .cover .img {
     align-items: flex-end;
   }
-  #lightBox .artworks .cover .box h3 {
-    bottom: 0px;
-    color: black;
-    position: relative;
-    transform: translateY(25px);
-    letter-spacing: 1px;
-    opacity: 1;
-    transition: 0.2s ease-out;
-  }
-  #lightBox .artworks .cover:hover {
+  #shopList .items .cover:hover {
     transform: translate(-2px, -2px);
     filter: none;
     box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
-  }
-  #lightBox .artworks .cover:hover .box h3 {
-    color: black;
-    transform: translateY(25px);
   }
 }
 

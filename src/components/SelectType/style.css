@@ -108,8 +108,8 @@
 
 #viewbtn:checked ~ .options {
   height: 30px;
-  -webkit-animation: focus 0.3s ease-in-out both;
-          animation: focus 0.3s ease-in-out both;
+  -webkit-animation: focus 0.2s ease-in-out both;
+          animation: focus 0.2s ease-in-out both;
 }
 #viewbtn:checked ~ .options:hover {
   background-color: rgba(0, 0, 0, 0.2);
@@ -118,8 +118,8 @@
 @-webkit-keyframes focus {
   0% {
     letter-spacing: 1em;
-    -webkit-filter: blur(10px);
-            filter: blur(10px);
+    -webkit-filter: blur(5px);
+            filter: blur(5px);
     opacity: 0;
   }
   100% {
@@ -131,8 +131,8 @@
 @keyframes focus {
   0% {
     letter-spacing: 1em;
-    -webkit-filter: blur(10px);
-            filter: blur(10px);
+    -webkit-filter: blur(5px);
+            filter: blur(5px);
     opacity: 0;
   }
   100% {
