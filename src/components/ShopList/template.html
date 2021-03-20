@@ -19,13 +19,14 @@
 
         <div class="price"><span class="price-symbol">&#36</span>{{artworkMenu.map[artwork].price}}
         </div>
+        <font-awesome-icon icon="shopping-basket" @click="addList(artwork)"/>
       </div>
     </div>
   </div>
   <div class="orderTotal">
     <div class="shopCart">Shopping Cart</div>
     <div class="orderList">
-      <ul>
+      <!-- <ul>
         <li v-for="(workart, workid) in shoppingCar">
           <div
             class="thumbnail"
@@ -66,6 +67,11 @@
             />
           </div>
         </div>
+      </ul> -->
+      <ul>
+        <li v-for="item in cartList">
+          {{item.material[1]}}
+        </li>
       </ul>
     </div>
     <div class="subTotal">Subtotal

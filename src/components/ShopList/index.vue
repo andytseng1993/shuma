@@ -26,6 +26,10 @@ export default {
     nowPlayId: {
       type: Number,
       required: true
+    },
+    cartList: {
+      type: Array,
+      default: null
     }
   },
   computed: {
@@ -55,6 +59,10 @@ export default {
     },
     change (val) {
       this.setPlayId((val + this.total) % this.total)
+    },
+    addList (val) {
+      const list = this.artworkMenu.map[val]
+      this.$emit('add-to-cart', { item: list, title: val })
     }
   }
 }

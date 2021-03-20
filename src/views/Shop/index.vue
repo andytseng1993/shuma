@@ -23,6 +23,9 @@ export default {
         this.$store.commit('SETLANGUAGE', val)
       }
     },
+    cartList () {
+      return this.$store.state.cartList
+    },
     artworks () {
       return this.$store.state.artworks
     },
@@ -95,24 +98,28 @@ export default {
         this.shoplists.forEach(({ title, src, year, material, size, sell, soldout, price }, index) => {
           if (!this.engControl) {
             el.sort.push(title[0])
-            el.map[title[0]] = { index, src, year, material, size, sell, soldout, price }
+            el.map[title[0]] = { title, index, src, year, material, size, sell, soldout, price }
           } else {
             el.sort.push(title[1])
-            el.map[title[1]] = { index, src, year, material, size, sell, soldout, price }
+            el.map[title[1]] = { title, index, src, year, material, size, sell, soldout, price }
           }
         })
         return el
       }
     }
-
   },
   watch: {
 
   },
   mounted () {
     this.$store.dispatch('GETARTWORK')
+    this.$store.dispatch('READ_SHOPLIST')
   },
   methods: {
+    addList (val) {
+      this.$store.dispatch('CREATE_SHOPLIST', val)
+    }
+
   }
 
 }

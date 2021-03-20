@@ -12,10 +12,12 @@
   ></FilterType>
   <font-awesome-icon icon=shopping-cart />
   <ShopList
+    :cartList="cartList"
     :isLightboxOpen.sync="isLightboxOpen"
     :artworkMenu="artworkMenu"
     :engControl="engControl"
     :nowPlayId.sync="nowPlayId"
+    @add-to-cart="addList"
   ></ShopList>
   <div class="footer"></div>
 </div>
