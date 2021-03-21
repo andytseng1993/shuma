@@ -45,6 +45,9 @@ export default {
     artworkMaterials () {
       if (this.engControl) return this.artworkDetail.material[1]
       else return this.artworkDetail.material[0]
+    },
+    subTotal () {
+      return this.cartList.map(workart => workart.price).reduce((accumulator, currentValue) => accumulator + currentValue, 0)
     }
   },
   methods: {
@@ -62,7 +65,10 @@ export default {
     },
     addList (val) {
       const list = this.artworkMenu.map[val]
-      this.$emit('add-to-cart', { item: list, title: val })
+      this.$emit('add-to-cart', { item: list })
+    },
+    deleteList (val) {
+      this.$emit('delete-list', { itemId: val })
     }
   }
 }

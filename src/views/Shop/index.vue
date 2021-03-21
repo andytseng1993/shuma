@@ -118,6 +118,9 @@ export default {
   methods: {
     addList (val) {
       this.$store.dispatch('CREATE_SHOPLIST', val)
+    },
+    deleteList (val) {
+      this.$store.dispatch('DELETE_SHOPLIST', val)
     }
 
   }

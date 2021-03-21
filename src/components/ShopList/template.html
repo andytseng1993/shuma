@@ -26,56 +26,39 @@
   <div class="orderTotal">
     <div class="shopCart">Shopping Cart</div>
     <div class="orderList">
-      <!-- <ul>
-        <li v-for="(workart, workid) in shoppingCar">
-          <div
-            class="thumbnail"
-            :style="{ backgroundImage: 'url(' + workart.img + ')' }"
-          ></div>
-          <ul>
-            <li class="name">
-              <div class="title">{{ workart.name }}</div>
+      <ul>
+        <li v-for="(item,itemId) in cartList" :key="itemId">
+          <div class="img" :style="{ backgroundImage: 'url(' + item.src + ')' }"></div>
+          <div class="details">
+            <div class="title">
+              <span class="name" @click="setPlayId(itemId),controlLightBox()">{{item.title[1]}}</span>
+              <span class="price">{{engControl?'$':'NT$'}}{{item.price}}</span>
+            </div>
+            <div class="material"> {{ item.material[1]}}</div>
+            <div class="size"> {{ item.size }}
               <div
                 class="remove"
-                @click="shoppingCar.splice(workid, 1)"
+                @click="deleteList(itemId)"
               >&#10006</div>
-              <div class="price">${{ workart.price }}</div>
-            </li>
-            <li>
-              <div class="year">Year: {{ workart.year }}</div>
-              <div class="material">Material: {{ workart.material }}</div>
-              <div class="size">Size: {{ workart.size }}</div>
-            </li>
-          </ul>
-        </li>
-        <li
-          class="empty"
-          v-if="!shoppingCar.length"
-        >
-          <h3>Your cart is empty!</h3>
-        </li>
-        <hr v-if="shoppingCar.length" />
-        <div
-          class="total"
-          v-if="shoppingCar.length"
-        >
-          <h4>Subtotal ({{ totlenum }} item): ${{ totalPrice }}</h4>
-          <div class="submit">
-            <input
-              type="submit"
-              value="Place order"
-            />
+            </div>
           </div>
-        </div>
-      </ul> -->
-      <ul>
-        <li v-for="item in cartList">
-          {{item.material[1]}}
+        </li>
+        <li v-if="!cartList.length">
+          <h1>132</h1>
         </li>
       </ul>
     </div>
-    <div class="subTotal">Subtotal
-      <div class="submit">submit</div>
+    <div class="subTotal">
+      <div
+        class="total"
+      >
+        <h4>Subtotal: {{engControl?'$':'NT$'}}{{subTotal}}</h4>
+      </div>
+      <div class="submit">
+        <button>
+          Place order
+        </button>
+      </div>
     </div>
 
   </div>

@@ -63,6 +63,7 @@ export default new Vuex.Store({
     },
     DELETE_SHOPLIST ({ commit }, { itemId }) {
       const items = STORE.get()
+      console.log(itemId)
       const item = items.splice(itemId, 1)[0]
       STORE.set(items)
       commit('SET_SHOPLISTS', items)

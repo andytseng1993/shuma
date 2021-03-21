@@ -1,6 +1,9 @@
 *{
   user-select: none; 
 }
+#nav{
+  background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),url(https://i.imgur.com/BVaDZC4.jpg);
+}
 .title {
   font-family:'Times New Roman';
   display: flex;
@@ -62,19 +65,16 @@
 }
 
 
-
-
-
-
-
 #shopList{
-  margin-top: 70px;
+  margin-top: 40px;
 }
 #TypeHandler {
-  margin-top: 10px;
+  display: block;
+  margin-left: 5vw;
+  margin-top: 15px;
   position: relative;
-  left: 8%;
   transition: left 0.1s;
+  left:5vw;
 }
 @media only screen and (max-width: 480px) {
   .title h1 {
