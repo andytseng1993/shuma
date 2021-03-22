@@ -17,9 +17,8 @@
       <div class="details" >
         <div class="title" @click="setPlayId(artid),controlLightBox()">{{artwork}}</div>
 
-        <div class="price"><span class="price-symbol">&#36</span>{{artworkMenu.map[artwork].price}}
+        <div class="price"><span class="price-symbol">&#36</span>{{price(artworkMenu.map[artwork].price)}}
         </div>
-        <font-awesome-icon icon="shopping-basket" @click="addList(artwork)"/>
       </div>
     </div>
   </div>
@@ -31,8 +30,11 @@
           <div class="img" :style="{ backgroundImage: 'url(' + item.src + ')' }"></div>
           <div class="details">
             <div class="title">
-              <span class="name" @click="setPlayId(itemId),controlLightBox()">{{item.title[1]}}</span>
-              <span class="price">{{engControl?'$':'NT$'}}{{item.price}}</span>
+              <span class="name" @click="value(item),controlLightBox()">{{item.title[1]}}</span>
+              <span class="price">
+                <span class="price-symbol">
+                  {{engControl?'&#36':'NT&#36'}}</span>{{price(item.price)}}
+              </span>
             </div>
             <div class="material"> {{ item.material[1]}}</div>
             <div class="size"> {{ item.size }}
@@ -43,16 +45,22 @@
             </div>
           </div>
         </li>
-        <li v-if="!cartList.length">
-          <h1>132</h1>
+        <li class="emptyCart" v-if="!cartList.length">
+          <font-awesome-icon icon=shopping-cart />
+          <div>
+            Your Cart is empty.
+          </div>
         </li>
       </ul>
     </div>
-    <div class="subTotal">
+    <div class="subTotal" v-if="cartList.length">
       <div
         class="total"
       >
-        <h4>Subtotal: {{engControl?'$':'NT$'}}{{subTotal}}</h4>
+        <h4>Subtotal: 
+          <span class="price-symbol">
+          {{engControl?'&#36':'NT&#36'}}</span>{{price(subTotal)}}
+        </h4>
       </div>
       <div class="submit">
         <button>
@@ -60,9 +68,6 @@
         </button>
       </div>
     </div>
-
-  </div>
-  <div class="shoppingcart">
 
   </div>
   <div
@@ -109,6 +114,15 @@
             <div class="size">
               , {{artworkDetail.size}}
             </div>
+            <div class="add" @click="addList(selectArtwork)">
+              Add to Cart
+            </div>
+          </div>
+          <div class="price">
+            <span class="price-symbol">
+              {{engControl?'&#36':'NT&#36'}}
+            </span>
+            {{price(artworkDetail.price)}}
           </div>
         </div>
       </div>

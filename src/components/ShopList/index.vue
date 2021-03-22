@@ -69,7 +69,15 @@ export default {
     },
     deleteList (val) {
       this.$emit('delete-list', { itemId: val })
+    },
+    value (val) {
+      console.log(val)
+    },
+    price (val) {
+      if (val === null) return 0
+      else return val.toLocaleString('en')
     }
+
   }
 }
 </script>
