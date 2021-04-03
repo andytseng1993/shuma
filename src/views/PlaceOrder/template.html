@@ -1,0 +1,61 @@
+<div class="placeOrder">
+  <transition name="fade">
+    <div
+      v-if="show"
+      class="confirm"
+    >
+      <div class="send">
+        <font-awesome-icon :icon="['far','paper-plane']" />
+        <font-awesome-icon :icon="['fas','wind']" />
+        your order place success!!
+      </div>
+      <span class="content">
+        Thank you for your order, we'll contact you in 24 hour!
+      </span>
+    </div>
+  </transition>
+  <form
+    class="container"
+    @submit.prevent="submittest()"
+  >
+    <label>Name</label>
+    <input
+      v-model.trim="order.name"
+      type="text"
+      name="name"
+      placeholder="Your Name"
+      required="required"
+    >
+    <label>Email</label>
+    <input
+      v-model.trim="order.email"
+      type="email"
+      name="email"
+      placeholder="Your Email"
+      required="required"
+    >
+    <label>Message</label>
+    <textarea
+      v-model.trim="order.message"
+      name="message"
+      cols="30"
+      rows="5"
+      placeholder="Message"
+      required="required"
+    />
+    <div
+      class="recaptcha"
+      :class="{formEmpty}"
+    >
+      <vue-recaptcha
+        sitekey="6LdcWpQaAAAAAKwlfSQfDE_ZYN1fe8fdTujNrhIy"
+        @verify="recaptchaverify"
+      />
+      <small :class="{recaptcha_failed:!vuerecaptcha}">Please complete!</small>
+    </div>
+    <input
+      type="submit"
+      value="Send"
+    >
+  </form>
+</div>

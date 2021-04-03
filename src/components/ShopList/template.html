@@ -62,11 +62,12 @@
           {{engControl?'&#36':'NT&#36'}}</span>{{price(subTotal)}}
         </h4>
       </div>
-      <div class="submit">
-        <button>
-          Place order
-        </button>
-      </div>
+      <router-link class="submit"
+        :to="{path: 'place-order'}"
+        append
+      >
+        Place order
+      </router-link>
     </div>
 
   </div>

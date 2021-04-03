@@ -144,11 +144,10 @@
   justify-content: space-around;
   align-items: center;
 }
-#shopList .orderTotal .subTotal button{
+#shopList .orderTotal .subTotal .submit{
   padding: 10px 25px;
   border-radius: 40px;
   background: linear-gradient(to top,rgb(216, 0, 43),rgb(239, 45, 84) ) ;
-  color: white;
   font-size: 18px;
   font-weight: 700;
   margin: 20px 0px 20px 0px;
@@ -157,12 +156,15 @@
   outline: none;
   box-shadow: 0px 2px 4px rgba(0,0,0,0.6);
   transition-duration: 0.2s;
+    text-decoration: none;
+  color: white;
 }
-#shopList .orderTotal .subTotal button:hover{
+
+#shopList .orderTotal .subTotal .submit:hover{
   transform: translateY(-2px);
   box-shadow: 0px 4px 6px rgba(0,0,0,0.4);
 }
-#shopList .orderTotal .subTotal button:active{
+#shopList .orderTotal .subTotal .submit:active{
   transition-duration: 0.05s;
   transform: translateY(0px);
   box-shadow: 0px 2px 1px rgba(0,0,0,0.7);
