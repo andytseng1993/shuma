@@ -1,61 +1,131 @@
-<div class="placeOrder">
+<div id="placeOrder">
+    <div class="back">
+      <router-link to="/shop">
+      <font-awesome-icon
+        icon=chevron-left
+      />
+      <span>Shop</span>
+      </router-link>
+    </div>
+
+  <!-- order complete -->
   <transition name="fade">
-    <div
-      v-if="show"
-      class="confirm"
-    >
-      <div class="send">
-        <font-awesome-icon :icon="['far','paper-plane']" />
-        <font-awesome-icon :icon="['fas','wind']" />
-        your order place success!!
+    <div class="confirm"
+          v-if="show"
+          >
+      <div
+        class="content"
+      >
+        <div class="send">
+          <font-awesome-icon :icon="['far','paper-plane']" />
+          <font-awesome-icon :icon="['fas','wind']" />
+          Your order place success!!
+        </div>
+        <div class="context">
+          Thank you for your order, SHUMA will contact you in 24 hour!
+        </div>
       </div>
-      <span class="content">
-        Thank you for your order, we'll contact you in 24 hour!
-      </span>
     </div>
   </transition>
-  <form
-    class="container"
-    @submit.prevent="submittest()"
-  >
-    <label>Name</label>
-    <input
-      v-model.trim="order.name"
-      type="text"
-      name="name"
-      placeholder="Your Name"
-      required="required"
-    >
-    <label>Email</label>
-    <input
-      v-model.trim="order.email"
-      type="email"
-      name="email"
-      placeholder="Your Email"
-      required="required"
-    >
-    <label>Message</label>
-    <textarea
-      v-model.trim="order.message"
-      name="message"
-      cols="30"
-      rows="5"
-      placeholder="Message"
-      required="required"
-    />
-    <div
-      class="recaptcha"
-      :class="{formEmpty}"
-    >
-      <vue-recaptcha
-        sitekey="6LdcWpQaAAAAAKwlfSQfDE_ZYN1fe8fdTujNrhIy"
-        @verify="recaptchaverify"
-      />
-      <small :class="{recaptcha_failed:!vuerecaptcha}">Please complete!</small>
+
+  <div class="order-content">
+    <!-- order list -->
+    <div class="orderList">
+      <div class="header">Order Summary:</div>
+      <ul>
+        <li
+          v-for="(item,itemId) in cartList"
+          :key="itemId"
+        >
+          <div
+            class="img"
+            :style="{ backgroundImage: 'url(' + item.src + ')' }"
+          ></div>
+          <div class="details">
+            <div class="title">
+              <span class="name">{{item.title[1]}}</span>
+              <span class="price">
+                <span class="price-symbol">
+                  {{engControl?'&#36':'NT&#36'}}</span>{{price(item.price)}}
+              </span>
+            </div>
+            <div class="material"> {{ item.material[1]}}</div>
+            <div class="size"> {{ item.size }}
+              <div
+                class="remove"
+                @click="deleteList(itemId),value(itemId)"
+              >&#10006</div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="emptyCart"
+          v-if="!cartList.length"
+        >
+          <font-awesome-icon icon=shopping-cart />
+          <div>
+            Your Cart is empty.
+          </div>
+        </li>
+      </ul>
+      <div
+        class="subTotal"
+        v-if="cartList.length"
+      >
+        <h4>Total:</h4>
+        <div class="total-price">
+          <span class="price-symbol">
+            {{engControl?'&#36':'NT&#36'}}</span>{{price(subTotal)}}
+        </div>
+      </div>
     </div>
-    <input
-      type="submit"
-      value="Send"
-    >
-  </form>
+    
+      <!-- contact form -->
+      <form
+        class="container"
+        @submit.prevent="send()"
+      >
+        <label>Name*</label>
+        <input
+          v-model.trim="order.name"
+          type="text"
+          name="name"
+          placeholder="Your Name"
+          required="required"
+        >
+        <label>Email*</label>
+        <input
+          v-model.trim="order.email"
+          type="email"
+          name="email"
+          placeholder="Your Email"
+          required="required"
+        >
+        <label>Message (options)</label>
+        <textarea
+          v-model.trim="order.message"
+          name="message"
+          cols="20"
+          rows="3"
+          placeholder="Message"
+        />
+        <div
+          class="recaptcha"
+          :class="{recaptchaVerifyKey}"
+        >
+          <vue-recaptcha
+            sitekey="6LdcWpQaAAAAAKwlfSQfDE_ZYN1fe8fdTujNrhIy"
+            @verify="recaptchaverify"
+          />
+          <small :class="{recaptcha_failed:formEmpty}">Please complete reCAPTCHA !</small>
+        </div>
+        <input
+          type="submit"
+          value="Send"
+        >
+      </form>
+  </div>
+
+  
+
 </div>

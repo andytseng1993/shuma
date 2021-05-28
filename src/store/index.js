@@ -18,7 +18,8 @@ export default new Vuex.Store({
     nowPlayId: 0,
     scroll: 0,
     touchDown: 0,
-    touchUp: 0
+    touchUp: 0,
+    recaptcha: ''
   },
   mutations: {
     SETARTWORK (state, artworks) {
@@ -38,6 +39,9 @@ export default new Vuex.Store({
     },
     SET_SHOPLISTS (state, items) {
       state.cartList = items
+    },
+    SET_RECAPTCHA (state, val) {
+      state.recaptcha = val
     }
   },
   actions: {

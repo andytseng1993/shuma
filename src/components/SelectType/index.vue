@@ -14,6 +14,10 @@ export default {
     typeMenu: {
       type: Array,
       required: true
+    },
+    isLightboxOpen: {
+      type: Boolean,
+      required: true
     }
   },
   computed: {

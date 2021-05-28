@@ -28,7 +28,9 @@ html,body{
   margin: 0%;
   width:100%;
   height: 100%;
-  overflow-x:hidden;
+}
+body{
+  overflow-x: hidden;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;

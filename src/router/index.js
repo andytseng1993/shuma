@@ -28,14 +28,18 @@ const routes = [
     component: () => import(/* webpackChunkName: "shop" */ '../views/Shop/index.vue')
   },
   {
-    path: '/shop/place-order',
+    path: '/place-order',
     name: 'placeOrder',
     component: () => import(/* webpackChunkName: "place-order" */ '../views/PlaceOrder/index.vue')
   }
 ]
 
 const router = new VueRouter({
-  routes
+  mode: 'history',
+  routes,
+  scrollBehavior () {
+    document.getElementById('app').scrollIntoView()
+  }
 })
 
 export default router
