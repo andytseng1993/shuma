@@ -32,6 +32,11 @@ export default {
       default: null
     }
   },
+  data () {
+    return {
+      isCartOpen: false
+    }
+  },
   computed: {
     total () {
       return this.artworkMenu.sort.length
@@ -70,12 +75,25 @@ export default {
     deleteList (val) {
       this.$emit('delete-list', { itemId: val })
     },
-    value (val) {
-      console.log(val)
-    },
     price (val) {
       if (val === null) return 0
       else return val.toLocaleString('en')
+    },
+    cartNoScroll () {
+      const el = document.body
+      if (this.isCartOpen) {
+        el.classList.add('noScroll')
+      } else {
+        el.classList.remove('noScroll')
+      }
+    },
+    lightboxNoScroll (val) {
+      const el = document.body
+      if (val === 'add') {
+        el.classList.add('noScroll')
+      } else {
+        el.classList.remove('noScroll')
+      }
     }
 
   }

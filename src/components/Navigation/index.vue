@@ -15,6 +15,14 @@ export default {
       type: Boolean,
       required: true
     }
+  },
+  methods: {
+    scrollToTop () {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      })
+    }
   }
 
 }
