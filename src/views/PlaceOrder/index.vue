@@ -76,9 +76,6 @@ export default {
     deleteList (val) {
       this.$store.dispatch('DELETE_SHOPLIST', val)
     },
-    value (val) {
-      console.log(val)
-    },
     sendEmail () {
       emailjs.send('service_hd39hf4', 'template_6ngi6cd', this.order, 'user_XiclrBTze0zEbsO6pBizA').then(function (response) {
         console.log('SUCCESS!', response.status, response.text)
