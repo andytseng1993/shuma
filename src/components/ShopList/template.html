@@ -17,14 +17,18 @@
       <div class="details" >
         <div class="title" @click="setPlayId(artid),controlLightBox(),lightboxNoScroll('add')">{{artwork}}</div>
 
-        <div class="price"><span class="price-symbol">&#36</span>{{price(artworkMenu.map[artwork].price)}}
+        <div class="price"><span class="price-symbol">{{engControl?'&#36':'NT&#36'}}</span>{{price(artworkMenu.map[artwork].price)}}
         </div>
       </div>
     </div>
   </div>
+
+
   <!-- shopping cart -->
+
+
   <div class="orderTotal" :class={open:isCartOpen}>
-    <div class="shopCart">Shopping Cart
+    <div class="shopCart">{{engControl?'Shopping Cart':'購物車'}}
       <div class="close_btn">
         <font-awesome-icon
           icon=times-circle
@@ -38,13 +42,13 @@
           <div class="img" :style="{ backgroundImage: 'url(' + item.src + ')' }"></div>
           <div class="details">
             <div class="title">
-              <span class="name" >{{item.title[1]}}</span>
+              <span class="name" >{{engControl?item.title[1]:item.title[0]}}</span>
               <span class="price">
                 <span class="price-symbol">
                   {{engControl?'&#36':'NT&#36'}}</span>{{price(item.price)}}
               </span>
             </div>
-            <div class="material"> {{ item.material[1]}}</div>
+            <div class="material"> {{engControl?item.material[1]:item.material[0]}}</div>
             <div class="size"> {{ item.size }}
               <div
                 class="remove"
@@ -56,7 +60,7 @@
         <li class="emptyCart" v-if="!cartList.length">
           <font-awesome-icon icon=shopping-cart />
           <div>
-            Your Cart is empty.
+            {{engControl?'Your Cart is empty.':'無商品'}}
           </div>
         </li>
       </ul>
@@ -78,7 +82,7 @@
       <div
         class="total"
       >
-        <h4>Subtotal: 
+        <h4>{{engControl?'Subtotal':'總金額'}}: 
           <span class="price-symbol">
           {{engControl?'&#36':'NT&#36'}}</span>{{price(subTotal)}}
         </h4>
@@ -87,7 +91,7 @@
         :to="{name: 'placeOrder'}"
         append
       >
-        Place order
+        {{engControl?'Place order':'訂購'}}
       </router-link>
     </div>
 
@@ -139,7 +143,7 @@
                 , {{artworkDetail.size}}
               </div>
               <div class="add" @click="addList(selectArtwork)">
-                Add to Cart
+                {{engControl?'Add to Cart':'加入購物車'}}
               </div>
             </div>
             <div class="price">

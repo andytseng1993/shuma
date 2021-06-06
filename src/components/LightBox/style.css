@@ -64,10 +64,11 @@
 }
 @media only screen and (max-width: 480px) {
   #lightBox .artworks {
-    margin: 0px;
+    margin: 10px;
+    border: none;
   }
   #lightBox .artworks .cover {
-    margin-bottom: 30px;
+    margin-bottom: 55px;
     filter: none;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
   }
@@ -78,8 +79,9 @@
     bottom: 0px;
     color: black;
     position: relative;
-    transform: translateY(25px);
-    letter-spacing: 1px;
+    transform: translateY(40px);
+    font-size: 16px;
+    letter-spacing: 0px;
     opacity: 1;
     transition: 0.2s ease-out;
     text-align: center;
@@ -280,4 +282,5 @@
     max-width: 85vw;
     max-height: 78vh;
   }
+
 }

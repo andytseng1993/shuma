@@ -33,7 +33,7 @@
   font-size: max(3vw,45px);
 }
 #lightBox{
-  margin-top: 70px;
+  margin-top: 50px;
 }
 #TypeHandler {
   display: inline-block;
@@ -51,7 +51,7 @@
     left: 2%;
   }
   #lightBox{
-  margin-top: 75px;
+  margin-top: 30px;
   }
   .footer{
     height: 60px;

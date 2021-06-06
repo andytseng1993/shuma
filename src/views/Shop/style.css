@@ -70,33 +70,31 @@
   top: 60px;
 }
 #TypeHandler {
-  display: inline-block;
-  margin-left: 5vw;
-  margin-top: 15px;
-  position: relative;
-  transition: left 0.1s;
-  left:5vw;
+  margin-top: 10px;
+  left: 8.5vw;
 }
 @media only screen and (max-width: 992px){
-
+  #TypeHandler{
+    left: 6vw;
 }
-@media only screen and (max-width: 480px) {
+}
+@media only screen and (max-width: 481px) {
   .title h1 {
-    font-size: 8vw;
+    font-size: 10vw;
   }
   .title{
     position: relative;
-    margin-top: 0px;
+    margin-top: 10px;
     top: 10px;
     margin-bottom: 20px;
   }
   #TypeHandler{
-    position: relative;
-    margin-top: 15px;
-    left: initial;
-    margin-left: auto;
-    margin-right: auto;
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%);
+    width: 80%;
   }
+
   #lightBox{
   margin-top: 75px;
   }
