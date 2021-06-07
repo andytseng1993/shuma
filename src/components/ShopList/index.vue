@@ -62,8 +62,8 @@ export default {
     setPlayId (id) {
       this.$emit('update:nowPlayId', id)
     },
-    controlLightBox () {
-      this.$emit('update:isLightboxOpen', !this.isLightboxOpen)
+    controlLightBox (val) {
+      this.$emit('update:isLightboxOpen', val)
     },
     change (val) {
       this.setPlayId((val + this.total) % this.total)

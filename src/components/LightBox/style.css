@@ -113,7 +113,7 @@
 .lightbox.isLightboxOpen {
   opacity: 1;
   pointer-events: initial;
-  z-index: 50;
+  z-index: 250;
 }
 
 .closeButton {

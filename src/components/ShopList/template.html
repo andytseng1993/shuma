@@ -10,12 +10,12 @@
     >
       <div
         class="img"
-        @click="setPlayId(artid),controlLightBox(),lightboxNoScroll('add')"
+        @click="setPlayId(artid),controlLightBox(true),lightboxNoScroll('add')"
         :style="bgcss(artworkMenu.map[artwork].src)"
       >
       </div>
       <div class="details" >
-        <div class="title" @click="setPlayId(artid),controlLightBox(),lightboxNoScroll('add')">{{artwork}}</div>
+        <div class="title" @click="setPlayId(artid),controlLightBox(true),lightboxNoScroll('add')">{{artwork}}</div>
 
         <div class="price"><span class="price-symbol">{{engControl?'&#36':'NT&#36'}}</span>{{price(artworkMenu.map[artwork].price)}}
         </div>
@@ -105,7 +105,7 @@
       <div class="closeButton">
         <div class="circle"></div>
         <font-awesome-icon icon=times-circle
-        @click="controlLightBox(),lightboxNoScroll('remove')"
+        @click="controlLightBox(false),lightboxNoScroll('remove')"
         />
       </div>
       <div class="nextButton">

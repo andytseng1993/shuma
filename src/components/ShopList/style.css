@@ -125,6 +125,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
 }
 #shopList .orderTotal .orderList ul li .details .size .remove{
   cursor: pointer;
@@ -340,7 +341,7 @@
     width: 96vw;
   }
   #shopList .orderTotal.open .orderList{
-    height: 60vh;
+    height: 73vh;
 }
   #shopList .orderTotal .subTotal .shopControl .fa-shopping-cart{
     font-size: 6vw;
@@ -351,8 +352,36 @@
   #shopList .orderTotal .subTotal a.submit{
     font-size: 4vw;
     margin: 0px;
-    padding: 9px 25px;
-
+    padding: 7px 20px;
+  }
+  #shopList .orderTotal.open .shopCart{
+    font-size: 24px;
+  }
+  #shopList .orderTotal.open .shopCart .close_btn{
+    margin-right: 15px;
+  }
+  #shopList .orderTotal .orderList ul li .img{
+    width: 80px;
+    height: 80px;
+  }
+  #shopList .orderTotal .orderList ul li .details .title .name{
+    width: 130px;
+    font-size: 14px;
+    padding-right: 5px;
+  }
+  #shopList .orderTotal .orderList ul li .details .title .price{
+    font-size: 15px;
+    width: initial;
+  }
+  #shopList .orderTotal .orderList ul li .details .material{
+    font-size: 14px;
+  }
+  #shopList .orderTotal .orderList ul li .details .size{
+    font-size: 14px;
+  }
+  #shopList .orderTotal .subTotal .shopControl .num{
+    padding-left: 4px;
+    font-size: 14px;
   }
 }
 /* lightBox */
