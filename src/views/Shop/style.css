@@ -1,0 +1,105 @@
+*{
+  user-select: none; 
+}
+#nav{
+  background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.5)),url(https://i.imgur.com/BVaDZC4.jpg);
+}
+.title {
+  font-family:'Times New Roman';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  margin: 10px 0px;
+}
+.title .beforeLine {
+  flex: 1 1;
+  height: 0;
+  width: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 3px solid black;
+  margin-right: 10px;
+}
+.title .afterLine {
+  flex: 1 1;
+  height: 0;
+  width: 10%;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-top: 3px solid black;
+  margin-left: 10px;
+}
+.title h1{
+  margin:0px;
+  font-size: max(3vw,45px);
+}
+.shopcontrol {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 40px;
+  color: black;
+}
+.shopcontrol:active {
+  transform: translate(2px, 2px);
+}
+.shopcontrol .emptynum {
+  color: rgba(0, 0, 0, 0.4);
+}
+.shopcontrol .num {
+  color: white;
+  width: 25px;
+  height: 25px;
+  font-weight: 700;
+  position: relative;
+  display: flex;
+  top: -50px;
+  left: 15px;
+  justify-content: center;
+  align-items: center;
+  font-size: 17px;
+  background-color: red;
+  border-radius: 50%;
+  text-align: center;
+}
+
+
+#shopList{
+  position: relative;
+  top: 60px;
+}
+#TypeHandler {
+  margin-top: 10px;
+  left: 8.5vw;
+}
+@media only screen and (max-width: 992px){
+  #TypeHandler{
+    left: 6vw;
+}
+}
+@media only screen and (max-width: 481px) {
+  .title h1 {
+    font-size: 10vw;
+  }
+  .title{
+    position: relative;
+    margin-top: 10px;
+    top: 10px;
+    margin-bottom: 20px;
+  }
+  #TypeHandler{
+    left: 50%;
+    right: 50%;
+    transform: translate(-50%);
+    width: 80%;
+  }
+
+  #lightBox{
+  margin-top: 75px;
+  }
+  .footer{
+    height: 60px;
+  }
+}
+

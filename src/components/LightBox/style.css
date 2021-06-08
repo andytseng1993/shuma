@@ -42,6 +42,7 @@
   opacity: 0;
   transition: 0.3s ease-out;
   letter-spacing: 3px;
+  text-align: center;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -59,13 +60,15 @@
   color: white;
   opacity: 1;
   transform: translateY(0px);
+  
 }
 @media only screen and (max-width: 480px) {
   #lightBox .artworks {
-    margin: 0px;
+    margin: 10px;
+    border: none;
   }
   #lightBox .artworks .cover {
-    margin-bottom: 30px;
+    margin-bottom: 55px;
     filter: none;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
   }
@@ -76,10 +79,12 @@
     bottom: 0px;
     color: black;
     position: relative;
-    transform: translateY(25px);
-    letter-spacing: 1px;
+    transform: translateY(40px);
+    font-size: 16px;
+    letter-spacing: 0px;
     opacity: 1;
     transition: 0.2s ease-out;
+    text-align: center;
   }
   #lightBox .artworks .cover:hover {
     transform: translate(-2px, -2px);
@@ -89,6 +94,7 @@
   #lightBox .artworks .cover:hover .box h3 {
     color: black;
     transform: translateY(25px);
+    text-align: center;
   }
 }
 
@@ -98,7 +104,7 @@
   position: fixed;
   left: 0;
   top: 0;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.9);
   color: #eee;
   opacity: 0;
   pointer-events: none;
@@ -107,7 +113,7 @@
 .lightbox.isLightboxOpen {
   opacity: 1;
   pointer-events: initial;
-  z-index: 50;
+  z-index: 250;
 }
 
 .closeButton {
@@ -129,7 +135,7 @@
 }
 .closeButton .fa-times-circle {
   font-size: calc(17px + 1.5vw);
-  color: rgba(247, 255, 247, 0.5);
+  color: rgba(247, 255, 247, 0.9);
   cursor: pointer;
   transition: 0.2s ease-in-out;
 }
@@ -198,7 +204,7 @@
     top: 94vh;
   }
   .nextButton .fa-chevron-right {
-    color: rgba(247, 255, 247, 0.3);
+    color: rgba(247, 255, 247, 0.4);
     font-size: 35px;
   }
 
@@ -206,7 +212,7 @@
     top: 94vh;
   }
   .preButton .fa-chevron-left {
-    color: rgba(247, 255, 247, 0.3);
+    color: rgba(247, 255, 247, 0.4);
     font-size: 35px;
   }
 }
@@ -276,4 +282,5 @@
     max-width: 85vw;
     max-height: 78vh;
   }
+
 }

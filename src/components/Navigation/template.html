@@ -15,12 +15,14 @@
     <router-link
       to="/artwork"
       :class={ch:!engControl}
+      @click.native="scrollToTop"
     >
       {{engControl?'Artwork':'作品集'}}
     </router-link>
     <router-link
-      to="shop"
+      to="/shop"
       :class={ch:!engControl}
+      @click.native="scrollToTop"
     >
       {{engControl?'Shop':'商店'}}
     </router-link>

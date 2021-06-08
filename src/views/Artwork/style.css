@@ -33,11 +33,12 @@
   font-size: max(3vw,45px);
 }
 #lightBox{
-  margin-top: 70px;
+  position: relative;
+  top: 50px;
+  margin-top: 30px;
 }
 #TypeHandler {
-  margin-top: 10px;
-  position: relative;
+  margin-top: 15px;
   left: 8%;
   transition: left 0.1s;
 }
@@ -50,7 +51,7 @@
     left: 2%;
   }
   #lightBox{
-  margin-top: 75px;
+  margin-top: 30px;
   }
   .footer{
     height: 60px;

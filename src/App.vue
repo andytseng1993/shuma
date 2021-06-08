@@ -28,7 +28,27 @@ html,body{
   margin: 0%;
   width:100%;
   height: 100%;
-  overflow-x:hidden;
+}
+body.noScroll{
+  overflow-y: hidden;
+}
+body{
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+ width: 8px;
+}
+::-webkit-scrollbar-thumb {
+ background: #b4b4b4;
+ border-radius: 15px;
+}
+::-webkit-scrollbar-thumb:hover{
+ background: #7c7c7c;
+}
+::-webkit-scrollbar-track{
+ background: #ffffff;
+ border-radius: 15px;
+ box-shadow: inset 7px 10px 12px #f0f0f0;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
