@@ -33,12 +33,12 @@
   font-size: max(3vw,45px);
 }
 #lightBox{
-  margin-top: 50px;
+  position: relative;
+  top: 50px;
+  margin-top: 30px;
 }
 #TypeHandler {
-  display: inline-block;
-  margin-top: 10px;
-  position: relative;
+  margin-top: 15px;
   left: 8%;
   transition: left 0.1s;
 }

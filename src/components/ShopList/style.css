@@ -53,8 +53,8 @@
   border: rgba(0, 0, 0, 0.1) 2px solid;
   border-radius: 15px;
   position: sticky;
-  top: 70px;
-  margin: -10px 40px 20px 20px;
+  top: 80px;
+  margin: 15px 40px 20px 20px;
   
 }
 #shopList .orderTotal .shopCart{
