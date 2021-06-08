@@ -39,13 +39,8 @@ export default {
         this.$store.commit('SET_RECAPTCHA', val)
       }
     },
-    engControl: {
-      get () {
-        return this.$store.state.engControl
-      },
-      set (val) {
-        this.$store.commit('SETLANGUAGE', val)
-      }
+    engControl () {
+      return this.$store.state.engControl
     },
     subTotal () {
       return this.cartList.map(workart => workart.price).reduce((accumulator, currentValue) => accumulator + currentValue, 0)
@@ -64,6 +59,7 @@ export default {
   },
   mounted () {
     this.$store.dispatch('READ_SHOPLIST')
+    this.$store.dispatch('GET_LANGUAGE')
   },
   methods: {
     recaptchaverify (res) {

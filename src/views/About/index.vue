@@ -6,14 +6,12 @@ export default {
     Navigation
   },
   computed: {
-    engControl: {
-      get () {
-        return this.$store.state.engControl
-      },
-      set (val) {
-        this.$store.commit('SETLANGUAGE', val)
-      }
+    engControl () {
+      return this.$store.state.engControl
     }
+  },
+  mounted () {
+    this.$store.dispatch('GET_LANGUAGE')
   }
 
 }

@@ -179,7 +179,7 @@
 }
 @media screen and (max-width: 480px) {
   #Home .translate {
-  right: 27px;
+  right: 15px;
   bottom: 20px;
   top: initial
 }

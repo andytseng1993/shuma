@@ -28,10 +28,7 @@
 #TypeHandler:hover {
   box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
-#TypeHandler .select{
-  position: relative;
-  top: 2px;
-}
+
 #TypeHandler .selectbtn {
   height: 26px;
   padding: 5px 0px;
@@ -42,6 +39,9 @@
           user-select: none;
   -webkit-transition: 0.2s, background-color 0.4s;
   transition: 0.2s, background-color 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 #TypeHandler .selectbtn:hover {
   background-color: rgba(0, 0, 0, 0.05);
@@ -157,7 +157,16 @@
   top: 3px;
 }
 @media only screen and (max-width: 480px) {
-#TypeHandler{
+  #TypeHandler{
     width: 70vw;
+  }
+  #TypeHandler .selectbtn{
+    height: 18px;
+  }
+  #TypeHandler .selectbtn .select{
+    font-size: 17px;
+  }
+  #viewbtn:checked ~ .options{
+    font-size: 17px;
   }
 }

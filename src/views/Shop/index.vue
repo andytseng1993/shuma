@@ -15,13 +15,8 @@ export default {
     FontAwesomeIcon
   },
   computed: {
-    engControl: {
-      get () {
-        return this.$store.state.engControl
-      },
-      set (val) {
-        this.$store.commit('SETLANGUAGE', val)
-      }
+    engControl () {
+      return this.$store.state.engControl
     },
     cartList () {
       return this.$store.state.cartList
@@ -112,6 +107,7 @@ export default {
 
   },
   mounted () {
+    this.$store.dispatch('GET_LANGUAGE')
     this.$store.dispatch('GETARTWORK')
     this.$store.dispatch('READ_SHOPLIST')
   },

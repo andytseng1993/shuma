@@ -11,13 +11,8 @@ export default {
     LightBox
   },
   computed: {
-    engControl: {
-      get () {
-        return this.$store.state.engControl
-      },
-      set (val) {
-        this.$store.commit('SETLANGUAGE', val)
-      }
+    engControl () {
+      return this.$store.state.engControl
     },
     artworks () {
       return this.$store.state.artworks
@@ -105,6 +100,7 @@ export default {
   },
   mounted () {
     this.$store.dispatch('GETARTWORK')
+    this.$store.dispatch('GET_LANGUAGE')
   },
   methods: {
   }

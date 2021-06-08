@@ -2,6 +2,7 @@
   user-select: none; 
 }
 .title {
+  margin: 10px 0px;
   font-family:'Times New Roman';
   display: flex;
   justify-content: center;
@@ -34,15 +35,23 @@
 }
 #lightBox{
   position: relative;
-  top: 50px;
-  margin-top: 30px;
+  top: 80px;
 }
 #TypeHandler {
   margin-top: 15px;
-  left: 8%;
+  left: 9%;
   transition: left 0.1s;
 }
+.footer{
+  position: relative;
+  top: 100px;
+  height: 30px;
+}
 @media only screen and (max-width: 480px) {
+  .title{
+    position: relative;
+    top: 10px;
+  }
   .title h1 {
     font-size: 9vw;
   }

@@ -2,8 +2,10 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import axios from 'axios'
 import LocalStorage from '../modules/LocalStorage'
+import LocalStorageEngControl from '../modules/LocalStorageEngControl'
 Vue.use(Vuex)
 
+const ENG = new LocalStorageEngControl('language')
 const STORE = new LocalStorage('shopList')
 
 export default new Vuex.Store({
@@ -28,8 +30,8 @@ export default new Vuex.Store({
     SETTYPE (state, type) {
       state.type = type
     },
-    SETLANGUAGE (state, language) {
-      state.engControl = language
+    SETLANGUAGE (state, val) {
+      state.engControl = val
     },
     SETLIGHTBOX (state, lightbox) {
       state.isLightboxOpen = lightbox
@@ -49,6 +51,15 @@ export default new Vuex.Store({
       return axios.get('/artwork.json').then(res => {
         context.commit('SETARTWORK', res.data)
       })
+    },
+    GET_LANGUAGE ({ commit }) {
+      const val = ENG.get()
+      commit('SETLANGUAGE', val)
+      return val
+    },
+    SET_LANGUAGE ({ commit }, value) {
+      ENG.set(value)
+      commit('SETLANGUAGE', value)
     },
     READ_SHOPLIST ({ commit }) {
       const items = STORE.get()

@@ -4,7 +4,7 @@
   display: flex;
   overflow-y: hidden;
   flex-direction: column;
-  background: no-repeat url("../../assets/selfi.jpg");
+  background: no-repeat url("../../assets/selfi_min.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -69,8 +69,8 @@
   color: rgba(255, 255, 255, 0.7);
 }
 .aboutme {
-  position: absolute;
-  top: 60vh;
+  position: relative;
+  top: 25%;
   width: 100vw;
   height: 40vh;
   flex-grow: 1;
@@ -95,6 +95,11 @@
   text-align: justify;
   font-size: min(1.6vw,23px);
   color: black;
+}
+.aboutme.english h4{
+  top: -400px;
+  line-height: 1.1em;
+  letter-spacing: 0.8px;
 }
 @media screen and (max-width: 1200px) and (min-width: 481px) {
   #about .aboutme{
@@ -121,10 +126,14 @@
     border-radius: 10px;
     color: white;
   }
+  #about .aboutme.english h4{
+  line-height: 1.2em;
+  letter-spacing: 0.8px;
+}
 }
 @media screen and (max-width: 480px) {
   #about {
-    background-position: 30% 100%;
+    background-position: 30% 50%;
     justify-content: space-between;
   }
   #nav{
@@ -165,17 +174,25 @@
     justify-content: center;
   }
   .aboutme h4 {
-    position: absolute;;
+    position: relative;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
     padding: 5px 10px;
     font-weight: 500;
-
     width: 90vw;
-    font-size: 3.8vw;
+    font-size: 4vw;
     right:auto;
-    top: auto;
-    bottom: 55px;
     color: white;
+    line-height: 1.3em;
+    letter-spacing: 0.9px;
+    top: -10px;
   }
+  .aboutme.english{
+    top: auto;
+  }
+  .aboutme.english h4{
+  top: 22vh;
+  line-height: 1.2em;
+  letter-spacing: 0.5px;
+}
 }
