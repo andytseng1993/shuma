@@ -69,11 +69,13 @@
     margin-bottom: 55px;
     filter: none;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 0.2s ease-out,transform 0.2s;
   }
   #lightBox .artworks .cover .box {
     align-items: flex-end;
   }
   #lightBox .artworks .cover .box h3 {
+    padding-top: 20px;
     bottom: 0px;
     color: black;
     position: relative;
@@ -89,10 +91,12 @@
     filter: none;
     box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
   }
+  #lightBox .artworks .cover:hover .box {
+  background-color: transparent;
+}
   #lightBox .artworks .cover:hover .box h3 {
     color: black;
-    transform: translateY(25px);
-    text-align: center;
+    transform: translateY(35px);
   }
 }
 
@@ -114,23 +118,23 @@
 
 .closeButton {
   position: fixed;
-  right: 40px;
-  top: 30px;
+  right: 3vw;
+  top: 2vw;
   z-index: 100;
 }
 .closeButton .circle {
   top: 2.5px;
   left: 2px;
   border-radius: 50%;
-  width: calc(10px + 1.5vw);
-  height: calc(10px + 1.5vw);
+  width: calc(20px + 1.5vw);
+  height: calc(20px + 1.5vw);
   position: absolute;
   z-index: -1;
   opacity: 0;
   transition: 0.2s ease-out;
 }
 .closeButton .fa-times-circle {
-  font-size: calc(17px + 1.5vw);
+  font-size: calc(25px + 1.5vw);
   color: rgba(247, 255, 247, 0.9);
   cursor: pointer;
   transition: 0.2s ease-in-out;
@@ -147,7 +151,7 @@
 
 .nextButton {
   position: fixed;
-  right: calc(25px + 1.5vw);
+  right: calc(15px + 1.5vw);
   top: 50vh;
   transform: translate(50%, -50%);
 }
@@ -160,7 +164,7 @@
 
 .preButton {
   position: fixed;
-  left: calc(25px + 1.5vw);
+  left: calc(15px + 1.5vw);
   top: 50vh;
   transform: translate(-50%, -50%);
 }
@@ -199,36 +203,8 @@
 .fade-enter,.fade-leave-to{
   opacity: 0;
 }
+/*lightBox img */
 
-@media only screen and (max-width: 480px) {
-  .closeButton {
-    right: 10px;
-    top: 10px;
-  }
-  .closeButton .circle {
-    width: 20px;
-    height: 20px;
-  }
-  .closeButton .fa-times-circle {
-    font-size: 28px;
-  }
-
-  .nextButton {
-    top: 94vh;
-  }
-  .nextButton .fa-chevron-right {
-    color: rgba(247, 255, 247, 0.4);
-    font-size: 35px;
-  }
-
-  .preButton {
-    top: 94vh;
-  }
-  .preButton .fa-chevron-left {
-    color: rgba(247, 255, 247, 0.4);
-    font-size: 35px;
-  }
-}
 .myPainting {
   width: 100vw;
   height: 100vh;
@@ -241,12 +217,21 @@
       -ms-user-select: none;
           user-select: none;
 }
+.myPainting .all{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    max-width: 90vw;
+  }
 .myPainting img {
   display: block;
   width: auto;
   height: auto;
+  padding: 0px 10px;
   max-width: 80vw;
-  max-height: 75vh;
+  max-height: 80vh;
   cursor: pointer;
   margin-left: auto;
   margin-right: auto;
@@ -263,37 +248,96 @@
 .words .name {
   text-align: left;
   margin-top: 10px;
-  border-top: 1px solid rgba(255, 255, 255, 0.7);
-  padding: 10px 0px 10px 10px;
-  letter-spacing: 2px;
+  border-top: 1px solid rgba(255, 255, 255, 0.8);
+  padding: 10px 15px;
+  letter-spacing: 1px;
   font-weight: 600;
   font-size: 20px;
 }
 .words .name .year {
   display: inline-block;
-  font-size: 17px;
-  letter-spacing: 1px;
+  font-size: 16px;
+  letter-spacing: 0px;
   font-weight: 500;
 }
 .words .material {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.8);
   text-align: left;
-  padding: 0px 0px 0px 10px;
-  font-size: 15px;
+  padding: 0px 15px;
+  font-size: 17px;
   letter-spacing: 2px;
   font-weight: 400;
 }
 .words .material .size {
   display: inline-block;
   margin-right: 0px;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
 }
 
 @media only screen and (max-width: 480px) {
+  /* lightBox btn*/
+  .closeButton {
+    right: 10px;
+    top: 10px;
+  }
+  .closeButton .circle {
+    width: 20px;
+    height: 20px;
+  }
+  .closeButton .fa-times-circle {
+    font-size: 28px;
+  }
+
+  .nextButton {
+    top: 94vh;
+  }
+  .nextButton .fa-chevron-right,.preButton .fa-chevron-left{
+    color: rgba(247, 255, 247, 0.6);
+    font-size: 35px;
+  }
+
+  .preButton {
+    top: 94vh;
+
+  }
+  /* lightBox img*/
+  .myPainting .all{
+
+  }
   .myPainting img {
-    max-width: 85vw;
-    max-height: 78vh;
+    max-width: 83vw;
+    max-height: 74vh;
+  }
+  .words .name{
+    letter-spacing: 1px;
+    margin: 10px 0vw 0px 0vw;
+    padding: 10px 4vw 5px 4vw;
+    font-size: 18px;
+  }
+  .words .name .year{
+    font-size: 13px;
+    letter-spacing: 0px;
+   }
+  .words .material{
+    padding: 0px 4vw;
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+  .nextButton .fa-chevron-right, .preButton .fa-chevron-left {
+    color: rgba(253, 253, 253, 0.6);
+    font-size: 40px;
+  }
+  .nextButton:hover .fa-chevron-right, .preButton:hover .fa-chevron-left {
+    filter: none;
+    color: rgba(253, 253, 253, 0.6);
+    transform: none;
+  }
+  .nextButton:active .fa-chevron-right, .preButton:active .fa-chevron-left {
+    filter: none;
+    color: #edf2f4;
+    transform: translate(2px,2px);
+    transition: 0.01s ease-out;
   }
 
 }

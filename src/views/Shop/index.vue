@@ -117,6 +117,10 @@ export default {
     },
     deleteList (val) {
       this.$store.dispatch('DELETE_SHOPLIST', val)
+    },
+    date: function () {
+      const nowDate = new Date()
+      return nowDate.getFullYear()
     }
 
   }

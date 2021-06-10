@@ -103,6 +103,10 @@ export default {
     this.$store.dispatch('GET_LANGUAGE')
   },
   methods: {
+    date: function () {
+      const nowDate = new Date()
+      return nowDate.getFullYear()
+    }
   }
 
 }
