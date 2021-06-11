@@ -66,8 +66,7 @@ export default {
       this.recaptchaVerifyKey = res
     },
     price (val) {
-      if (val === null) return 0
-      else return val.toLocaleString('en')
+      if (this.engControl) { return this.cartList.map(workart => workart.price[1]).reduce((accumulator, currentValue) => parseInt(accumulator) + parseInt(currentValue), 0) } else { return this.cartList.map(workart => workart.price[0]).reduce((accumulator, currentValue) => parseInt(accumulator) + parseInt(currentValue), 0) }
     },
     deleteList (val) {
       this.$store.dispatch('DELETE_SHOPLIST', val)

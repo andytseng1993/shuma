@@ -4,7 +4,7 @@
   display: flex;
   overflow-y: hidden;
   flex-direction: column;
-  background: no-repeat url("../../assets/selfi_min.jpg");
+  background: no-repeat url("../../assets/img/About/selfi.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;

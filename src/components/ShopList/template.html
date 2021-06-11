@@ -17,7 +17,7 @@
       <div class="details" >
         <div class="title" @click="setPlayId(artid),controlLightBox(true),lightboxNoScroll('add')">{{artwork}}</div>
 
-        <div class="price"><span class="price-symbol">{{engControl?'&#36':'NT&#36'}}</span>{{price(artworkMenu.map[artwork].price)}}
+        <div class="price"><span class="price-symbol">{{engControl?'&#36':'NT&#36'}}</span>{{engControl?price(artworkMenu.map[artwork].price[1]):price(artworkMenu.map[artwork].price[0])}}
         </div>
       </div>
     </div>
@@ -37,13 +37,13 @@
     <div class="orderList">
       <ul>
         <li v-for="(item,itemId) in cartList" :key="itemId">
-          <div class="img" :style="{ backgroundImage: 'url(' + item.src + ')' }"></div>
+          <div class="img" :style="{ 'background-image': 'url(' + require('@/assets/img/' + item.src) + ')' }"></div>
           <div class="details">
             <div class="title">
               <span class="name" >{{engControl?item.title[1]:item.title[0]}}</span>
               <span class="price">
                 <span class="price-symbol">
-                  {{engControl?'&#36':'NT&#36'}}</span>{{price(item.price)}}
+                  {{engControl?'&#36':'NT&#36'}}</span>{{engControl?price(item.price[1]):price(item.price[0])}}
               </span>
             </div>
             <div class="material"> {{engControl?item.material[1]:item.material[0]}}</div>
@@ -124,7 +124,7 @@
         <div class="all">
           <img
             id="myPaint"
-            :src="artworkDetail.src"
+            :src="require('@/assets/img/'+artworkDetail.src)"
             @click="change(nowPlayId+1)"
           >
           <div
@@ -149,7 +149,7 @@
               <span class="price-symbol">
                 {{engControl?'&#36':'NT&#36'}}
               </span>
-              {{price(artworkDetail.price)}}
+              {{engControl?price(artworkDetail.price[1]):price(artworkDetail.price[0])}}
             </div>
           </div>
         </div>

@@ -48,7 +48,7 @@ export default new Vuex.Store({
   },
   actions: {
     GETARTWORK (context) {
-      return axios.get('/artwork.json').then(res => {
+      return axios.get('./artwork.json').then(res => {
         context.commit('SETARTWORK', res.data)
       })
     },
