@@ -43,7 +43,7 @@ export default {
       return this.$store.state.engControl
     },
     subTotal () {
-      return this.cartList.map(workart => workart.price).reduce((accumulator, currentValue) => accumulator + currentValue, 0)
+      if (this.engControl) { return this.cartList.map(workart => workart.price[1]).reduce((accumulator, currentValue) => parseInt(accumulator) + parseInt(currentValue), 0) } else { return this.cartList.map(workart => workart.price[0]).reduce((accumulator, currentValue) => parseInt(accumulator) + parseInt(currentValue), 0) }
     }
   },
   watch: {
@@ -60,13 +60,18 @@ export default {
   mounted () {
     this.$store.dispatch('READ_SHOPLIST')
     this.$store.dispatch('GET_LANGUAGE')
+    this.focusInput()
   },
   methods: {
+    focusInput () {
+      this.$refs.name.focus()
+    },
     recaptchaverify (res) {
       this.recaptchaVerifyKey = res
     },
     price (val) {
-      if (this.engControl) { return this.cartList.map(workart => workart.price[1]).reduce((accumulator, currentValue) => parseInt(accumulator) + parseInt(currentValue), 0) } else { return this.cartList.map(workart => workart.price[0]).reduce((accumulator, currentValue) => parseInt(accumulator) + parseInt(currentValue), 0) }
+      if (val === null) return 0
+      else return val.toLocaleString('en')
     },
     deleteList (val) {
       this.$store.dispatch('DELETE_SHOPLIST', val)

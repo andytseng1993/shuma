@@ -30,7 +30,8 @@
   </transition>
 
   <div class="order-content">
-    <!-- order list -->
+
+     <!-- order list -->
     <div class="orderList">
       <div class="header">{{engControl?'Order Summary:':'訂單摘要：'}}</div>
       <ul>
@@ -88,6 +89,7 @@
       >
         <label>{{engControl?'Name*':'名字*'}}</label>
         <input
+          ref="name"
           v-model.trim="order.name"
           type="text"
           name="name"
