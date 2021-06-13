@@ -4,7 +4,7 @@
   display: flex;
   overflow-y: hidden;
   flex-direction: column;
-  background: no-repeat url("../../assets/img/About/selfi.jpg");
+  background: no-repeat url("../../assets/img/selfi.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -58,16 +58,31 @@
   margin:0px;
   font-size: max(3vw,45px);
 }
-.name {
+.link {
+  z-index: 100;
   font-family:'Times New Roman';
   position: absolute;
   bottom: 3vh;
   left: 6vw;
   font-weight: bold;
-  font-size: max(8vw,50px);
   letter-spacing: 3px;
   color: rgba(255, 255, 255, 0.7);
 }
+.link .name{
+  font-size: max(7vw,50px);
+}
+.link .hyperlink a{
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 3vw;
+  margin-right: 20px;
+}
+.link .hyperlink a:nth-of-type(1){
+  margin-left: 10px;
+}
+.link .hyperlink a:hover {
+  color: white;
+}
+
 .aboutme {
   position: relative;
   top: 25%;
@@ -97,7 +112,7 @@
   color: black;
 }
 .aboutme.english h4{
-  top: -400px;
+  top: -410px;
   line-height: 1.1em;
   letter-spacing: 0.8px;
 }
@@ -105,12 +120,23 @@
   #about .aboutme{
     justify-content: center;
   }
-  #about .name {
+  #about .link {
     bottom: 53vh;
     left:auto;
     right: 7vw;
     color: rgba(0, 0, 0, 0.5);
   }
+  #about .link .hyperlink a{
+    color: rgba(0, 0, 0, 0.4);
+    font-size:max(25px ,3.5vw);
+    margin-right: 10px;
+  }
+  .link .hyperlink a:nth-of-type(1){
+  margin-left: 5px;
+}
+  #about .link .hyperlink a:hover {
+    color: black;
+}
   #about .aboutme h4 {
     position: relative;
     top: auto;
@@ -153,13 +179,27 @@
   .title h1 {
     font-size: 9vw;
   }
-  .name {
-    top: 13vh;
+  .link {
+    top: 10vh;
     bottom: initial;
-    right: 15px;
+    right: 10px;
     left: initial;
-    font-size: 12vw;
+  }
+  .link .hyperlink a:nth-of-type(1){
+    margin-left: 3px;
+  }
+  .link .hyperlink a{
+    font-size: 6vw;
+    color: rgba(0, 0, 0, 0.5);
+    margin-right: 9px;
+    margin-left: initial;
+  }
+  .link .name{
+    font-size: 11vw;
     color: rgba(0, 0, 0, 0.6);
+  }
+  #about .link .hyperlink a:hover {
+  color: rgba(0, 0, 0, 0.6);
   }
   .title .beforeLine {
     flex: none;

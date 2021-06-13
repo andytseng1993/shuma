@@ -121,13 +121,14 @@
   margin-top: 75px;
   }
   .footer{
-    padding-top: 10px;
+    padding-top: 15px;
     margin-top: 10px;
-    height: 75px;
-    font-size: 12px;
+    height: 65px;
+    font-size: 14px;
   }
   .footer.cart{
-    height: 120px;
+    padding-top: 10px;
+    height: 130px;
   }
 }
 

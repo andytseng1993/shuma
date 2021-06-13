@@ -5,7 +5,21 @@
     <h1>{{engControl?'About':'關於'}}</h1>
     <div class="afterLine"></div>
   </div>
-  <span class="name">SHUMA</span>
+  <div class="link">
+    <div class="hyperlink">
+      <a href="https://www.facebook.com/SHUMAart" target="_blank">
+        <font-awesome-icon :icon="['fab','facebook-square']" />
+      </a>
+      <a href="https://www.instagram.com/shu_artproject/" target="_blank">
+        <font-awesome-icon :icon="['fab','instagram-square']" />
+      </a>
+      <a href="https://serenachen.artstation.com/" target="_blank">
+        <font-awesome-icon :icon="['fab','artstation']" />
+      </a>
+      
+    </div>
+    <span class="name">SHUMA</span>
+  </div>
   <div class="aboutme" :class="{english:engControl}">
     <h4>
       {{engControl?'Taiwanese American artist. I’m a freelance artist and illustrator in Los Angeles, California. In 2019, I set up SHUMA Art Studio. My art works are based on a fictional universe which has some unique lives and nature I created. These characters built up the utopia and stories which represent the reflection of my emotion from the conflict between the reality and illusion. I like to use bright color to be the atmosphere and make multiple layers by brush to represent the vitality in the utopia. Acrylic painting and gouache are my favorite materials to use in my artworks. Sometimes my part of artworks are made by the digital painting.':'台裔美國藝術家，目前留居於美國加州從事自由接案創作相關工作中。2019年成立SHUMA ART Studio,創作以一個架空世界觀為主的一系列作品。作品中，擅長使用大自然及自己獨創的動物們去描寫內心的理想國度。這些角色們所營造出的世界與故事，反映著藝術家從現實中體會到的心情，以及腦中幻想之間的衝突。喜歡用鮮亮的顏色去包覆畫裡的氛圍，透過筆刷的一層層堆疊去描繪虛幻國度的生命力。使用媒材多以壓克力及廣告顏料等沒采展現，也有部分作品以數位繪圖為表現手法。'}}

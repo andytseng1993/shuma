@@ -1,18 +1,15 @@
 <script>
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+
 import FilterType from '@/components/SelectType/index.vue'
 import ShopList from '@/components/ShopList/index.vue'
 import Navigation from '@/components/Navigation/index.vue'
-library.add(faShoppingCart)
 
 export default {
   components: {
     Navigation,
     FilterType,
-    ShopList,
-    FontAwesomeIcon
+    ShopList
+
   },
   computed: {
     engControl () {
@@ -49,14 +46,14 @@ export default {
       }
     },
     shoplists () {
-      return this.artworks.filter((artwork) => { return artwork.sell === true })
+      return this.artworks.filter((artwork) => { return artwork.sell === true && artwork.soldOut === false })
     },
     typeList () {
       const obj = {
         sort: [],
         map: { }
       }
-      this.shoplists.forEach(({ type, title, src, year, material, size, sell, soldout, price }, index) => {
+      this.shoplists.forEach(({ type, title, thumbnail, src, year, material, size, sell, soldout, price }, index) => {
         if (!this.engControl) {
           if (!obj.map[type[0]]) {
             obj.sort.push(type[0])
@@ -66,7 +63,7 @@ export default {
             }
           }
           obj.map[type[0]].sort.push(title[0])
-          obj.map[type[0]].map[title[0]] = { index, src, year, material, size, sell, soldout, price }
+          obj.map[type[0]].map[title[0]] = { index, thumbnail, src, year, material, size, sell, soldout, price }
         } else {
           if (!obj.map[type[1]]) {
             obj.sort.push(type[1])
@@ -76,7 +73,7 @@ export default {
             }
           }
           obj.map[type[1]].sort.push(title[1])
-          obj.map[type[1]].map[title[1]] = { index, src, year, material, size, sell, soldout, price }
+          obj.map[type[1]].map[title[1]] = { index, thumbnail, src, year, material, size, sell, soldout, price }
         }
       })
 
@@ -90,13 +87,13 @@ export default {
           sort: [],
           map: {}
         }
-        this.shoplists.forEach(({ title, src, year, material, size, sell, soldout, price }, index) => {
+        this.shoplists.forEach(({ title, thumbnail, src, year, material, size, sell, soldout, price }, index) => {
           if (!this.engControl) {
             el.sort.push(title[0])
-            el.map[title[0]] = { title, index, src, year, material, size, sell, soldout, price }
+            el.map[title[0]] = { title, thumbnail, index, src, year, material, size, sell, soldout, price }
           } else {
             el.sort.push(title[1])
-            el.map[title[1]] = { title, index, src, year, material, size, sell, soldout, price }
+            el.map[title[1]] = { title, thumbnail, index, src, year, material, size, sell, soldout, price }
           }
         })
         return el
