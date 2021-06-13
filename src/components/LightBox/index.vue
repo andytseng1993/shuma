@@ -45,7 +45,7 @@ export default {
   },
   methods: {
     bgcss (url) {
-      return { 'background-image': 'url(' + require('@/assets/img/' + url) + ')' }
+      return { 'background-image': 'url(' + require('@/assets/thumbnail/' + url) + ')' }
     },
     setPlayId (id) {
       this.$emit('update:nowPlayId', id)

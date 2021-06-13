@@ -11,7 +11,7 @@
       <div
         class="img"
         @click="setPlayId(artid),controlLightBox(true),lightboxNoScroll('add')"
-        :style="bgcss(artworkMenu.map[artwork].src)"
+        :style="bgcss(artworkMenu.map[artwork].thumbnail)"
       >
       </div>
       <div class="details" >
@@ -37,7 +37,7 @@
     <div class="orderList">
       <ul>
         <li v-for="(item,itemId) in cartList" :key="itemId">
-          <div class="img" :style="{ 'background-image': 'url(' + require('@/assets/img/' + item.src) + ')' }"></div>
+          <div class="img" :style="{ 'background-image': 'url(' + require('@/assets/thumbnail/' + item.thumbnail) + ')' }"></div>
           <div class="details">
             <div class="title">
               <span class="name" >{{engControl?item.title[1]:item.title[0]}}</span>

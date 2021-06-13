@@ -6,7 +6,7 @@
     <div
       class="cover"
       v-for="(artwork,artid) in artworkMenu.sort"
-      :style="bgcss(artworkMenu.map[artwork].src)"
+      :style="bgcss(artworkMenu.map[artwork].thumbnail)"
       :key="artid"
     >
       <div
