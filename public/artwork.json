@@ -1,9 +1,30 @@
-[
+[ 
+    {
+      "thumbnail": "Swamp-min.jpg",
+      "src": "Swamp.jpg",
+      "type": [
+        "壓克力顏料系列",
+        "Acrylic Painting"
+      ],
+      "title": [
+        "沼澤",
+        "Swamp"
+      ],
+      "year": 2021,
+      "material": [
+        "壓克力顏料,畫布",
+        "Acrylic Painting, Canvas"
+      ],
+      "size": "24×24 inch",
+      "sell": false,
+      "soldOut": false,
+      "price": 0
+    },
     {
       "thumbnail": "The-Night-Citizen-min.jpg",
       "src": "The_Night_Citizen.jpg",
       "type": [
-        "壓克力顏料系列 ",
+        "壓克力顏料系列",
         "Acrylic Painting"
       ],
       "title": [
@@ -19,7 +40,7 @@
       "sell": true,
       "soldOut": false,
       "price": [
-        32000,
+        30000,
         1200
       ]
     },
@@ -48,7 +69,7 @@
       "thumbnail": "Legand-of-Horse-min.jpg",
       "src": "Legand-of-Horse.jpg",
       "type": [
-        " 12生肖傳說 ",
+        "12生肖傳說",
         "Legend of Zodiac"
       ],
       "title": [
@@ -66,10 +87,94 @@
       "price": 0
     },
     {
+     "thumbnail": "rabbit-hiding-min.jpg",
+      "src": "rabbit-hiding.jpg", 
+      "type": [
+        "廣告顏料系列",
+        "Gouache Painting"
+      ],
+      "title": [
+        "藏",
+        "Hiding"
+      ],
+      "year": 2021,
+      "material": [
+        "廣告顏料,水彩紙",
+        "Gouache, Paper"
+      ],
+      "size": "7×5.5inch ",
+      "sell": true,
+      "soldOut": false,
+      "price": [7500,230]
+    },
+    {
+      "thumbnail": "Rich-min.jpg",
+      "src": "Rich.jpg",
+      "type": [
+        "廣告顏料系列",
+        "Gouache Painting"
+      ],
+      "title": [
+        "富",
+        "Rich"
+      ],
+      "year": 2021,
+      "material": [
+        "廣告顏料,水彩紙",
+        "Gouache, Paper"
+      ],
+      "size": "9.5×6inch",
+      "sell": true,
+      "soldOut": false,
+      "price": [7500,230]
+    },
+    {
+      "thumbnail": "white-witch-min.jpg",
+      "src": "white-witch.jpg",
+      "type": [
+        "廣告顏料系列",
+        "Gouache Painting"
+      ],
+      "title": [
+        "白色女巫",
+        "White Witch"
+      ],
+      "year": 2021,
+      "material": [
+        "廣告顏料,水彩紙",
+        "Gouache, Paper"
+      ],
+      "size": "8.3×11.7inch",
+      "sell": false,
+      "soldOut": false,
+      "price": 0
+    },
+    { 
+      "thumbnail": "galaxy-princess-min.jpg",
+      "src": "galaxy-princess.jpg",
+      "type": [
+        "廣告顏料系列",
+        "Gouache Painting"
+      ],
+      "title": [
+        "宇宙公主",
+        "Galaxy Princess"
+      ],
+      "year": 2021,
+      "material": [
+        "廣告顏料,水彩紙",
+        "Gouache, Paper"
+      ],
+      "size": "7×5.5 inch",
+      "sell": false,
+      "soldOut": false,
+      "price": 0
+    },
+    {
       "thumbnail": "Forever-Love-Bridge-and-Groom-min.jpg",
       "src": "Forever-Love_Bridge-and-Groom.jpg",
       "type": [
-        " 廣告顏料系列",
+        "廣告顏料系列",
         "Gouache Painting"
       ],
       "title": [
@@ -79,7 +184,7 @@
       "year": 2020,
       "material": [
         "廣告顏料,水彩紙",
-        "Gouache, paper"
+        "Gouache, Paper"
       ],
       "size": "6×9 inch",
       "sell": true,
@@ -90,7 +195,7 @@
       "thumbnail": "Amazing-Food_1-min.jpg",
       "src": "Amazing-Food_1.jpg",
       "type": [
-        " 廣告顏料系列",
+        "廣告顏料系列",
         "Gouache Painting"
       ],
       "title": [
@@ -100,7 +205,7 @@
       "year": 2020,
       "material": [
         "廣告顏料,水彩紙",
-        "Gouache, paper"
+        "Gouache, Paper"
       ],
       "size": "6×9 inch",
       "sell": true,
@@ -111,7 +216,7 @@
       "thumbnail": "Amazing-food_2-min.jpg",
       "src": "Amazing-food_2.jpg",
       "type": [
-        " 廣告顏料系列",
+        "廣告顏料系列",
         "Gouache Painting"
       ],
       "title": [
@@ -121,7 +226,7 @@
       "year": 2020,
       "material": [
         "廣告顏料,水彩紙",
-        "Gouache, paper"
+        "Gouache, Paper"
       ],
       "size": "6×9 inch",
       "sell": true,
@@ -135,7 +240,7 @@
       "thumbnail": "Work-at-ice-Mountain-min.jpg",
       "src": "Work-at-ice-Mountain.jpg",
       "type": [
-        " 廣告顏料系列",
+        "廣告顏料系列",
         "Gouache Painting"
       ],
       "title": [
@@ -145,7 +250,7 @@
       "year": 2021,
       "material": [
         "廣告顏料,水彩紙",
-        "Gouache, paper"
+        "Gouache, Paper"
       ],
       "size": "8.5×11.7 inch",
       "sell": false,
@@ -156,7 +261,7 @@
       "thumbnail": "Black-Witch-min.jpg",
       "src": "Black-Witch.jpg",
       "type": [
-        " 廣告顏料系列",
+        "廣告顏料系列",
         "Gouache Painting"
       ],
       "title": [
@@ -166,7 +271,7 @@
       "year": 2021,
       "material": [
         "廣告顏料,水彩紙",
-        "Gouache, paper"
+        "Gouache, Paper"
       ],
       "size": "8.5×11.7 inch",
       "sell": false,
@@ -198,7 +303,7 @@
       "thumbnail": "Moon-Bear-min.jpg",
       "src": "Moon-Bear.jpg",
       "type": [
-        " 數位繪圖",
+        "數位繪圖",
         "Digital Painting"
       ],
       "title": [
@@ -219,7 +324,7 @@
       "thumbnail": "OX-New-Year-min.jpg",
       "src": "OX-New-Year.jpg",
       "type": [
-        " 數位繪圖",
+        "數位繪圖",
         "Digital Painting"
       ],
       "title": [
@@ -240,7 +345,7 @@
       "thumbnail": "Lust-min.jpg",
       "src": "Lust.jpg",
       "type": [
-        " 數位繪圖",
+        "數位繪圖",
         "Digital Painting"
       ],
       "title": [
@@ -258,10 +363,115 @@
       "price": 0
     },
     {
+      "thumbnail": "sketch-dog-min.jpg",
+      "src": "sketch-dog.jpg",
+      "type": [
+        "速寫系列",
+        "Sketch"
+      ],
+      "title": [
+        "狗",
+        "Dog"
+      ],
+      "year": 2021,
+      "material": [
+        "墨筆,麥克筆, 紙本",
+        "Ink, Markers, Paper"
+      ],
+      "size": "7×10 inch",
+      "sell": false,
+      "soldOut": false,
+      "price": 0
+    },
+    {
+      "thumbnail": "sketch-pig-min.jpg",
+      "src": "sketch-pig.jpg",
+      "type": [
+        "速寫系列",
+        "Sketch"
+      ],
+      "title": [
+        "豬",
+        "Pig"
+      ],
+      "year": 2021,
+      "material": [
+        "墨筆, 麥克筆, 紙本",
+        "Ink, Markers, Paper"
+      ],
+      "size": "7×10 inch",
+      "sell": false,
+      "soldOut": false,
+      "price": 0
+    },
+    {
+      "thumbnail": "sketch-rabbit-min.jpg",
+      "src": "sketch-rabbit.jpg",
+      "type": [
+        "速寫系列",
+        "Sketch"
+      ],
+      "title": [
+        "兔子",
+        "Rabbit"
+      ],
+      "year": 2021,
+      "material": [
+        "墨筆, 麥克筆, 紙本",
+        "Ink, Markers, Paper"
+      ],
+      "size": "7×10 inch",
+      "sell": false,
+      "soldOut": false,
+      "price": 0
+    },
+    {
+      "thumbnail": "sketch-crab-min.jpg",
+      "src": "sketch-crab.jpg",
+      "type": [
+        "速寫系列",
+        "Sketch"
+      ],
+      "title": [
+        "螃蟹",
+        "Crab"
+      ],
+      "year": 2021,
+      "material": [
+        "墨筆, 麥克筆, 紙本",
+        "Ink, Markers, Paper"
+      ],
+      "size": "7×10 inch",
+      "sell": false,
+      "soldOut": false,
+      "price": 0
+    },
+    {
+      "thumbnail": "where-is-pink-min.jpg",
+      "src": "where-is-pink.jpg",
+      "type": [
+        "速寫系列",
+        "Sketch"
+      ],
+      "title": [
+        "粉色",
+        "Where’s pink"
+      ],
+      "year": 2021,
+      "material": [
+        "色鉛筆, 麥克筆, 紙本",
+        "Color Pencil, Markers, Paper"
+      ],
+      "size": "7×10 inch",
+      "sell": false,
+      "soldOut": false,
+      "price": 0
+    },
+    {
       "thumbnail": "New-Year-eve-min.jpg",
       "src": "New-Year-eve.jpg",
       "type": [
-        " 鼠新年系列",
+        "鼠新年系列",
         "Rat New Year"
       ],
       "title": [
@@ -271,7 +481,7 @@
       "year": 2020,
       "material": [
         "油漆筆,水彩紙",
-        "Paint Marker, paper"
+        "Paint Marker, Paper"
       ],
       "size": "6×8 inch",
       "sell": true,
@@ -285,7 +495,7 @@
       "thumbnail": "New-Year-first-day-min.jpg",
       "src": "New-Year-first-day.jpg",
       "type": [
-        " 鼠新年系列",
+        "鼠新年系列",
         "Rat New Year"
       ],
       "title": [
@@ -295,7 +505,7 @@
       "year": 2020,
       "material": [
         "油漆筆,水彩紙",
-        "Paint Marker, paper"
+        "Paint Marker, Paper"
       ],
       "size": "6×8 inch",
       "sell": true,
@@ -309,7 +519,7 @@
       "thumbnail": "New-Year-second-day-min.jpg",
       "src": "New-Year-second-day.jpg",
       "type": [
-        " 鼠新年系列",
+        "鼠新年系列",
         "Rat New Year"
       ],
       "title": [
@@ -319,7 +529,7 @@
       "year": 2020,
       "material": [
         "油漆筆,水彩紙",
-        "Paint Marker, paper"
+        "Paint Marker, Paper"
       ],
       "size": "6×8 inch",
       "sell": true,
@@ -333,7 +543,7 @@
       "thumbnail": "End-of-New-Year-min.jpg",
       "src": "End-of-New-Year.jpg",
       "type": [
-        " 鼠新年系列",
+        "鼠新年系列",
         "Rat New Year"
       ],
       "title": [
@@ -343,7 +553,7 @@
       "year": 2020,
       "material": [
         "油漆筆,水彩紙",
-        "Paint Marker, paper"
+        "Paint Marker, Paper"
       ],
       "size": "6×8 inch",
       "sell": true,
@@ -354,7 +564,7 @@
       "thumbnail": "New-Year-After-min.jpg",
       "src": "New-Year-After.jpg",
       "type": [
-        " 鼠新年系列",
+        "鼠新年系列",
         "Rat New Year"
       ],
       "title": [
@@ -364,7 +574,7 @@
       "year": 2020,
       "material": [
         "油漆筆,水彩紙",
-        "Paint Marker, paper"
+        "Paint Marker, Paper"
       ],
       "size": "6×8 inch",
       "sell": true,
@@ -378,7 +588,7 @@
       "thumbnail": "Australia-Fire-min.jpg",
       "src": "Australia-Fire.jpg",
       "type": [
-        " 鼠新年系列",
+        "鼠新年系列",
         "Rat New Year"
       ],
       "title": [
@@ -388,7 +598,7 @@
       "year": 2020,
       "material": [
         "油漆筆,水彩紙",
-        "Paint Marker, paper"
+        "Paint Marker, Paper"
       ],
       "size": "6×8 inch",
       "sell": true,
@@ -399,7 +609,7 @@
       "thumbnail": "After-Fire-min.jpg",
       "src": "After-Fire.jpg",
       "type": [
-        " 鼠新年系列",
+        "鼠新年系列",
         "Rat New Year"
       ],
       "title": [
@@ -409,7 +619,7 @@
       "year": 2020,
       "material": [
         "油漆筆,水彩紙",
-        "Paint Marker, paper"
+        "Paint Marker, Paper"
       ],
       "size": "6×8 inch",
       "sell": true,
@@ -441,7 +651,7 @@
       "thumbnail": "Electric-Cat-min.jpg",
       "src": "Electric-Cat.jpg",
       "type": [
-        " 貓系列",
+        "貓系列",
         "CAT"
       ],
       "title": [
@@ -604,8 +814,8 @@
       "sell": true,
       "soldOut": false,
       "price": [
-        6500,
-        250
+        7500,
+        230
       ]
     },
     {
@@ -628,8 +838,8 @@
       "sell": true,
       "soldOut": false,
       "price": [
-        6500,
-        250
+        7500,
+        230
       ]
     },
     {
@@ -652,8 +862,8 @@
       "sell": true,
       "soldOut": true,
       "price": [
-        6500,
-        250
+        7500,
+        230
       ]
     },
     {
@@ -676,8 +886,8 @@
       "sell": true,
       "soldOut": false,
       "price": [
-        6500,
-        250
+        7500,
+        230
       ]
     }
     
