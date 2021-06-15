@@ -37,7 +37,7 @@
         "Acrylic Painting, Canvas"
       ],
       "size": "18×24 inch",
-      "sell": true,
+      "sell": false,
       "soldOut": false,
       "price": [
         30000,
@@ -102,8 +102,8 @@
         "廣告顏料,水彩紙",
         "Gouache, Paper"
       ],
-      "size": "7×5.5inch ",
-      "sell": true,
+      "size": "7×5.5 inch ",
+      "sell": false,
       "soldOut": false,
       "price": [7500,230]
     },
@@ -123,7 +123,7 @@
         "廣告顏料,水彩紙",
         "Gouache, Paper"
       ],
-      "size": "9.5×6inch",
+      "size": "9.5×6 inch",
       "sell": true,
       "soldOut": false,
       "price": [7500,230]
@@ -144,7 +144,7 @@
         "廣告顏料,水彩紙",
         "Gouache, Paper"
       ],
-      "size": "8.3×11.7inch",
+      "size": "8.3×11.7 inch",
       "sell": false,
       "soldOut": false,
       "price": 0

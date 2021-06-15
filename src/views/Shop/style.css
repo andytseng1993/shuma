@@ -7,12 +7,12 @@
   background-position: 60% 70%;
 }
 .title {
-  font-family:'Times New Roman';
+  font-family:'Times New Roman','Taipei Sans';
   display: flex;
   justify-content: center;
   align-items: center;
   color: black;
-  margin: 10px 0px;
+  margin: 20px 0px;
 }
 .title .beforeLine {
   flex: 1 1;
@@ -35,7 +35,7 @@
 }
 .title h1{
   margin:0px;
-  font-size: max(3vw,45px);
+  font-size: max(2.2vw,40px);
 }
 .shopcontrol {
   display: inline-block;
@@ -81,7 +81,7 @@
     font-size: 16px;
     border-top: 1px rgba(0, 0, 0, 0.1) solid;
     height: initial;
-    font-family:  'Times New Roman';
+    font-family:  'Times New Roman','Taipei Sans';
   }
 @media only screen and (max-width: 992px){
   #TypeHandler{

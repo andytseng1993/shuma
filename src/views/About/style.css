@@ -24,7 +24,7 @@
 }
 
 .title {
-  font-family:'Times New Roman';
+  font-family:'Times New Roman','Taipei Sans';
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,7 +33,7 @@
           background-clip: text;
   color: transparent;
   filter: invert(1) grayscale(1) contrast(10);
-  margin-top: 10px;
+  margin-top: 20px;
 }
 .title .beforeLine {
   flex: 1 1;
@@ -56,7 +56,7 @@
 }
 .title h1{
   margin:0px;
-  font-size: max(3vw,45px);
+  font-size: max(2.4vw,40px);
 }
 .link {
   z-index: 100;

@@ -76,16 +76,6 @@ export default {
     deleteList (val) {
       this.$store.dispatch('DELETE_SHOPLIST', val)
     },
-    sendEmail () {
-      emailjs.send('service_hd39hf4', 'template_6ngi6cd', this.order, 'user_XiclrBTze0zEbsO6pBizA').then(function (response) {
-        console.log('SUCCESS!', response.status, response.text)
-      }, function (error) {
-        console.log('FAILED...', error)
-      })
-      this.order.name = null
-      this.order.email = null
-      this.order.message = null
-    },
     send () {
       if (this.order.name && this.order.email && this.recaptchaVerifyKey) {
         emailjs.send(process.env.VUE_APP_EMAILJS_SERVICE_ID, process.env.VUE_APP_EMAILJS_TEMPALTE_ID, this.order, process.env.VUE_APP_EMAILJS_USER_ID).then(function (response) {

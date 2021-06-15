@@ -1,3 +1,6 @@
+* {
+  font-family: "Times New Roman", 'Taipei Sans';
+}
 #lightBox .artworks {
   margin: 0px 8%;
   height: 100%;
@@ -19,10 +22,10 @@
   position: relative;
   flex: 1 1 300px;
   background-position: center center;
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: contain;
   filter: drop-shadow(3px 7px 3px rgba(0, 0, 0, 0.4));
   transition:transform 0.2s ease-in-out,filter 0.1s ease-in-out;
-  
 }
 #lightBox .artworks .cover .box {
   position: relative;
@@ -61,6 +64,7 @@
   transform: translateY(0px);
 }
 @media only screen and (max-width: 480px) {
+  
   #lightBox .artworks {
     margin: 10px;
     border: none;
@@ -68,15 +72,15 @@
   #lightBox .artworks .cover {
     margin-bottom: 55px;
     filter: none;
-    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+    background-size: cover;
     transition: box-shadow 0.2s ease-out,transform 0.2s;
   }
   #lightBox .artworks .cover .box {
     align-items: flex-end;
   }
   #lightBox .artworks .cover .box h3 {
-    padding-top: 20px;
-    bottom: 0px;
+    padding: 20px;
+    bottom: -15px;
     color: black;
     position: relative;
     transform: translateY(40px);
@@ -89,7 +93,7 @@
   #lightBox .artworks .cover:hover {
     transform: translate(-2px, -2px);
     filter: none;
-    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);
   }
   #lightBox .artworks .cover:hover .box {
   background-color: transparent;
@@ -154,6 +158,7 @@
   right: calc(15px + 1.5vw);
   top: 50vh;
   transform: translate(50%, -50%);
+  padding-left: -1px;
 }
 .nextButton .fa-chevron-right {
   font-size: calc(35px + 1.5vw);
@@ -178,7 +183,7 @@
 .nextButton:hover .fa-chevron-right {
   filter: drop-shadow(-5px 0px 5px black);
   color: #edf2f4;
-  transform: translateX(4px);
+  transform: translateX(3px);
 }
 .nextButton:active .fa-chevron-right {
   filter: drop-shadow(-5px 0px 5px black);
@@ -189,7 +194,7 @@
 .preButton:hover .fa-chevron-left {
   filter: drop-shadow(5px 0px 5px black);
   color: #edf2f4;
-  transform: translateX(-4px);
+  transform: translateX(-3px);
 }
 .preButton:active .fa-chevron-left {
   filter: drop-shadow(-5px 0px 5px black);
