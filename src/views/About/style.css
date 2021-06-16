@@ -15,12 +15,8 @@
   background-position: 100% 44%;
 }
 #nav{
-  position: relative;
-  display: flex;
-  padding: 0px;
   background-color:rgba(0, 0, 0, 0.5);
-  justify-content: center;
-  z-index: 1;
+  z-index: 50;
 }
 
 .title {
@@ -100,7 +96,7 @@
 .aboutme h4 {
   position: relative;
   right: 3vw;
-  top: -380px;
+  top: -400px;
   width: 39vw;
   margin: 0px;
   font-family:'Times New Roman','Taipei Sans';

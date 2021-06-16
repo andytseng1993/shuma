@@ -5,12 +5,12 @@
   font-family:'Times New Roman','Taipei Sans';
 }
 #shopList .items {
-  width: 1000px;
+  width: 1050px;
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  margin-left: 10px;
+  justify-content: space-between;
+  margin: 0px 3%;
   transition: 0.2s;
 }
 #shopList .items.isLightboxOpen {
@@ -20,11 +20,15 @@
 #shopList .items .cover {
   margin: 10px 15px;
   margin-top: 20px;
-  width: 25%;
-  flex: 1 1;
-  min-width: 200px;
-  max-width: 250px;
+  width: 22%;
+
   transition: 0.3s ease-in-out;
+}
+#shopList .items::after{
+  content: '';
+  width: 230px;
+  margin-right: auto;
+  
 }
 #shopList .items .cover .img {
   box-sizing: border-box;
@@ -212,7 +216,26 @@
   color: rgba(255, 62, 62, 0.9);
 }
 
-
+@media only screen and (max-width: 1580px){
+  #shopList .items .cover {
+  margin: 10px 15px;
+  margin-top: 20px;
+  min-width: 200px;
+  width: 25%;
+}
+}
+@media only screen and (max-width: 1260px){
+  #shopList .items .cover {
+  margin: 10px 15px;
+  margin-top: 20px;
+  min-width: 200px;
+  width: 40%;
+}
+#shopList .items {
+  width: 650px;
+  margin: initial;
+}
+}
 @media only screen and (max-width: 992px){
   #shopList .items{
     margin-left: 0;

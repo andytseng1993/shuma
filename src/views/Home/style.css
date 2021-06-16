@@ -179,10 +179,29 @@
 }
 @media screen and (max-width: 480px) {
   #Home .translate {
-  right: 15px;
-  bottom: 20px;
+  right: 10px;
+  bottom: 15px;
   top: initial
 }
+#Home .translate label {
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+}
+#Home .translate label .ch {
+  width: 20px;
+  height: 22p;
+  padding: 0px 2px;
+}
+#Home .translate label span {
+  font-size: 20px;
+  font-weight: 800;
+}
+#Home .translate label .eg {
+  width: 22px;
+  height: 22px;
+}
+
   #Home .word .name {
     font-size: 10vh;
   }
@@ -204,7 +223,7 @@
     margin: 0px;
   }
   #Home .nav a{
-    padding: 10px 20px;
+    padding: 10px 16px;
     font-size: 4vw;
     margin: 0px;
     margin-top: 2vh;

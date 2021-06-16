@@ -2,11 +2,11 @@
   font-family: "Times New Roman", 'Taipei Sans';
 }
 #lightBox .artworks {
-  margin: 0px 8%;
+  margin: 0px 5%;
   height: 100%;
   flex-wrap: wrap;
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: flex-start;
   transition: 0.3s ease-in-out;
 }
@@ -15,18 +15,23 @@
 }
 #lightBox .artworks .cover {
   margin: calc(1px + 2%) calc(1px + 2%);
-  width: 100%;
-  height: 340px;
-  max-width: 600px;
+  width: 20.8%;
+  height: 370px;
   border-radius: 3px;
   position: relative;
-  flex: 1 1 300px;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
   filter: drop-shadow(3px 7px 3px rgba(0, 0, 0, 0.4));
   transition:transform 0.2s ease-in-out,filter 0.1s ease-in-out;
 }
+
+#lightBox .artworks::after{
+  content: '';
+  flex: 1 0 200px;
+}
+
+
 #lightBox .artworks .cover .box {
   position: relative;
   width: 100%;
@@ -63,47 +68,6 @@
   opacity: 1;
   transform: translateY(0px);
 }
-@media only screen and (max-width: 480px) {
-  
-  #lightBox .artworks {
-    margin: 10px;
-    border: none;
-  }
-  #lightBox .artworks .cover {
-    margin-bottom: 55px;
-    filter: none;
-    background-size: cover;
-    transition: box-shadow 0.2s ease-out,transform 0.2s;
-  }
-  #lightBox .artworks .cover .box {
-    align-items: flex-end;
-  }
-  #lightBox .artworks .cover .box h3 {
-    padding: 20px;
-    bottom: -15px;
-    color: black;
-    position: relative;
-    transform: translateY(40px);
-    font-size: 16px;
-    letter-spacing: 0px;
-    opacity: 1;
-    transition: 0.2s ease-out;
-    text-align: center;
-  }
-  #lightBox .artworks .cover:hover {
-    transform: translate(-2px, -2px);
-    filter: none;
-    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);
-  }
-  #lightBox .artworks .cover:hover .box {
-  background-color: transparent;
-}
-  #lightBox .artworks .cover:hover .box h3 {
-    color: black;
-    transform: translateY(35px);
-  }
-}
-
 
 .lightbox {
   width: 100%;
@@ -279,8 +243,78 @@
   font-size: 16px;
   font-weight: 400;
 }
+@media only screen and (max-width: 1800px) {
+  #lightBox .artworks .cover {
+  width: 29%;
+  }
+  #lightBox .artworks {
+  margin: 0px 8%;
+  }
+}
 
+@media only screen and (max-width: 1350px) {
+  #lightBox .artworks {
+    margin: 0px 10%;
+  }
+  #lightBox .artworks .cover {
+    width: 45%;
+    height: 360px;
+  }
+}
+
+@media only screen and (max-width: 790px) {
+
+  #lightBox .artworks {
+    justify-content: center;
+  }
+  #lightBox .artworks .cover {
+    width: 85%;
+    height: 370px;
+    max-width: 450px;
+  }
+}
 @media only screen and (max-width: 480px) {
+  /* artworks */
+  #lightBox .artworks {
+    justify-content: center;
+    margin: 10px;
+    border: none;
+  }
+  #lightBox .artworks .cover {
+    margin-bottom: 55px;
+    filter: none;
+    background-size: cover;
+    transition: box-shadow 0.2s ease-out,transform 0.2s;
+    width: 80%;
+  }
+  #lightBox .artworks .cover .box {
+    align-items: flex-end;
+  }
+  #lightBox .artworks .cover .box h3 {
+    padding: 20px;
+    bottom: -15px;
+    color: black;
+    position: relative;
+    transform: translateY(40px);
+    font-size: 16px;
+    letter-spacing: 0px;
+    opacity: 1;
+    transition: 0.2s ease-out;
+    text-align: center;
+  }
+  #lightBox .artworks .cover:hover {
+    transform: translate(-2px, -2px);
+    filter: none;
+    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);
+  }
+  #lightBox .artworks .cover:hover .box {
+  background-color: transparent;
+}
+  #lightBox .artworks .cover:hover .box h3 {
+    color: black;
+    transform: translateY(35px);
+  }
+
   /* lightBox btn*/
   .closeButton {
     right: 10px;

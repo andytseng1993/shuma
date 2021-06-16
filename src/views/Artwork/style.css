@@ -57,6 +57,11 @@
     height: initial;
     font-family:'Times New Roman','Taipei Sans';
   }
+@media only screen and (max-width: 1350px) {
+  #TypeHandler{
+    left:12%;
+}
+}
 @media only screen and (max-width: 790px){
   #TypeHandler{
     margin-top: 30px;
