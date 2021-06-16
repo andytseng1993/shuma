@@ -29,7 +29,7 @@
     </div>
   </transition>
 
-  <div class="order-content">
+  <div class="order-content" :class="{confirm:show}">
 
      <!-- order list -->
     <div class="orderList">
@@ -55,7 +55,7 @@
             <div class="size"> {{ item.size }}
               <div
                 class="remove"
-                @click="deleteList(itemId),value(itemId)"
+                @click="deleteList(itemId)"
               >&#10006</div>
             </div>
           </div>
@@ -63,6 +63,7 @@
         <li
           class="emptyCart"
           v-if="!cartList.length"
+          :class="{empty:cartEmpty}"
         >
           <font-awesome-icon icon=shopping-cart />
           <div>
