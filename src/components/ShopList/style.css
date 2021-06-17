@@ -364,7 +364,7 @@
     font-size: 6vw;
 }
   #shopList .orderTotal .subTotal .total{
-    font-size: 4vw;
+    font-size: 16px;
   }
   #shopList .orderTotal .subTotal a.submit{
     font-size: 4vw;
@@ -592,7 +592,7 @@
   font-weight: 700;
 }
 .price-symbol{
-  font-size: 13px;
+  font-size: 12px;
   position: relative;
   top: -0.2em;
 }

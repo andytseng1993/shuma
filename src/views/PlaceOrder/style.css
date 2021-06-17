@@ -221,7 +221,9 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #45a049;
 }
-
+input[type=submit]:active{
+  transform: translate(2px,2px);
+}
 /* confirm */
 
 .confirm{
