@@ -13,5 +13,7 @@
         :isLightboxOpen="isLightboxOpen"
         ></FilterType>
     <LightBox :isLightboxOpen.sync="isLightboxOpen" :artworkMenu="artworkMenu" :engControl="engControl" :nowPlayId.sync="nowPlayId"></LightBox>
-    <div class="footer"></div>
+    <div
+        class="footer"
+    >{{engControl?'Copyright &#169;'+ date()+ ' SHUMA. All Rights Reserved':'版權所有 &#169;'+ date()+' SHUMA'}}</div>
 </div>

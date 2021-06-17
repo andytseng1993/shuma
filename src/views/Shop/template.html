@@ -20,5 +20,5 @@
     @add-to-cart="addList"
     @delete-list='deleteList'
   ></ShopList>
-  <div class="footer"></div>
+  <div class="footer" :class="{cart:cartList.length}">{{engControl?'Copyright &#169;'+ date()+ ' SHUMA. All Rights Reserved':'版權所有 &#169;'+ date()+' SHUMA'}}</div>
 </div>

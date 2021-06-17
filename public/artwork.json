@@ -1,46 +1,850 @@
-[
+[ 
     {
-      "src": "https://i.imgur.com/BVaDZC4.jpg",
+      "thumbnail": "Swamp-min.jpg",
+      "src": "Swamp.jpg",
+      "type": [
+        "壓克力顏料系列",
+        "Acrylic Painting"
+      ],
+      "title": [
+        "沼澤",
+        "Swamp"
+      ],
+      "year": 2021,
+      "material": [
+        "壓克力顏料,畫布",
+        "Acrylic Painting, Canvas"
+      ],
+      "size": "24×24 inch",
+      "sell": false,
+      "soldOut": false,
+      "price": 0
+    },
+    {
+      "thumbnail": "The-Night-Citizen-min.jpg",
+      "src": "The_Night_Citizen.jpg",
+      "type": [
+        "壓克力顏料系列",
+        "Acrylic Painting"
+      ],
+      "title": [
+        "朔夜裡的居民",
+        "The Night Citizen"
+      ],
+      "year": 2020,
+      "material": [
+        "壓克力顏料,畫布",
+        "Acrylic Painting, Canvas"
+      ],
+      "size": "18×24 inch",
+      "sell": false,
+      "soldOut": false,
+      "price": [
+        30000,
+        1200
+      ]
+    },
+    { 
+      "thumbnail": "Legand-of-Ox-min.jpg",
+      "src": "Legand-of-Ox.jpg",
+      "type": [
+        "12生肖傳說",
+        "Legend of Zodiac"
+      ],
+      "title": [
+        "牛的傳說",
+        "Legend of Ox"
+      ],
+      "year": 2020,
+      "material": [
+        "壓克力,畫布",
+        "Acrylic,Canvas"
+      ],
+      "size": "30×40 inch",
+      "sell": false,
+      "soldOut": false,
+      "price": 0
+    },
+    {
+      "thumbnail": "Legand-of-Horse-min.jpg",
+      "src": "Legand-of-Horse.jpg",
+      "type": [
+        "12生肖傳說",
+        "Legend of Zodiac"
+      ],
+      "title": [
+        "馬的傳說",
+        "Legend of Horse"
+      ],
+      "year": 2020,
+      "material": [
+        "壓克力,畫布",
+        "Acrylic,Canvas"
+      ],
+      "size": "30×40 inch",
+      "sell": false,
+      "soldOut": false,
+      "price": 0
+    },
+    {
+     "thumbnail": "rabbit-hiding-min.jpg",
+      "src": "rabbit-hiding.jpg", 
+      "type": [
+        "廣告顏料系列",
+        "Gouache Painting"
+      ],
+      "title": [
+        "藏",
+        "Hiding"
+      ],
+      "year": 2021,
+      "material": [
+        "廣告顏料,水彩紙",
+        "Gouache, Paper"
+      ],
+      "size": "7×5.5 inch ",
+      "sell": false,
+      "soldOut": false,
+      "price": [7500,230]
+    },
+    {
+      "thumbnail": "Rich-min.jpg",
+      "src": "Rich.jpg",
+      "type": [
+        "廣告顏料系列",
+        "Gouache Painting"
+      ],
+      "title": [
+        "富",
+        "Rich"
+      ],
+      "year": 2021,
+      "material": [
+        "廣告顏料,水彩紙",
+        "Gouache, Paper"
+      ],
+      "size": "9.5×6 inch",
+      "sell": true,
+      "soldOut": false,
+      "price": [7500,230]
+    },
+    {
+      "thumbnail": "white-witch-min.jpg",
+      "src": "white-witch.jpg",
+      "type": [
+        "廣告顏料系列",
+        "Gouache Painting"
+      ],
+      "title": [
+        "白色女巫",
+        "White Witch"
+      ],
+      "year": 2021,
+      "material": [
+        "廣告顏料,水彩紙",
+        "Gouache, Paper"
+      ],
+      "size": "8.3×11.7 inch",
+      "sell": false,
+      "soldOut": false,
+      "price": 0
+    },
+    { 
+      "thumbnail": "galaxy-princess-min.jpg",
+      "src": "galaxy-princess.jpg",
+      "type": [
+        "廣告顏料系列",
+        "Gouache Painting"
+      ],
+      "title": [
+        "宇宙公主",
+        "Galaxy Princess"
+      ],
+      "year": 2021,
+      "material": [
+        "廣告顏料,水彩紙",
+        "Gouache, Paper"
+      ],
+      "size": "7×5.5 inch",
+      "sell": false,
+      "soldOut": false,
+      "price": 0
+    },
+    {
+      "thumbnail": "Forever-Love-Bridge-and-Groom-min.jpg",
+      "src": "Forever-Love_Bridge-and-Groom.jpg",
+      "type": [
+        "廣告顏料系列",
+        "Gouache Painting"
+      ],
+      "title": [
+        "永恆的愛之新郎新娘",
+        "Forever Love_Bridge and Groom "
+      ],
+      "year": 2020,
+      "material": [
+        "廣告顏料,水彩紙",
+        "Gouache, Paper"
+      ],
+      "size": "6×9 inch",
+      "sell": true,
+      "soldOut": true,
+      "price": [20000,700]
+    },
+    {
+      "thumbnail": "Amazing-Food_1-min.jpg",
+      "src": "Amazing-Food_1.jpg",
+      "type": [
+        "廣告顏料系列",
+        "Gouache Painting"
+      ],
+      "title": [
+        "這食物太美妙了！(1)",
+        "Amazing Food (1)"
+      ],
+      "year": 2020,
+      "material": [
+        "廣告顏料,水彩紙",
+        "Gouache, Paper"
+      ],
+      "size": "6×9 inch",
+      "sell": true,
+      "soldOut": false,
+      "price": [6000,200]
+    },
+    {
+      "thumbnail": "Amazing-food_2-min.jpg",
+      "src": "Amazing-food_2.jpg",
+      "type": [
+        "廣告顏料系列",
+        "Gouache Painting"
+      ],
+      "title": [
+        "這食物太美妙了！(2)",
+        "Amazing Food (2)"
+      ],
+      "year": 2020,
+      "material": [
+        "廣告顏料,水彩紙",
+        "Gouache, Paper"
+      ],
+      "size": "6×9 inch",
+      "sell": true,
+      "soldOut": false,
+      "price": [
+        6000,
+        200
+      ]
+    },
+    {
+      "thumbnail": "Work-at-ice-Mountain-min.jpg",
+      "src": "Work-at-ice-Mountain.jpg",
+      "type": [
+        "廣告顏料系列",
+        "Gouache Painting"
+      ],
+      "title": [
+        "冰山",
+        "Work at Ice Mountain"
+      ],
+      "year": 2021,
+      "material": [
+        "廣告顏料,水彩紙",
+        "Gouache, Paper"
+      ],
+      "size": "8.5×11.7 inch",
+      "sell": false,
+      "soldOut": false,
+      "price": 0
+    },
+    {
+      "thumbnail": "Black-Witch-min.jpg",
+      "src": "Black-Witch.jpg",
+      "type": [
+        "廣告顏料系列",
+        "Gouache Painting"
+      ],
+      "title": [
+        "黑女巫",
+        "Black Witch"
+      ],
+      "year": 2021,
+      "material": [
+        "廣告顏料,水彩紙",
+        "Gouache, Paper"
+      ],
+      "size": "8.5×11.7 inch",
+      "sell": false,
+      "soldOut": false,
+      "price": 0
+    },
+    {
+      "thumbnail": "Firenado-Wolf-min.jpg",
+      "src": "Firenado-Wolf.jpg",
+      "type": [
+        "數位繪圖",
+        "Digital Painting"
+      ],
+      "title": [
+        "火焰龍捲風之狼",
+        "Firenado Wolf"
+      ],
+      "year": 2020,
+      "material": [
+        "數位繪圖",
+        "Digital Painting"
+      ],
+      "size": "2388×1668 px",
+      "sell": false,
+      "soldOut": false,
+      "price": 0
+    },
+    {
+      "thumbnail": "Moon-Bear-min.jpg",
+      "src": "Moon-Bear.jpg",
+      "type": [
+        "數位繪圖",
+        "Digital Painting"
+      ],
+      "title": [
+        "月亮熊",
+        "Moon Bear"
+      ],
+      "year": 2020,
+      "material": [
+        "數位繪圖",
+        "Digital Painting"
+      ],
+      "size": "2480×3508 px",
+      "sell": false,
+      "soldOut": false,
+      "price": 0
+    },
+    {
+      "thumbnail": "OX-New-Year-min.jpg",
+      "src": "OX-New-Year.jpg",
+      "type": [
+        "數位繪圖",
+        "Digital Painting"
+      ],
+      "title": [
+        "牛新年",
+        "Ox New Year"
+      ],
+      "year": 2021,
+      "material": [
+        "數位繪圖",
+        "Digital Painting"
+      ],
+      "size": "3508×2480 px",
+      "sell": false,
+      "soldOut": false,
+      "price": 0
+    },
+    {
+      "thumbnail": "Lust-min.jpg",
+      "src": "Lust.jpg",
+      "type": [
+        "數位繪圖",
+        "Digital Painting"
+      ],
+      "title": [
+        "情慾",
+        "Lust"
+      ],
+      "year": 2021,
+      "material": [
+        "數位繪圖",
+        "Digital Painting"
+      ],
+      "size": "4096×1714 px",
+      "sell": false,
+      "soldOut": false,
+      "price": 0
+    },
+    {
+      "thumbnail": "sketch-dog-min.jpg",
+      "src": "sketch-dog.jpg",
+      "type": [
+        "速寫系列",
+        "Sketch"
+      ],
+      "title": [
+        "狗",
+        "Dog"
+      ],
+      "year": 2021,
+      "material": [
+        "墨筆,麥克筆, 紙本",
+        "Ink, Markers, Paper"
+      ],
+      "size": "7×10 inch",
+      "sell": false,
+      "soldOut": false,
+      "price": 0
+    },
+    {
+      "thumbnail": "sketch-pig-min.jpg",
+      "src": "sketch-pig.jpg",
+      "type": [
+        "速寫系列",
+        "Sketch"
+      ],
+      "title": [
+        "豬",
+        "Pig"
+      ],
+      "year": 2021,
+      "material": [
+        "墨筆, 麥克筆, 紙本",
+        "Ink, Markers, Paper"
+      ],
+      "size": "7×10 inch",
+      "sell": false,
+      "soldOut": false,
+      "price": 0
+    },
+    {
+      "thumbnail": "sketch-rabbit-min.jpg",
+      "src": "sketch-rabbit.jpg",
+      "type": [
+        "速寫系列",
+        "Sketch"
+      ],
+      "title": [
+        "兔子",
+        "Rabbit"
+      ],
+      "year": 2021,
+      "material": [
+        "墨筆, 麥克筆, 紙本",
+        "Ink, Markers, Paper"
+      ],
+      "size": "7×10 inch",
+      "sell": false,
+      "soldOut": false,
+      "price": 0
+    },
+    {
+      "thumbnail": "sketch-crab-min.jpg",
+      "src": "sketch-crab.jpg",
+      "type": [
+        "速寫系列",
+        "Sketch"
+      ],
+      "title": [
+        "螃蟹",
+        "Crab"
+      ],
+      "year": 2021,
+      "material": [
+        "墨筆, 麥克筆, 紙本",
+        "Ink, Markers, Paper"
+      ],
+      "size": "7×10 inch",
+      "sell": false,
+      "soldOut": false,
+      "price": 0
+    },
+    {
+      "thumbnail": "where-is-pink-min.jpg",
+      "src": "where-is-pink.jpg",
+      "type": [
+        "速寫系列",
+        "Sketch"
+      ],
+      "title": [
+        "粉色",
+        "Where’s pink"
+      ],
+      "year": 2021,
+      "material": [
+        "色鉛筆, 麥克筆, 紙本",
+        "Color Pencil, Markers, Paper"
+      ],
+      "size": "7×10 inch",
+      "sell": false,
+      "soldOut": false,
+      "price": 0
+    },
+    {
+      "thumbnail": "New-Year-eve-min.jpg",
+      "src": "New-Year-eve.jpg",
+      "type": [
+        "鼠新年系列",
+        "Rat New Year"
+      ],
+      "title": [
+        "除夕",
+        "New Year's Eve"
+      ],
+      "year": 2020,
+      "material": [
+        "油漆筆,水彩紙",
+        "Paint Marker, Paper"
+      ],
+      "size": "6×8 inch",
+      "sell": true,
+      "soldOut": false,
+      "price": [
+        6000,
+        200
+      ]
+    },
+    {
+      "thumbnail": "New-Year-first-day-min.jpg",
+      "src": "New-Year-first-day.jpg",
+      "type": [
+        "鼠新年系列",
+        "Rat New Year"
+      ],
+      "title": [
+        "新年第一天",
+        "New Year's day "
+      ],
+      "year": 2020,
+      "material": [
+        "油漆筆,水彩紙",
+        "Paint Marker, Paper"
+      ],
+      "size": "6×8 inch",
+      "sell": true,
+      "soldOut": false,
+      "price": [
+        6000,
+        200
+      ]
+    },
+    {
+      "thumbnail": "New-Year-second-day-min.jpg",
+      "src": "New-Year-second-day.jpg",
+      "type": [
+        "鼠新年系列",
+        "Rat New Year"
+      ],
+      "title": [
+        "初二回娘家",
+        "New Year's Second Day "
+      ],
+      "year": 2020,
+      "material": [
+        "油漆筆,水彩紙",
+        "Paint Marker, Paper"
+      ],
+      "size": "6×8 inch",
+      "sell": true,
+      "soldOut": false,
+      "price": [
+        6000,
+        200
+      ]
+    },
+    {
+      "thumbnail": "End-of-New-Year-min.jpg",
+      "src": "End-of-New-Year.jpg",
+      "type": [
+        "鼠新年系列",
+        "Rat New Year"
+      ],
+      "title": [
+        "新年最後一天",
+        "End of New Year"
+      ],
+      "year": 2020,
+      "material": [
+        "油漆筆,水彩紙",
+        "Paint Marker, Paper"
+      ],
+      "size": "6×8 inch",
+      "sell": true,
+      "soldOut": true,
+      "price": 0
+    },
+    {
+      "thumbnail": "New-Year-After-min.jpg",
+      "src": "New-Year-After.jpg",
+      "type": [
+        "鼠新年系列",
+        "Rat New Year"
+      ],
+      "title": [
+        "新年之後",
+        "After New Year"
+      ],
+      "year": 2020,
+      "material": [
+        "油漆筆,水彩紙",
+        "Paint Marker, Paper"
+      ],
+      "size": "6×8 inch",
+      "sell": true,
+      "soldOut": false,
+      "price": [
+        6000,
+        200
+      ]
+    },
+    {
+      "thumbnail": "Australia-Fire-min.jpg",
+      "src": "Australia-Fire.jpg",
+      "type": [
+        "鼠新年系列",
+        "Rat New Year"
+      ],
+      "title": [
+        "澳洲大火",
+        "Australia Fire"
+      ],
+      "year": 2020,
+      "material": [
+        "油漆筆,水彩紙",
+        "Paint Marker, Paper"
+      ],
+      "size": "6×8 inch",
+      "sell": true,
+      "soldOut": true,
+      "price": 0
+    },
+    {
+      "thumbnail": "After-Fire-min.jpg",
+      "src": "After-Fire.jpg",
+      "type": [
+        "鼠新年系列",
+        "Rat New Year"
+      ],
+      "title": [
+        "大火之後",
+        "After Fire"
+      ],
+      "year": 2020,
+      "material": [
+        "油漆筆,水彩紙",
+        "Paint Marker, Paper"
+      ],
+      "size": "6×8 inch",
+      "sell": true,
+      "soldOut": true,
+      "price": 0
+    },
+    {
+      "thumbnail": "Normal-Cat-min.jpg",
+      "src": "Normal-Cat.jpg",
+      "type": [
+        "貓系列",
+        "CAT"
+      ],
+      "title": [
+        "普通貓",
+        "Normal Cat"
+      ],
+      "year": 2020,
+      "material": [
+        "壓克力,畫布",
+        "Acrylic,Canvas"
+      ],
+      "size": "8×10 inch",
+      "sell": true,
+      "soldOut": true,
+      "price": 0
+    },
+    {
+      "thumbnail": "Electric-Cat-min.jpg",
+      "src": "Electric-Cat.jpg",
+      "type": [
+        "貓系列",
+        "CAT"
+      ],
+      "title": [
+        "電氣貓",
+        "Electric Cat"
+      ],
+      "year": 2020,
+      "material": [
+        "壓克力,畫布",
+        "Acrylic,Canvas"
+      ],
+      "size": "8×10 inch",
+      "sell": true,
+      "soldOut": true,
+      "price": 0
+    },
+    {
+      "thumbnail": "Rubber-Cat-min.jpg",
+      "src": "Rubber-Cat.jpg",
+      "type": [
+        "貓系列",
+        "CAT"
+      ],
+      "title": [
+        "橡膠貓",
+        "Rubber Cat"
+      ],
+      "year": 2020,
+      "material": [
+        "壓克力,畫布",
+        "Acrylic,Canvas"
+      ],
+      "size": "8×10 inch",
+      "sell": true,
+      "soldOut": true,
+      "price": 0
+    },
+    {
+      "thumbnail": "Moss-Cat-min.jpg",
+      "src": "Moss-Cat.jpg",
+      "type": [
+        "貓系列",
+        "CAT"
+      ],
+      "title": [
+        " 苔蘚貓",
+        "Moss Cat"
+      ],
+      "year": 2020,
+      "material": [
+        "壓克力,畫布",
+        "Acrylic,Canvas"
+      ],
+      "size": "8×10 inch",
+      "sell": true,
+      "soldOut": true,
+      "price": 0
+    },
+    {
+      "thumbnail": "Magma-Cat-min.jpg",
+      "src": "Magma-Cat.jpg",
+      "type": [
+        "貓系列",
+        "CAT"
+      ],
+      "title": [
+        "岩漿貓",
+        "Magma Cat"
+      ],
+      "year": 2020,
+      "material": [
+        "壓克力,畫布",
+        "Acrylic,Canvas"
+      ],
+      "size": "8×10 inch",
+      "sell": true,
+      "soldOut": true,
+      "price": 0
+    },
+    {
+      "thumbnail": "Fog-Cat-min.jpg",
+      "src": "Fog-Cat.jpg",
+      "type": [
+        "貓系列",
+        "CAT"
+      ],
+      "title": [
+        "迷霧貓",
+        "Fog Cat"
+      ],
+      "year": 2020,
+      "material": [
+        "壓克力,畫布",
+        "Acrylic,Canvas"
+      ],
+      "size": "8×10 inch",
+      "sell": true,
+      "soldOut": true,
+      "price": 0
+    },
+    {
+      "thumbnail": "Robot-Cat-min.jpg",
+      "src": "Robot-Cat.jpg",
+      "type": [
+        "貓系列",
+        "CAT"
+      ],
+      "title": [
+        "機械貓",
+        "Robot Cat"
+      ],
+      "year": 2020,
+      "material": [
+        "壓克力,畫布",
+        "Acrylic,Canvas"
+      ],
+      "size": "8×10 inch",
+      "sell": true,
+      "soldOut": true,
+      "price": 0
+    },
+    {
+      "thumbnail": "Diamond-Cat-min.jpg",
+      "src": "Diamond-Cat.jpg",
+      "type": [
+        "貓系列",
+        "CAT"
+      ],
+      "title": [
+        "鑽石貓",
+        "Diamond Cat"
+      ],
+      "year": 2020,
+      "material": [
+        "壓克力,畫布",
+        "Acrylic,Canvas"
+      ],
+      "size": "8×10 inch",
+      "sell": true,
+      "soldOut": true,
+      "price": 0
+    },
+    {
+      "thumbnail":"Spring-In-Taiwan-min.jpg",
+      "src": "Spring-In-Taiwan.jpg",
+      "type": [
+        "四季系列",
+        "Four Season"
+      ],
+      "title": [
+        "春天中的台灣",
+        "Spring In Taiwan"
+      ],
+      "year": 2019,
+      "material": [
+        "壓克力,畫布",
+        "Acrylic,Canvas"
+      ],
+      "size": "10×10 inch",
+      "sell": true,
+      "soldOut": false,
+      "price": [
+        7500,
+        230
+      ]
+    },
+    {
+      "thumbnail": "Raining-in-Taiwan-min.jpg",
+      "src": "Raining-in-Taiwan.jpg",
       "type": [
         "四季系列",
         "Four Season"
       ],
       "title": [
         "雨天中的台灣",
-        "Raining in Taiwana sadasd qweqw z"
+        "Raining in Taiwan"
       ],
       "year": 2019,
       "material": [
         "壓克力,畫布",
         "Acrylic,Canvas"
       ],
-      "size": "10✕10 inch",
+      "size": "10×10 inch",
       "sell": true,
       "soldOut": false,
-      "price": 6500
+      "price": [
+        7500,
+        230
+      ]
     },
     {
-      "src": "https://i.imgur.com/EI2MIXo.jpg",
-      "type": [
-        "四季系列",
-        "Four Season"
-      ],
-      "title": [
-        "秋天中的台灣",
-        "Fall in Taiwan"
-      ],
-      "year": 2019,
-      "material": [
-        "壓克力,畫布",
-        "Acrylic,Canvas"
-      ],
-      "size": "10✕10 inch",
-      "sell": true,
-      "soldOut": false,
-      "price": 6500
-    },
-    {
-      "src": "https://i.imgur.com/KeUH5nP.jpg",
+      "thumbnail": "Winter-in-Taiwan-min.jpg",
+      "src": "Winter-in-Taiwan.jpg",
       "type": [
         "四季系列",
         "Four Season"
@@ -54,259 +858,37 @@
         "壓克力,畫布",
         "Acrylic,Canvas"
       ],
-      "size": "10✕10 inch",
+      "size": "10×10 inch",
       "sell": true,
       "soldOut": true,
-      "price": null
+      "price": [
+        7500,
+        230
+      ]
     },
     {
-      "src": "https://i.imgur.com/JNR604J.jpg",
+      "thumbnail": "Fall-In-Taiwan-min.jpg",
+      "src": "Fall-In-Taiwan.jpg",
       "type": [
         "四季系列",
         "Four Season"
       ],
       "title": [
-        "春天中的台灣",
-        "Spring in Taiwan"
+        "秋天中的台灣",
+        "Fall in Taiwan"
       ],
       "year": 2019,
       "material": [
         "壓克力,畫布",
         "Acrylic,Canvas"
       ],
-      "size": "10✕10 inch",
+      "size": "10×10 inch",
       "sell": true,
       "soldOut": false,
-      "price": 6500
-    },
-    {
-      "src": "https://i.pinimg.com/originals/46/da/e5/46dae512e375bee2664a025507da8795.jpg",
-      "type": [
-        "新年系列",
-        "Chinese New Year"
-      ],
-      "title": [
-        "年夜飯",
-        "New Year Eve"
-      ],
-      "year": 2019,
-      "material": [
-        "壓克力,畫布",
-        "Acrylic,Canvas"
-      ],
-      "size": "10✕10 inch",
-      "sell": true,
-      "soldOut": false,
-      "price": 6500
-    },
-    {
-      "src": "https://image.cache.storm.mg/styles/smg-800x533-fp/s3/media/image/2020/01/31/20200131-052418_U17017_M588719_cd2e.jpg?itok=s0SyFjTD",
-      "type": [
-        "貓",
-        "cat"
-      ],
-      "title": [
-        "貓貓貓貓貓",
-        "Catcatcatcatcat"
-      ],
-      "year": 2019,
-      "material": [
-        "壓克力,畫布",
-        "Acrylic,Canvas"
-      ],
-      "size": "10✕10 inch",
-      "sell": false,
-      "soldOut": false,
-      "price": 6500
-    },{
-      "src": "https://i.imgur.com/BVaDZC4.jpg",
-      "type": [
-        "四季系列",
-        "Four Season"
-      ],
-      "title": [
-        "雨天中的台灣",
-        "Raining in Taiwana sadasd qweqw z"
-      ],
-      "year": 2019,
-      "material": [
-        "壓克力,畫布",
-        "Acrylic,Canvas"
-      ],
-      "size": "10✕10 inch",
-      "sell": true,
-      "soldOut": false,
-      "price": 6500
-    },{
-      "src": "https://i.imgur.com/BVaDZC4.jpg",
-      "type": [
-        "四季系列",
-        "Four Season"
-      ],
-      "title": [
-        "雨天中的台灣",
-        "Raining in Taiwana sadasd qweqw z"
-      ],
-      "year": 2019,
-      "material": [
-        "壓克力,畫布",
-        "Acrylic,Canvas"
-      ],
-      "size": "10✕10 inch",
-      "sell": true,
-      "soldOut": false,
-      "price": 6500
-    },{
-      "src": "https://i.imgur.com/BVaDZC4.jpg",
-      "type": [
-        "四季系列",
-        "Four Season"
-      ],
-      "title": [
-        "雨天中的台灣",
-        "Raining in Taiwana sadasd qweqw z"
-      ],
-      "year": 2019,
-      "material": [
-        "壓克力,畫布",
-        "Acrylic,Canvas"
-      ],
-      "size": "10✕10 inch",
-      "sell": true,
-      "soldOut": false,
-      "price": 6500
-    },{
-      "src": "https://i.imgur.com/BVaDZC4.jpg",
-      "type": [
-        "四季系列",
-        "Four Season"
-      ],
-      "title": [
-        "雨天中的台灣",
-        "Raining in Taiwana sadasd qweqw z"
-      ],
-      "year": 2019,
-      "material": [
-        "壓克力,畫布",
-        "Acrylic,Canvas"
-      ],
-      "size": "10✕10 inch",
-      "sell": true,
-      "soldOut": false,
-      "price": 6500
-    },{
-      "src": "https://i.imgur.com/BVaDZC4.jpg",
-      "type": [
-        "四季系列",
-        "Four Season"
-      ],
-      "title": [
-        "雨天中的台灣",
-        "Raining in Taiwana sadasd qweqw z"
-      ],
-      "year": 2019,
-      "material": [
-        "壓克力,畫布",
-        "Acrylic,Canvas"
-      ],
-      "size": "10✕10 inch",
-      "sell": true,
-      "soldOut": false,
-      "price": 6500
-    },{
-      "src": "https://i.imgur.com/BVaDZC4.jpg",
-      "type": [
-        "四季系列",
-        "Four Season"
-      ],
-      "title": [
-        "雨天中的台灣",
-        "Raining in Taiwana sadasd qweqw z"
-      ],
-      "year": 2019,
-      "material": [
-        "壓克力,畫布",
-        "Acrylic,Canvas"
-      ],
-      "size": "10✕10 inch",
-      "sell": true,
-      "soldOut": false,
-      "price": 6500
-    },{
-      "src": "https://i.imgur.com/BVaDZC4.jpg",
-      "type": [
-        "四季系列",
-        "Four Season"
-      ],
-      "title": [
-        "雨天中的台灣",
-        "Raining in Taiwana sadasd qweqw z"
-      ],
-      "year": 2019,
-      "material": [
-        "壓克力,畫布",
-        "Acrylic,Canvas"
-      ],
-      "size": "10✕10 inch",
-      "sell": true,
-      "soldOut": false,
-      "price": 6500
-    },{
-      "src": "https://i.imgur.com/BVaDZC4.jpg",
-      "type": [
-        "四季系列",
-        "Four Season"
-      ],
-      "title": [
-        "雨天中的台灣",
-        "Raining in Taiwana sadasd qweqw z"
-      ],
-      "year": 2019,
-      "material": [
-        "壓克力,畫布",
-        "Acrylic,Canvas"
-      ],
-      "size": "10✕10 inch",
-      "sell": true,
-      "soldOut": false,
-      "price": 6500
-    },{
-      "src": "https://i.imgur.com/BVaDZC4.jpg",
-      "type": [
-        "四季系列",
-        "Four Season"
-      ],
-      "title": [
-        "雨天中的台灣",
-        "Raining in Taiwana sadasd qweqw z"
-      ],
-      "year": 2019,
-      "material": [
-        "壓克力,畫布",
-        "Acrylic,Canvas"
-      ],
-      "size": "10✕10 inch",
-      "sell": true,
-      "soldOut": false,
-      "price": 6500
-    },{
-      "src": "https://i.imgur.com/BVaDZC4.jpg",
-      "type": [
-        "四季系列",
-        "Four Season"
-      ],
-      "title": [
-        "雨天中的台灣",
-        "Raining in Taiwana sadasd qweqw z"
-      ],
-      "year": 2019,
-      "material": [
-        "壓克力,畫布",
-        "Acrylic,Canvas"
-      ],
-      "size": "10✕10 inch",
-      "sell": true,
-      "soldOut": false,
-      "price": 6500
+      "price": [
+        7500,
+        230
+      ]
     }
-  ]
+    
+]

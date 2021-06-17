@@ -7,9 +7,12 @@ export default {
         return this.$store.state.engControl
       },
       set (val) {
-        this.$store.commit('SETLANGUAGE', val)
+        this.$store.dispatch('SET_LANGUAGE', val)
       }
     }
+  },
+  mounted () {
+    this.$store.dispatch('GET_LANGUAGE')
   }
 }
 </script>

@@ -1,4 +1,5 @@
 #nav{
+  font-family: 'Press Start 2P', 'Taipei Sans';
   position: sticky;
   top: 0px;
   display: flex;
@@ -13,20 +14,19 @@
   align-items: center;
   cursor: pointer;
   margin: 10px 0px;
-  font-size: min(3vw, 30px);
 }
 #nav .pc a{
   margin: 0px;
   border-radius: 5px;
   margin-left: 7px;
-  padding: 7px 22px;
-  font-size: max(21px, 1.3vw);
-  letter-spacing: 0.2vw;
+  padding: 15px 18px;
+  font-size: max(13px, 1.3vw);
+  letter-spacing: 0.1vw;
   color:rgba(255, 255, 255, 0.8);
   text-decoration-line: none;
 }
 #nav .pc .ch{
-  padding: 5px 25px;
+  padding: 10px 25px;
   font-size: max(23px, 1.6vw);
 }
 #nav .mobile{
@@ -85,8 +85,8 @@
   }
   #nav .mobile span{
     margin-top: 2px;
-    font-size: 10px;
-    letter-spacing: 1px;
+    font-size: 9px;
+    letter-spacing: 0.5px;
     
   }
   #nav a.router-link-exact-active{

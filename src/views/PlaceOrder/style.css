@@ -27,6 +27,9 @@
   justify-content: space-evenly;
   align-items: flex-start;
 }
+#placeOrder .order-content.confirm{
+  display: none;
+}
 
 /* order list */
 
@@ -145,6 +148,10 @@
   flex-direction: column;
   color: rgba(0, 0, 0, 0.2);
 }
+#placeOrder .orderList .emptyCart.empty{
+  color: red;
+  font-size: 23px;
+}
 #placeOrder .orderList .emptyCart .fa-shopping-cart{
   font-size: 50px;
   color: rgba(0, 0, 0, 0.2);
@@ -214,212 +221,241 @@ input[type=submit] {
 input[type=submit]:hover {
   background-color: #45a049;
 }
+input[type=submit]:active{
+  transform: translate(2px,2px);
+}
+/* confirm */
+
 .confirm{
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 100%;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: white;
+  z-index: 100;
 }
-@media only screen and (max-width: 992px){
-  #placeOrder .order-content{
-  margin-top: 10px;
+
+.confirm .content{
   display: flex;
-  flex-direction: column-reverse;
-  align-items: center;
-}
-#placeOrder .orderList{
-  width: 85%;
-  max-width: 600px;
-  margin-bottom: 20px;
-}
-.container {
-  max-width: 600px;
-  width: 85%;
-  margin-bottom: 20px;
-}
-
-}
-
-@media only screen and (max-width: 480px){
-.back{
-  padding:20px 30px;
-  font-weight: 500;
-  font-size: 17px;
-  display: block;
-  position: sticky;
-  top:0px;
-  background-color:rgb(255, 255, 255);
-  
-}
-#placeOrder .order-content{
-  margin-top: 10px;
-  display: flex;
-  flex-direction: column-reverse;
-}
-.back .fa-chevron-left{
+  flex-direction: column;
   font-weight: 600;
-  font-size: 20px;
-}
-/* order list */
-#placeOrder .orderList{
-  width: 96%;
-  border: rgba(0, 0, 0, 0.2) 1px solid;
-  margin: 10px auto 30px auto;
-}
-#placeOrder .header{
-  font-size: 18px;
-  font-weight: 700;
-  padding: 15px 0px;
-  text-align: center;
-}
-#placeOrder .orderList ul li .img{
-  width: 100px;
-  height: 100px;
-}
-
-#placeOrder .orderList ul li{
-  margin: 1px 0px;
-  padding: 8px 10px;
-}
-
-
-#placeOrder .orderList ul li .details .title .name{
-  min-width: unset;
-  width: 160px;
-  font-size: 16px;
-  font-weight: 600;
-}
-
-#placeOrder .orderList ul li .details .title .price{
-  width: initial;
-  font-weight: 600;
-  font-size: 16px;
-  min-width: 50px;
-}
-#placeOrder .orderList ul li .details .material{
-  font-size: 14px; 
-}
-#placeOrder .orderList ul li .details .size{
-  font-size: 14px;
-}
-#placeOrder .orderList ul li .details .size .remove{
-  cursor: pointer;
-  padding: 4px 10px;
-}
-#placeOrder .orderList ul li .details .size .remove:hover{
-  transform: none;
   color: black;
-  background:rgba(0, 0, 0, 0.1);
-}
-
-#placeOrder .total-price{
-  font-weight: 600;
-}
-#placeOrder .subTotal{
-  font-size: 16px;
-}
-
-#placeOrder .orderList .emptyCart{
-  width:100%;
-  padding: 10px 0px;
-}
-#placeOrder .orderList .emptyCart .fa-shopping-cart{
-  font-size: 50px;
-  color: rgba(0, 0, 0, 0.2);
-}
-
-/* contact form */
-.container {
-  display: block;
-  margin:auto;
-  text-align: center;
-  padding: 20px;
-  width: 96%;
-}
-label {
-  float: left;
-}
-
-input[type=text], [type=email], textarea {
-  border: none;
-  border-bottom: 1px solid rgb(196, 196, 196);
-  margin-bottom: 16px;
-}
-textarea{
-  border: 1px solid rgb(216, 216, 216);
-  border-radius: 5px;
-}
-
-input[type=submit] {
-  font-size: 16px;
-  padding: 12px;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-.recaptcha small{
-  color: red;
-  display: none;
-}
-.recaptcha{
-  flex-direction: column;
-  margin-bottom: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.recaptcha small.recaptcha_failed{
-  padding: 5px;
-  margin-bottom: -25px;
-}
-.confirm{
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.content{
-  display: flex;
-  flex-direction: column;
-  background-color:paleturquoise;
-  padding:30px 80px;
+  padding: 30px 80px;
   border-radius: 10px;
-
-}
-.fade-enter-active{
-  transition: opacity .5s;
-}
-.fade-enter{
-  opacity: 0;
-}
-.send{
-  font-size: 40px;
+  background-color:paleturquoise;
 }
 .fa-paper-plane{
   font-size: 55px;
   margin-right: 5px;
   transform: rotate(-50deg) rotateY(-180deg);
 }
-.fa-wind{
-  
-  font-size: 30px;
-  margin-right: 10px;
-  color:cornflowerblue;
 
+.fa-wind{
+  font-size: 30px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 2.5px;
+  transform: scaleX(1.5);
+  color: cornflowerblue;
 }
-.confirm .context{
-  display: inline-block;
-  margin: 15px;
-  font-size: 20px;
+.confirm .content .send{
+  font-size: 40px;
   text-align: center;
 }
+.confirm .context{
+  margin: 15px;
+  font-size: 25px;
 }
+
+
+@media only screen and (max-width: 992px){
+  #placeOrder .order-content{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  }
+  #placeOrder .orderList{
+    width: 85%;
+    max-width: 600px;
+    margin-bottom: 20px;
+  }
+  .container {
+    max-width: 600px;
+    width: 85%;
+    margin-bottom: 20px;
+  }
+
+  }
+
+@media only screen and (max-width: 480px){
+  .back{
+    padding:20px 30px;
+    font-weight: 600;
+    font-size: 22px;
+    display: block;
+    position: sticky;
+    top:0px;
+    background-color:rgb(255, 255, 255);
+    
+  }
+  #placeOrder .order-content{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .back .fa-chevron-left{
+    font-weight: 600;
+    font-size: 23px;
+  }
+  /* order list */
+  #placeOrder .orderList{
+    width: 96%;
+    border: rgba(0, 0, 0, 0.2) 1px solid;
+    margin: 10px auto 30px auto;
+  }
+  #placeOrder .header{
+    font-size: 18px;
+    font-weight: 700;
+    padding: 15px 0px;
+    text-align: center;
+  }
+  #placeOrder .orderList ul li .img{
+    width: 100px;
+    height: 100px;
+  }
+
+  #placeOrder .orderList ul li{
+    margin: 1px 0px;
+    padding: 8px 10px;
+  }
+
+
+  #placeOrder .orderList ul li .details .title .name{
+    min-width: unset;
+    width: 160px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  #placeOrder .orderList ul li .details .title .price{
+    width: initial;
+    font-weight: 600;
+    font-size: 16px;
+    min-width: 50px;
+  }
+  #placeOrder .orderList ul li .details .material{
+    font-size: 14px; 
+  }
+  #placeOrder .orderList ul li .details .size{
+    font-size: 14px;
+  }
+  #placeOrder .orderList ul li .details .size .remove{
+    cursor: pointer;
+    padding: 4px 10px;
+  }
+  #placeOrder .orderList ul li .details .size .remove:hover{
+    transform: none;
+    color: black;
+    background:rgba(0, 0, 0, 0.1);
+  }
+
+  #placeOrder .total-price{
+    font-weight: 600;
+  }
+  #placeOrder .subTotal{
+    font-size: 16px;
+  }
+
+  #placeOrder .orderList .emptyCart{
+    width:100%;
+    padding: 10px 0px;
+  }
+  #placeOrder .orderList .emptyCart .fa-shopping-cart{
+    font-size: 50px;
+    color: rgba(0, 0, 0, 0.2);
+  }
+
+  /* contact form */
+  .container {
+    display: block;
+    margin:auto;
+    text-align: center;
+    padding: 20px;
+    width: 96%;
+  }
+  label {
+    float: left;
+  }
+
+  input[type=text], [type=email], textarea {
+    border: none;
+    border-bottom: 1px solid rgb(196, 196, 196);
+    margin-bottom: 16px;
+  }
+  textarea{
+    border: 1px solid rgb(216, 216, 216);
+    border-radius: 5px;
+  }
+
+  input[type=submit] {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+  .recaptcha small{
+    color: red;
+    display: none;
+  }
+  .recaptcha{
+    flex-direction: column;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .recaptcha small.recaptcha_failed{
+    padding: 5px;
+    margin-bottom: -25px;
+  }
+  .confirm .content{
+    padding: 20px 10px;
+    margin: 0px 10px;
+  }
+  .confirm .content .send{
+    font-size: 20px;
+  }
+  .confirm .context{
+    margin: 10px;
+    font-size: 16px;
+  }
+  .fa-paper-plane{
+    font-size: 30px;
+    margin-left: 5px;
+  }
+  .fa-wind{
+    font-size: 15px;
+    margin-left: 2px;
+    margin-right: 5px;
+  }
+
+}
+
+
+.fade-enter-active{
+  transition: opacity .2s;
+}
+.fade-enter{
+  opacity: 0;
+}
+
+
 
 

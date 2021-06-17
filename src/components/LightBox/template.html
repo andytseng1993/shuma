@@ -6,64 +6,68 @@
     <div
       class="cover"
       v-for="(artwork,artid) in artworkMenu.sort"
-      :style="bgcss(artworkMenu.map[artwork].src)"
+      :style="bgcss(artworkMenu.map[artwork].thumbnail)"
       :key="artid"
     >
       <div
         class="box"
-        @click="setPlayId(artid),controlLightBox()"
+        @click="setPlayId(artid),controlLightBox(true),lightboxNoScroll('add')"
       >
         <h3>{{artwork}}</h3>
       </div>
     </div>
   </div>
-  <div
-    class="lightbox"
-    :class="{isLightboxOpen}"
-  >
-    <div class="closeButton">
-      <div class="circle"></div>
-      <font-awesome-icon icon=times-circle 
-      @click="controlLightBox()"
-      />
-    </div>
-    <div class="nextButton">
-      <font-awesome-icon icon=chevron-right
-      @click="change(nowPlayId+1)"
-      />
-    </div>
-    <div class="preButton">
-      <font-awesome-icon icon=chevron-left
-      @click="change(nowPlayId-1)"
-      />
-    </div>
-    <div
-      class="myPainting"
-      v-if="isLightboxOpen"
-    >
-      <div class="all">
-        <img
-          id="myPaint"
-          :src="artworkDetail.src"
+
+  <!-- lightBox -->
+    <transition name="fade">
+      <div
+        v-show="isLightboxOpen"
+        class="lightbox isLightboxOpen"
+      >
+        <div class="closeButton">
+          <div class="circle"></div>
+          <font-awesome-icon icon=times-circle
+          @click="controlLightBox(false),lightboxNoScroll('remove')"
+          />
+        </div>
+        <div class="nextButton">
+          <font-awesome-icon icon=chevron-right
           @click="change(nowPlayId+1)"
-        >
+          />
+        </div>
+        <div class="preButton">
+          <font-awesome-icon icon=chevron-left
+          @click="change(nowPlayId-1)"
+          />
+        </div>
         <div
-          class="words"
+          class="myPainting"
+          v-if="isLightboxOpen"
         >
-          <div class="name">
-            {{selectArtwork}}
-            <div class="year">
-              , {{artworkDetail.year}}
-            </div>
-          </div>
-          <div class="material">
-            {{artworkMaterials}}
-            <div class="size">
-              , {{artworkDetail.size}}
+          <div class="all">
+            <img
+              id="myPaint"
+              :src="require('@/assets/img/'+artworkDetail.src)"
+              @click="change(nowPlayId+1)"
+            >
+            <div
+              class="words"
+            >
+              <div class="name">
+                {{selectArtwork}}
+                <div class="year">
+                  , {{artworkDetail.year}}
+                </div>
+              </div>
+              <div class="material">
+                {{artworkMaterials}}
+                <div class="size">
+                  , {{artworkDetail.size}}
+                </div>
+              </div>
             </div>
           </div>
         </div>
-      </div>
     </div>
-  </div>
+  </transition>
 </div>

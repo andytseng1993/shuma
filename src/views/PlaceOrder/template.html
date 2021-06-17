@@ -29,8 +29,9 @@
     </div>
   </transition>
 
-  <div class="order-content">
-    <!-- order list -->
+  <div class="order-content" :class="{confirm:show}">
+
+     <!-- order list -->
     <div class="orderList">
       <div class="header">{{engControl?'Order Summary:':'訂單摘要：'}}</div>
       <ul>
@@ -40,21 +41,21 @@
         >
           <div
             class="img"
-            :style="{ backgroundImage: 'url(' + item.src + ')' }"
+            :style="{ backgroundImage: 'url(' +require('@/assets/thumbnail/'+ item.thumbnail) + ')' }"
           ></div>
           <div class="details">
             <div class="title">
               <span class="name">{{engControl?item.title[1]:item.title[0]}}</span>
               <span class="price">
                 <span class="price-symbol">
-                  {{engControl?'&#36':'NT&#36'}}</span>{{price(item.price)}}
+                  {{engControl?'&#36':'NT&#36'}}</span>{{engControl?price(item.price[1]):price(item.price[0])}}
               </span>
             </div>
             <div class="material"> {{engControl?item.material[1]:item.material[0]}}</div>
             <div class="size"> {{ item.size }}
               <div
                 class="remove"
-                @click="deleteList(itemId),value(itemId)"
+                @click="deleteList(itemId)"
               >&#10006</div>
             </div>
           </div>
@@ -62,6 +63,7 @@
         <li
           class="emptyCart"
           v-if="!cartList.length"
+          :class="{empty:cartEmpty}"
         >
           <font-awesome-icon icon=shopping-cart />
           <div>
@@ -88,6 +90,7 @@
       >
         <label>{{engControl?'Name*':'名字*'}}</label>
         <input
+          ref="name"
           v-model.trim="order.name"
           type="text"
           name="name"

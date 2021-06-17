@@ -52,12 +52,12 @@ export default {
       else return this.artworkDetail.material[0]
     },
     subTotal () {
-      return this.cartList.map(workart => workart.price).reduce((accumulator, currentValue) => accumulator + currentValue, 0)
+      if (this.engControl) { return this.cartList.map(workart => workart.price[1]).reduce((accumulator, currentValue) => parseInt(accumulator) + parseInt(currentValue), 0) } else { return this.cartList.map(workart => workart.price[0]).reduce((accumulator, currentValue) => parseInt(accumulator) + parseInt(currentValue), 0) }
     }
   },
   methods: {
     bgcss (url) {
-      return { 'background-image': 'url(' + url + ')' }
+      return { 'background-image': 'url(' + require('@/assets/thumbnail/' + url) + ')' }
     },
     setPlayId (id) {
       this.$emit('update:nowPlayId', id)

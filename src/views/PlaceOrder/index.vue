@@ -19,11 +19,14 @@ export default {
     return {
       show: false,
       formEmpty: false,
+      cartEmpty: false,
       order: {
         name: '',
         email: '',
         message: '',
-        title: []
+        title: [],
+        price: [],
+        total: ''
       }
     }
   },
@@ -39,16 +42,15 @@ export default {
         this.$store.commit('SET_RECAPTCHA', val)
       }
     },
-    engControl: {
-      get () {
-        return this.$store.state.engControl
-      },
-      set (val) {
-        this.$store.commit('SETLANGUAGE', val)
-      }
+    engControl () {
+      return this.$store.state.engControl
     },
     subTotal () {
-      return this.cartList.map(workart => workart.price).reduce((accumulator, currentValue) => accumulator + currentValue, 0)
+      if (this.engControl) {
+        return this.cartList.map(workart => workart.price[1]).reduce((accumulator, currentValue) => parseInt(accumulator) + parseInt(currentValue), 0)
+      } else {
+        return this.cartList.map(workart => workart.price[0]).reduce((accumulator, currentValue) => parseInt(accumulator) + parseInt(currentValue), 0)
+      }
     }
   },
   watch: {
@@ -56,16 +58,32 @@ export default {
       immediate: true,
       handler: function (newartworks, oldartworks) {
         this.order.title = []
-        this.cartList.forEach(({ title }) => {
-          this.order.title.push(title[1])
-        })
+        this.order.price = []
+        this.order.total = ''
+        if (this.engControl) {
+          this.cartList.forEach(({ title, price }) => {
+            this.order.title.push(title[1])
+            this.order.price.push(price[1])
+          })
+        } else {
+          this.cartList.forEach(({ title, price }) => {
+            this.order.title.push(title[0])
+            this.order.price.push(price[0])
+          })
+        }
+        this.order.total = this.subTotal
       }
     }
   },
   mounted () {
     this.$store.dispatch('READ_SHOPLIST')
+    this.$store.dispatch('GET_LANGUAGE')
+    this.focusInput()
   },
   methods: {
+    focusInput () {
+      this.$refs.name.focus()
+    },
     recaptchaverify (res) {
       this.recaptchaVerifyKey = res
     },
@@ -76,18 +94,12 @@ export default {
     deleteList (val) {
       this.$store.dispatch('DELETE_SHOPLIST', val)
     },
-    sendEmail () {
-      emailjs.send('service_hd39hf4', 'template_6ngi6cd', this.order, 'user_XiclrBTze0zEbsO6pBizA').then(function (response) {
-        console.log('SUCCESS!', response.status, response.text)
-      }, function (error) {
-        console.log('FAILED...', error)
-      })
-      this.order.name = null
-      this.order.email = null
-      this.order.message = null
+    clear () {
+      this.$store.dispatch('CLEAR_SHOLIST')
+      this.recaptchaVerifyKey = ''
     },
     send () {
-      if (this.order.name && this.order.email && this.recaptchaVerifyKey) {
+      if (this.order.name && this.order.email && this.recaptchaVerifyKey && this.order.title.length) {
         emailjs.send(process.env.VUE_APP_EMAILJS_SERVICE_ID, process.env.VUE_APP_EMAILJS_TEMPALTE_ID, this.order, process.env.VUE_APP_EMAILJS_USER_ID).then(function (response) {
           console.log('SUCCESS!', response.status, response.text)
         }, function (error) {
@@ -104,19 +116,20 @@ export default {
           console.log('SUCCESS!')
         })
           .catch(function (error) {
-            alert(error)
+            console.log(error)
           })
-        this.order.name = null
-        this.order.email = null
-        this.order.message = null
-        this.recaptchaVerifyKey = ''
+        this.clear()
         this.show = true
         window.setTimeout(() => {
           this.$router.push('/')
-          this.show = false
-        }, 3000)
-      } else {
+        }, 2000)
+      } else if (this.order.title.length === 0 && this.recaptchaVerifyKey === '') {
         this.formEmpty = true
+        this.cartEmpty = true
+      } else if (this.recaptchaVerifyKey === '') {
+        this.formEmpty = true
+      } else {
+        this.cartEmpty = true
       }
     },
     async recaptcha () {
