@@ -1,0 +1,245 @@
+#Home {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-image: url("../../assets/img/The_Night_Citizen.jpg");
+  background-position: center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+#Home::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-animation: change 2s both;
+          animation: change 2s both;
+  z-index: 0;
+}
+@-webkit-keyframes change {
+  0% {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.65);
+  }
+}
+@keyframes change {
+  0% {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.65);
+  }
+}
+#Home .translate {
+  position: absolute;
+  right: 5vw;
+  top: 20px;
+  z-index: 1;
+  display: flex;
+}
+#Home .translate input {
+  display: none;
+}
+#Home .translate label {
+  display: flex;
+  align-items: center;
+  font-size: max(1.5vw, 22px);
+}
+#Home .translate label .ch {
+  font-family: 'SweiAliasSans';
+  width: max(2vw, 24px);
+  height: max(2vw, 24px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  background: white;
+  border-radius: 50%;
+  color: black;
+}
+#Home .translate label span {
+  font-size: max(2vw, 24px);
+  font-weight: 800;
+  margin: 0px 4px;
+  color: white;
+}
+#Home .translate label .eg {
+  font-family: "Gugi", 'cursive';
+  width: max(2.5vw, 25px);
+  height: max(2.5vw, 25px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.5);
+  background: none;
+  font-weight: 500;
+  padding: 3px;
+}
+#Home .translate input:checked + label .ch {
+  color: rgba(255, 255, 255, 0.7);
+  font-weight: 600;
+  background: none;
+}
+#Home .translate input:checked + label .eg {
+  background: white;
+  padding: 3px;
+  border-radius: 50%;
+  color: black;
+  font-weight: 700;
+}
+#Home .word {
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition-duration: 2s;
+}
+#Home .word .name {
+  font-family: "Gugi", 'cursive';
+  color: transparent;
+  font-size: min(12vw, 180px);
+  -webkit-background-clip: text;
+          background-clip: text;
+  letter-spacing: 2vw;
+  font-weight: 600;
+  filter: drop-shadow(3px 0px 0px #fc6ace) drop-shadow(-3px 0px 0px #fc6ace) drop-shadow(0px 3px 0px #fc6ace) drop-shadow(0px -3px 0px #fc6ace) drop-shadow(0px 0px 7px rgba(251, 128, 214, 0.8)) drop-shadow(0px 0px 3px #ff006e);
+}
+#Home .word .name:nth-of-type(1) {
+  background-image: url("../../assets/thumbnail/Raining-in-Taiwan-min.jpg");
+  background-position: 80% 20%;
+}
+#Home .word .name:nth-of-type(2) {
+  background-image: url("../../assets/thumbnail/Fall-In-Taiwan-min.jpg");
+  background-position: 80% 10%;
+}
+#Home .word .name:nth-of-type(3) {
+  background-image: url("../../assets/thumbnail/Fall-In-Taiwan-min.jpg");
+}
+#Home .word .name:nth-of-type(4) {
+  margin-left: 2vw;
+  background-image: url("../../assets/thumbnail/Spring-In-Taiwan-min.jpg");
+}
+#Home .word .name:nth-of-type(5) {
+  background-image: url("../../assets/thumbnail/Winter-in-Taiwan-min.jpg");
+}
+#Home .word img {
+  width: auto;
+  height: 60vmin;
+}
+#Home .image {
+  z-index: 5;
+  display: none;
+}
+#Home .nav {
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+}
+#Home .nav a{
+  font-family: 'Press Start 2P';
+  margin: 0px;
+  margin-top: 5vw;
+  padding: 0px;
+  background: rgba(0, 0, 0, 0.4);
+  font-family: "Press Start 2P", cursive;
+  letter-spacing: 0.1vw;
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+  margin-left: 7px;
+  padding: 12px 25px;
+  font-size: min(2vw, 25px);
+  border: solid 3px #fb80d6;
+  box-shadow: 0px 0px 20px #fb80d6;
+  text-decoration-line: none;
+}
+#Home .nav a:hover {
+  background: black;
+  color: white;
+  box-shadow: 0px 0px 20px #0adaff;
+  border: solid 3px #0adaff;
+}
+#Home .nav .ch{
+  font-family: 'SweiAliasSans';
+  margin-left: 10px;
+  padding: 10px 50px;
+  font-size: min(3vw, 32px);
+}
+#Home .nav a.router-link-exact-active{
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+@media screen and (max-width: 480px) {
+  #Home .translate {
+  right: 10px;
+  bottom: 15px;
+  top: initial
+}
+#Home .translate label {
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+}
+#Home .translate label .ch {
+  width: 20px;
+  height: 22p;
+  padding: 0px 2px;
+}
+#Home .translate label span {
+  font-size: 20px;
+  font-weight: 800;
+}
+#Home .translate label .eg {
+  width: 22px;
+  height: 22px;
+}
+
+  #Home .word .name {
+    font-size: 10vh;
+  }
+  #Home .word img {
+    display: none;
+  }
+  #Home .word .num4 {
+    margin-left: initial;
+  }
+  #Home .image {
+    display: flex;
+  }
+  #Home .image img {
+    margin-top: 2.5vh;
+    height: 40vh;
+  }
+  #Home .nav{
+    flex-direction: column;
+    margin: 0px;
+  }
+  #Home .nav a{
+    padding: 10px 16px;
+    font-size: 4vw;
+    margin: 0px;
+    margin-top: 2vh;
+    text-align: center;
+  }
+  #Home .nav .ch{
+  font-family: 'SweiAliasSans';
+  margin-left: 0px;
+  margin-top: 2vh;
+  padding: 8px 30px;
+  font-size: 4.5vw;
+}
+}
+@media screen and (max-width: 1000px) {
+  #Home .word {
+    align-items: baseline;
+    transition-duration: 2s;
+  }
+}

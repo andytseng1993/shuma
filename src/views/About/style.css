@@ -1,0 +1,232 @@
+#about {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  overflow-y: hidden;
+  flex-direction: column;
+  background: no-repeat url("../../assets/img/selfi.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-position: 100% 44%;
+}
+#nav{
+  background-color:rgba(0, 0, 0, 0.5);
+  z-index: 50;
+}
+
+.title {
+  font-family:'Times New Roman','Taipei Sans';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: inherit;
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  filter: invert(1) grayscale(1) contrast(10);
+  margin-top: 20px;
+}
+.title .beforeLine {
+  flex: 1 1;
+  height: 0;
+  width: 10%;
+  top: 50%;
+  border-top: 2px solid rgba(255, 255, 255, 0.5);
+  margin-right: 10px;
+}
+.title .afterLine {
+  flex: 1 1;
+  height: 0;
+  width: 10%;
+  left: 10%;
+  top: 50%;
+  border-top: 2px solid rgba(255, 255, 255, 0.5);
+  margin-left: 10px;
+}
+.title h1{
+  margin:0px;
+  font-size: max(2.5vw,45px);
+}
+.link {
+  z-index: 100;
+  font-family:'Times New Roman';
+  position: absolute;
+  bottom: 3vh;
+  left: 6vw;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.link .name{
+  font-size: max(7vw,50px);
+}
+.link .hyperlink a{
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 3vw;
+  margin-right: 20px;
+}
+.link .hyperlink a:nth-of-type(1){
+  margin-left: 10px;
+}
+.link .hyperlink a:hover {
+  color: white;
+}
+
+.aboutme {
+  position: relative;
+  top: 25%;
+  width: 100vw;
+  height: 40vh;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.aboutme img {
+  width: 35vw;
+  position: relative;
+}
+.aboutme h4 {
+  position: relative;
+  right: 3vw;
+  top: -400px;
+  width: 39vw;
+  margin: 0px;
+  font-family:'Times New Roman','Taipei Sans';
+  font-weight: 600;
+  line-height: 1.4em;
+  letter-spacing: 2px;
+  text-align: justify;
+  font-size: min(1.6vw,23px);
+  color: black;
+}
+.aboutme.english h4{
+  top: -410px;
+  line-height: 1.1em;
+  letter-spacing: 0.8px;
+}
+@media screen and (max-width: 1200px) and (min-width: 481px) {
+  #about .aboutme{
+    justify-content: center;
+  }
+  #about .link {
+    bottom: 53vh;
+    left:auto;
+    right: 7vw;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  #about .link .hyperlink a{
+    color: rgba(0, 0, 0, 0.4);
+    font-size:max(25px ,3.5vw);
+    margin-right: 10px;
+  }
+  .link .hyperlink a:nth-of-type(1){
+  margin-left: 5px;
+}
+  #about .link .hyperlink a:hover {
+    color: black;
+}
+  #about .aboutme h4 {
+    position: relative;
+    top: auto;
+    right: auto;
+    text-align: justify;
+    width: 80vw;
+    bottom: auto;
+    font-size: max(1.9vh,2vw);
+    padding: 10px 25px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    color: white;
+  }
+  #about .aboutme.english h4{
+  line-height: 1.2em;
+  letter-spacing: 0.8px;
+}
+}
+@media screen and (max-width: 480px) {
+  #about {
+    background-position: 30% 50%;
+    justify-content: space-between;
+  }
+  #nav{
+    order: 2;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  #nav .pc{
+    position: absolute;
+    transform: translate(-9999px, 0px);
+  }
+  
+  .title {
+    justify-content: start;
+    font-size: 30px;
+    margin-top: 20px;
+  }
+  .title h1 {
+    font-size: 9vw;
+  }
+  .link {
+    top: 10vh;
+    bottom: initial;
+    right: 10px;
+    left: initial;
+  }
+  .link .hyperlink a:nth-of-type(1){
+    margin-left: 3px;
+  }
+  .link .hyperlink a{
+    font-size: 6vw;
+    color: rgba(0, 0, 0, 0.5);
+    margin-right: 9px;
+    margin-left: initial;
+  }
+  .link .name{
+    font-size: 11vw;
+    color: rgba(0, 0, 0, 0.6);
+  }
+  #about .link .hyperlink a:hover {
+  color: rgba(0, 0, 0, 0.6);
+  }
+  .title .beforeLine {
+    flex: none;
+    width: 70px;
+    border-top: 4px solid black;
+  }
+  .title .afterLine {
+    display: none;
+  }
+
+  #about .aboutme{
+    justify-content: center;
+  }
+  .aboutme h4 {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 10px;
+    padding: 5px 10px;
+    font-weight: 500;
+    width: 90vw;
+    font-size: 4vw;
+    right:auto;
+    color: white;
+    line-height: 1.3em;
+    letter-spacing: 0.9px;
+    top: -10px;
+  }
+  .aboutme.english{
+    top: auto;
+  }
+  .aboutme.english h4{
+  top: 22vh;
+  line-height: 1.2em;
+  letter-spacing: 0.5px;
+}
+}

@@ -1,0 +1,135 @@
+<div id="placeOrder">
+    <div class="back">
+      <router-link to="/shop">
+      <font-awesome-icon
+        icon=chevron-left
+      />
+      <span>{{engControl?'Back to Shop':'返回商店'}}</span>
+      </router-link>
+    </div>
+
+  <!-- order complete -->
+  <transition name="fade">
+    <div class="confirm"
+          v-if="show"
+          >
+      <div
+        class="content"
+      >
+        <div class="send">
+          <font-awesome-icon :icon="['far','paper-plane']" />
+          <font-awesome-icon :icon="['fas','wind']" />
+          {{engControl?'Your order place success!!':'下訂成功'}}
+          
+        </div>
+        <div class="context">
+          {{engControl?'Thank you for your order, SHUMA will contact you within 24 hours!':'感謝您的訂單，SHUMA會在24小説内聯絡您！'}}
+        </div>
+      </div>
+    </div>
+  </transition>
+
+  <div class="order-content" :class="{confirm:show}">
+
+     <!-- order list -->
+    <div class="orderList">
+      <div class="header">{{engControl?'Order Summary:':'訂單摘要：'}}</div>
+      <ul>
+        <li
+          v-for="(item,itemId) in cartList"
+          :key="itemId"
+        >
+          <div
+            class="img"
+            :style="{ backgroundImage: 'url(' +require('@/assets/thumbnail/'+ item.thumbnail) + ')' }"
+          ></div>
+          <div class="details">
+            <div class="title">
+              <span class="name">{{engControl?item.title[1]:item.title[0]}}</span>
+              <span class="price">
+                <span class="price-symbol">
+                  {{engControl?'&#36':'NT&#36'}}</span>{{engControl?price(item.price[1]):price(item.price[0])}}
+              </span>
+            </div>
+            <div class="material"> {{engControl?item.material[1]:item.material[0]}}</div>
+            <div class="size"> {{ item.size }}
+              <div
+                class="remove"
+                @click="deleteList(itemId)"
+              >&#10006</div>
+            </div>
+          </div>
+        </li>
+        <li
+          class="emptyCart"
+          v-if="!cartList.length"
+          :class="{empty:cartEmpty}"
+        >
+          <font-awesome-icon icon=shopping-cart />
+          <div>
+            {{engControl?'Your Cart is empty.':'購物車無商品'}}
+          </div>
+        </li>
+      </ul>
+      <div
+        class="subTotal"
+        v-if="cartList.length"
+      >
+        <h4>{{engControl?'Total:':'總金額:'}}</h4>
+        <div class="total-price">
+          <span class="price-symbol">
+            {{engControl?'&#36':'NT&#36'}}</span>{{price(subTotal)}}
+        </div>
+      </div>
+    </div>
+    
+      <!-- contact form -->
+      <form
+        class="container"
+        @submit.prevent="send()"
+      >
+        <label>{{engControl?'Name*':'名字*'}}</label>
+        <input
+          ref="name"
+          v-model.trim="order.name"
+          type="text"
+          name="name"
+          :placeholder="engControl?'Your Name':'您的名字'"
+          required="required"
+        >
+        <label>{{engControl?'Email*':'電子郵件*'}}</label>
+        <input
+          v-model.trim="order.email"
+          type="email"
+          name="email"
+          :placeholder="engControl?'Your Email':'您的電子郵件'"
+          required="required"
+        >
+        <label>{{engControl?'Message (options)':'額外訊息(非必要)'}}</label>
+        <textarea
+          v-model.trim="order.message"
+          name="message"
+          cols="20"
+          rows="3"
+          :placeholder="engControl?'Message':'訊息'"
+        />
+        <div
+          class="recaptcha"
+          :class="{recaptchaVerifyKey}"
+        >
+          <vue-recaptcha
+            sitekey="6LdcWpQaAAAAAKwlfSQfDE_ZYN1fe8fdTujNrhIy"
+            @verify="recaptchaverify"
+          />
+          <small :class="{recaptcha_failed:formEmpty}">{{engControl?'Please complete reCAPTCHA !':'請勾選驗證按鈕！'}}</small>
+        </div>
+        <input
+          type="submit"
+          :value="engControl?'Send':'傳送'"
+        >
+      </form>
+  </div>
+
+  
+
+</div>

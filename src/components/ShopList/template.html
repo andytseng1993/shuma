@@ -1,0 +1,159 @@
+<div id="shopList">
+  <div
+    class="items"
+    :class="{isLightboxOpen}"
+  >
+    <div
+      class="cover"
+      v-for="(artwork,artid) in artworkMenu.sort"
+      :key="artid"
+    >
+      <div
+        class="img"
+        @click="setPlayId(artid),controlLightBox(true),lightboxNoScroll('add')"
+        :style="bgcss(artworkMenu.map[artwork].thumbnail)"
+      >
+      </div>
+      <div class="details" >
+        <div class="title" @click="setPlayId(artid),controlLightBox(true),lightboxNoScroll('add')">{{artwork}}</div>
+
+        <div class="price"><span class="price-symbol">{{engControl?'&#36':'NT&#36'}}</span>{{engControl?price(artworkMenu.map[artwork].price[1]):price(artworkMenu.map[artwork].price[0])}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- shopping cart -->
+
+  <div class="orderTotal" :class={open:isCartOpen}>
+    <div class="shopCart">{{engControl?'Shopping Cart':'購物車'}}
+      <div class="close_btn">
+        <font-awesome-icon
+          icon=times-circle
+          @click="isCartOpen = !isCartOpen,cartNoScroll ('add')"
+        />
+      </div>
+    </div>
+    <div class="orderList">
+      <ul>
+        <li v-for="(item,itemId) in cartList" :key="itemId">
+          <div class="img" :style="{ 'background-image': 'url(' + require('@/assets/thumbnail/' + item.thumbnail) + ')' }"></div>
+          <div class="details">
+            <div class="title">
+              <span class="name" >{{engControl?item.title[1]:item.title[0]}}</span>
+              <span class="price">
+                <span class="price-symbol">
+                  {{engControl?'&#36':'NT&#36'}}</span>{{engControl?price(item.price[1]):price(item.price[0])}}
+              </span>
+            </div>
+            <div class="material"> {{engControl?item.material[1]:item.material[0]}}</div>
+            <div class="size"> {{ item.size }}
+              <div
+                class="remove"
+                @click="deleteList(itemId)"
+              >&#10006</div>
+            </div>
+          </div>
+        </li>
+        <li class="emptyCart" v-if="!cartList.length">
+          <font-awesome-icon icon=shopping-cart />
+          <div>
+            {{engControl?'Your Cart is empty.':'無商品'}}
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="subTotal" v-if="cartList.length">
+      <div
+        class="shopControl"
+        @click="isCartOpen = !isCartOpen,cartNoScroll ()"
+      >
+        <font-awesome-icon 
+          icon=shopping-cart 
+          :class="{ emptynum: !cartList.length }"
+          />
+        <span
+          class="num"
+          v-if="cartList.length"
+        >{{ cartList.length }}</span>
+      </div>
+      <div
+        class="total"
+      >
+        <h4>{{engControl?'Subtotal':'總金額'}}: 
+          <span class="price-symbol">
+          {{engControl?'&#36':'NT&#36'}}</span>{{price(subTotal)}}
+        </h4>
+      </div>
+      <router-link class="submit"
+        :to="{name: 'placeOrder'}"
+        append
+      >
+        {{engControl?'Place order':'訂購'}}
+      </router-link>
+    </div>
+
+  </div>
+
+  <!-- lightBox open -->
+  <transition name="fade">
+    <div
+      v-show="isLightboxOpen"
+      class="lightbox isLightboxOpen"
+    >
+      <div class="closeButton">
+        <div class="circle"></div>
+        <font-awesome-icon icon=times-circle
+        @click="controlLightBox(false),lightboxNoScroll('remove')"
+        />
+      </div>
+      <div class="nextButton">
+        <font-awesome-icon icon=chevron-right
+        @click="change(nowPlayId+1)"
+        />
+      </div>
+      <div class="preButton">
+        <font-awesome-icon icon=chevron-left
+        @click="change(nowPlayId-1)"
+        />
+      </div>
+      <div
+        class="myPainting"
+        v-if="isLightboxOpen"
+      >
+        <div class="all">
+          <img
+            id="myPaint"
+            :src="require('@/assets/img/'+artworkDetail.src)"
+            @click="change(nowPlayId+1)"
+          >
+          <div
+            class="words"
+          >
+            <div class="name">
+              {{selectArtwork}}
+              <div class="year">
+                , {{artworkDetail.year}}
+              </div>
+            </div>
+            <div class="material">
+              {{artworkMaterials}}
+              <div class="size">
+                , {{artworkDetail.size}}
+              </div>
+              <div class="add" @click="addList(selectArtwork)">
+                {{engControl?'Add to Cart':'加入購物車'}}
+              </div>
+            </div>
+            <div class="price">
+              <span class="price-symbol">
+                {{engControl?'&#36':'NT&#36'}}
+              </span>
+              {{engControl?price(artworkDetail.price[1]):price(artworkDetail.price[0])}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </transition>
+</div>

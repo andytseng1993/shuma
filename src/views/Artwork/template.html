@@ -1,0 +1,19 @@
+
+<div class="Artwork">
+    <Navigation :engControl="engControl"></Navigation>
+    <div class="title">
+        <div class="beforeLine"></div>
+        <h1>{{engControl?'Artwork':'作品集'}}</h1>
+        <div class="afterLine"></div>
+    </div>
+    <FilterType 
+        :filterType.sync="type" 
+        :typeMenu="typeList.sort" 
+        :engControl="engControl" 
+        :isLightboxOpen="isLightboxOpen"
+        ></FilterType>
+    <LightBox :isLightboxOpen.sync="isLightboxOpen" :artworkMenu="artworkMenu" :engControl="engControl" :nowPlayId.sync="nowPlayId"></LightBox>
+    <div
+        class="footer"
+    >{{engControl?'Copyright &#169;'+ date()+ ' SHUMA. All Rights Reserved':'版權所有 &#169;'+ date()+' SHUMA'}}</div>
+</div>
