@@ -21,13 +21,14 @@
 
 .title {
   font-family:'Times New Roman','Taipei Sans';
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  color: transparent;
   background: inherit;
   -webkit-background-clip: text;
           background-clip: text;
-  color: transparent;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
   filter: invert(1) grayscale(1) contrast(10);
   margin-top: 20px;
 }

@@ -24,19 +24,19 @@ export default new Vuex.Store({
     recaptcha: ''
   },
   mutations: {
-    SETARTWORK (state, artworks) {
+    SET_ARTWORK (state, artworks) {
       state.artworks = artworks
     },
-    SETTYPE (state, type) {
+    SET_TYPE (state, type) {
       state.type = type
     },
-    SETLANGUAGE (state, val) {
+    SET_LANGUAGE (state, val) {
       state.engControl = val
     },
-    SETLIGHTBOX (state, lightbox) {
+    SET_LIGHTBOX (state, lightbox) {
       state.isLightboxOpen = lightbox
     },
-    SETPLAYID (state, id) {
+    SET_PLAYID (state, id) {
       state.nowPlayId = id
     },
     SET_SHOPLISTS (state, items) {
@@ -49,17 +49,17 @@ export default new Vuex.Store({
   actions: {
     GETARTWORK (context) {
       return axios.get('./artwork.json').then(res => {
-        context.commit('SETARTWORK', res.data)
+        context.commit('SET_ARTWORK', res.data)
       })
     },
     GET_LANGUAGE ({ commit }) {
       const val = ENG.get()
-      commit('SETLANGUAGE', val)
+      commit('SET_LANGUAGE', val)
       return val
     },
     SET_LANGUAGE ({ commit }, value) {
       ENG.set(value)
-      commit('SETLANGUAGE', value)
+      commit('SET_LANGUAGE', value)
     },
     READ_SHOPLIST ({ commit }) {
       const items = STORE.get()
@@ -92,6 +92,10 @@ export default new Vuex.Store({
       return {
         items
       }
+    },
+    CLEAR_TYPE ({ commit }) {
+      const type = null
+      commit('SET_TYPE', type)
     }
   },
   modules: {
