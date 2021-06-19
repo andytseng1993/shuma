@@ -19,40 +19,7 @@
   z-index: 50;
 }
 
-.title {
-  font-family:'Times New Roman','Taipei Sans';
-  color: transparent;
-  background: inherit;
-  -webkit-background-clip: text;
-          background-clip: text;
-  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  filter: invert(1) grayscale(1) contrast(10);
-  margin-top: 20px;
-}
-.title .beforeLine {
-  flex: 1 1;
-  height: 0;
-  width: 10%;
-  top: 50%;
-  border-top: 2px solid rgba(255, 255, 255, 0.5);
-  margin-right: 10px;
-}
-.title .afterLine {
-  flex: 1 1;
-  height: 0;
-  width: 10%;
-  left: 10%;
-  top: 50%;
-  border-top: 2px solid rgba(255, 255, 255, 0.5);
-  margin-left: 10px;
-}
-.title h1{
-  margin:0px;
-  font-size: max(2.5vw,45px);
-}
+
 .link {
   z-index: 100;
   font-family:'Times New Roman';
@@ -79,13 +46,10 @@
 }
 
 .aboutme {
-  position: relative;
-  top: 25%;
-  width: 100vw;
-  height: 40vh;
+
   flex-grow: 1;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-end;
 }
 .aboutme img {
@@ -95,10 +59,10 @@
 .aboutme h4 {
   position: relative;
   right: 3vw;
-  top: -400px;
   width: 39vw;
+  top: 20vh;
   margin: 0px;
-  font-family:'Times New Roman','Taipei Sans';
+  font-family:'Times New Roman','Taipei Sans TC';
   font-weight: 600;
   line-height: 1.4em;
   letter-spacing: 2px;
@@ -107,7 +71,6 @@
   color: black;
 }
 .aboutme.english h4{
-  top: -410px;
   line-height: 1.1em;
   letter-spacing: 0.8px;
 }
@@ -128,17 +91,18 @@
   }
   .link .hyperlink a:nth-of-type(1){
   margin-left: 5px;
-}
+  }
   #about .link .hyperlink a:hover {
     color: black;
-}
+  }
+  #about .aboutme{
+    align-items: flex-end;
+  }
   #about .aboutme h4 {
-    position: relative;
     top: auto;
     right: auto;
-    text-align: justify;
     width: 80vw;
-    bottom: auto;
+    bottom: 40px;
     font-size: max(1.9vh,2vw);
     padding: 10px 25px;
     font-weight: 500;
@@ -207,26 +171,26 @@
 
   #about .aboutme{
     justify-content: center;
+    align-items: flex-end;
   }
   .aboutme h4 {
     position: relative;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 10px;
-    padding: 5px 10px;
+    top: initial;
+    bottom: 60px;
+    padding: 10px 15px;
     font-weight: 500;
-    width: 90vw;
-    font-size: 4vw;
+    width: 85vw;
+    font-size: 3.8vw;
     right:auto;
     color: white;
-    line-height: 1.3em;
-    letter-spacing: 0.9px;
-    top: -10px;
+    line-height: 1.2em;
   }
   .aboutme.english{
     top: auto;
   }
   .aboutme.english h4{
-  top: 22vh;
   line-height: 1.2em;
   letter-spacing: 0.5px;
 }

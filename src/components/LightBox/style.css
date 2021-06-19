@@ -1,5 +1,5 @@
 * {
-  font-family: "Times New Roman", 'Taipei Sans';
+  font-family: "Times New Roman", 'Taipei Sans TC';
 }
 #lightBox .artworks {
   margin: 0px 5%;
@@ -58,10 +58,11 @@
 #lightBox .artworks .cover:hover {
   transform: translate(-5px, -5px);
   cursor: pointer;
-  filter: drop-shadow(8px 14px 6px rgba(0, 0, 0, 0.2));
+  filter: none;
 }
 #lightBox .artworks .cover:hover .box {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.2);
 }
 #lightBox .artworks .cover:hover .box h3 {
   color: white;
