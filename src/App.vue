@@ -8,20 +8,16 @@
 @font-face {
   font-family: 'Gugi';
   src: local("Gugi"),
-  url(./fonts/Gugi/Gugi-Regular.ttf) format('truetype');
+  url(~@/assets/fonts/Gugi/Gugi-Regular.ttf) format('truetype');
   }
 @font-face {
   font-family:'Press Start 2P';
-  src: local("Press Start 2P"), url(./fonts/Press_Start_2P/PressStart2P-Regular.ttf) format('truetype');
+  src: local("Press Start 2P"), url(~@/assets/fonts/Press_Start_2P/PressStart2P-Regular.ttf) format('truetype');
 }
 @font-face {
-  font-family:'SweiAliasSans' ;
-  src: local('SweiAliasSans'),url(./fonts/CJK_TC/SweiAliasSansCJKtc-Bold.ttf) format('truetype');
-}
-@font-face {
-  font-family:'Taipei Sans';
-  src:  local('Taipei Sans'),url(./fonts/Taipei_Sans _TC/TaipeiSansTCBeta-Regular.ttf) format('truetype');
-  font-weight: normal;
+  font-family: 'SweiAliasSans';
+  src: url(https://cdn.jsdelivr.net/gh/max32002/swei-alias-sans@2.0/WebFont/CJK%20TC/SweiAliasSansCJKtc-Regular.woff2) format("woff2")
+  , url(https://cdn.jsdelivr.net/gh/max32002/swei-alias-sans@2.0/WebFont/CJK%20TC/SweiAliasSansCJKtc-Regular.woff) format("woff");
 }
 
 html,body{
