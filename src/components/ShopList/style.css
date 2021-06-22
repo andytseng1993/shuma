@@ -53,11 +53,16 @@
 }
 
 #shopList .items .cover .details .price{
+  display: flex;
+  align-items: flex-start;
   font-family: "Times New Roman";
   font-size: 18px;
   margin-top: 7px;
   font-weight: 600;
-
+}
+#shopList .items .cover .details .price .price-symbol{
+  font-size: 12px;
+  position: relative;
 }
 /* shopping cart */
 #shopList .orderTotal{
@@ -165,7 +170,12 @@
   align-items: center;
 }
 #shopList .orderTotal .subTotal .total h4{
+  display: flex;
   font-size: 20px;
+}
+#shopList .orderTotal .subTotal .total h4 .price-symbol{
+  font-size: 14px;
+  margin-left: 4px;
 }
 #shopList .orderTotal .subTotal .shopControl{
   display: none;
@@ -382,9 +392,8 @@
   #shopList .orderTotal .subTotal .total h4{
     font-size: 4vw;
   }
-  #shopList .orderTotal .subTotal .total .price-symbol{
-    top: -0.3em;
-    font-size: 3vw;
+  #shopList .orderTotal .subTotal .total h4 .price-symbol{
+    font-size: 2.8vw;
   }
   #shopList .orderTotal .subTotal .submit{
     font-size: 4vw;
@@ -614,11 +623,11 @@
   letter-spacing: 1px;
   font-weight: 700;
 }
-.price-symbol{
-  font-size: 14px;
-  position: relative;
-  top: -0.4em;
+.words .price .price-symbol{
+  font-size: 11px;
+  top: 0em;
 }
+
 .fade-enter-active,.fade-leave-active{
   transition: opacity .3s;
 }

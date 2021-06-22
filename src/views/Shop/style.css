@@ -2,9 +2,9 @@
   user-select: none; 
 }
 #nav{
-  background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),url("../../assets/img/The_Night_Citizen.jpg");
+  background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),url("../../assets/thumbnail/The-Night-Citizen-min.jpg");
   z-index: 50;
-  background-position: 60% 70%;
+  background-position: 30% 20%;
 }
 .title {
   font-family:'Times New Roman','Taipei Sans TC';

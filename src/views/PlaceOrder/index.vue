@@ -122,7 +122,7 @@ export default {
         this.show = true
         window.setTimeout(() => {
           this.$router.push('/')
-        }, 2000)
+        }, 4500)
       } else if (this.order.title.length === 0 && this.recaptchaVerifyKey === '') {
         this.formEmpty = true
         this.cartEmpty = true
