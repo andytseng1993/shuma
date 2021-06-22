@@ -22,7 +22,7 @@ export default {
         return this.$store.state.type
       },
       set (val) {
-        this.$store.commit('SETTYPE', val)
+        this.$store.commit('SET_TYPE', val)
       }
     },
     isLightboxOpen: {
@@ -30,7 +30,7 @@ export default {
         return this.$store.state.isLightboxOpen
       },
       set (val) {
-        this.$store.commit('SETLIGHTBOX', val)
+        this.$store.commit('SET_LIGHTBOX', val)
       }
     },
     nowPlayId: {
@@ -38,7 +38,7 @@ export default {
         return this.$store.state.nowPlayId
       },
       set (val) {
-        this.$store.commit('SETPLAYID', val)
+        this.$store.commit('SET_PLAYID', val)
       }
     },
 
@@ -101,6 +101,7 @@ export default {
   mounted () {
     this.$store.dispatch('GETARTWORK')
     this.$store.dispatch('GET_LANGUAGE')
+    this.$store.dispatch('CLEAR_TYPE')
   },
   methods: {
     date: function () {
