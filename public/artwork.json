@@ -105,7 +105,7 @@
       "size": "7×5.5 inch ",
       "sell": false,
       "soldOut": false,
-      "price": [7500,230]
+      "price": [7500,250]
     },
     {
       "thumbnail": "Rich-min.jpg",
@@ -126,7 +126,7 @@
       "size": "9.5×6 inch",
       "sell": true,
       "soldOut": false,
-      "price": [7500,230]
+      "price": [7500,250]
     },
     {
       "thumbnail": "white-witch-min.jpg",
@@ -815,7 +815,7 @@
       "soldOut": false,
       "price": [
         7500,
-        230
+        250
       ]
     },
     {
@@ -839,7 +839,7 @@
       "soldOut": false,
       "price": [
         7500,
-        230
+        250
       ]
     },
     {
@@ -863,7 +863,7 @@
       "soldOut": true,
       "price": [
         7500,
-        230
+        250
       ]
     },
     {
@@ -887,7 +887,7 @@
       "soldOut": false,
       "price": [
         7500,
-        230
+        250
       ]
     }
     

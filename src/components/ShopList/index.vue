@@ -17,7 +17,9 @@ export default {
     },
     artworkMenu: {
       type: Object,
-      required: true
+      default: function () {
+        return {}
+      }
     },
     engControl: {
       type: Boolean,
