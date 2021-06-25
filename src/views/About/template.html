@@ -14,6 +14,15 @@
       
     </div>
     <span class="name">SHUMA</span>
+    <router-link
+      class="contact"
+      :to="{name:'Contact'}"
+      append
+    >
+      Contact me
+      <font-awesome-icon :icon="['fas','envelope']" />
+    </router-link>
+    
   </div>
   <div class="aboutme" :class="{english:engControl}">
     <h4>
