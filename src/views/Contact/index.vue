@@ -52,7 +52,7 @@ export default {
       this.recaptchaVerifyKey = res
     },
     send () {
-      if (this.order.name && this.order.email && this.recaptchaVerifyKey && this.order.title.length) {
+      if (this.order.name && this.order.email && this.recaptchaVerifyKey) {
         emailjs.send(process.env.VUE_APP_EMAILJS_SERVICE_ID, process.env.VUE_APP_EMAILJS_TEMPALTE_ID, this.order, process.env.VUE_APP_EMAILJS_USER_ID).then(function (response) {
           console.log('SUCCESS!', response.status, response.text)
         }, function (error) {
@@ -71,11 +71,10 @@ export default {
           .catch(function (error) {
             console.log(error)
           })
-        this.clear()
         this.show = true
         window.setTimeout(() => {
-          this.$router.push('/')
-        }, 4500)
+          this.$router.push('/about')
+        }, 4000)
       } else {
         this.formEmpty = true
       }

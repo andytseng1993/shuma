@@ -2,7 +2,7 @@
   <div class="back">
     <router-link to="/about">
       <font-awesome-icon icon=chevron-left />
-      <span>{{engControl?'Back to About':'返回關於'}}</span>
+      <span>{{engControl?'Back to About':'返回'}}</span>
     </router-link>
   </div>
 
@@ -20,9 +20,9 @@
   
         </div>
         <div class="context">
-          Dear {{order.name}},<br>
-          Thank you for getting in touch! <br>
-          Have a great day! <br>
+          {{engControl?'Dear'+order.name+',':order.name+','}}<br>
+          {{engControl?'Thank you for getting in touch!':'感謝您的回饋！'}} <br>
+          {{engControl?'Have a great day!':'祝您有美好的一天！'}}<br>
           SHUMA
         </div>
       </div>
@@ -30,9 +30,10 @@
   </transition>
 
   
-  <div class="content">
-    <h2>Hi, there!!</h2>
-    <h3>Get in Touch</h3>
+  <div class="content" :class="{submit:show}">
+    <h2>{{engControl?'Hi, there!!!!':'Hello, 您好！！！'}}</h2>
+    <h3>{{engControl?'Have any questions?':''}} <span>{{engControl?'Please get in Touch with me!':'有任何問題請與SHUMA聯係！'}}</span>
+      </h3>
     <form
           class="container"
           @submit.prevent="send()"
