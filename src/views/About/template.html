@@ -19,7 +19,7 @@
       :to="{name:'Contact'}"
       append
     >
-      Contact me
+      {{engControl?'Contact me':'聯絡我'}}
       <font-awesome-icon :icon="['fas','envelope']" />
     </router-link>
     

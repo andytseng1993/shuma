@@ -470,10 +470,10 @@ input[type=submit]:active{
 }
 
 
-.fade-enter-active{
+.fade-enter-active, .fade-leave-active{
   transition: opacity .2s;
 }
-.fade-enter{
+.fade-enter,.fade-leave-to{
   opacity: 0;
 }
 
