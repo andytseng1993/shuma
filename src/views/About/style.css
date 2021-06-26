@@ -22,7 +22,7 @@
 
 .link {
   z-index: 100;
-  font-family:'Times New Roman';
+  font-family:'Times New Roman','Taipei Sans TC';
   position: absolute;
   bottom: 3vh;
   left: 6vw;
