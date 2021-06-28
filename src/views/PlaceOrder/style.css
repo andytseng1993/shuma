@@ -1,4 +1,5 @@
 * {
+  font-family:'Times New Roman','Taipei Sans TC';
   box-sizing: border-box;
   user-select: none;
 }
@@ -478,5 +479,16 @@ input[type=submit]:active{
 }
 
 
-
+@font-face {
+  font-family:'Taipei Sans TC';
+  src:  local('Taipei Sans TC'),url(~@/assets/fonts/Taipei_Sans_TC/TaipeiSansTCBeta-Bold.ttf) format('truetype');
+  font-weight: bold;
+  font-display: swap;
+}
+@font-face {
+  font-family:'Taipei Sans TC';
+  src:  local('Taipei Sans TC'),url(~@/assets/fonts/Taipei_Sans_TC/TaipeiSansTCBeta-Regular.ttf) format('truetype');
+  font-weight: normal;
+  font-display: swap;
+}
 
