@@ -9,15 +9,12 @@
   font-family: 'Gugi';
   src: local("Gugi"),
   url(~@/assets/fonts/Gugi/Gugi-Regular.ttf) format('truetype');
+  font-display: swap;
   }
 @font-face {
   font-family:'Press Start 2P';
   src: local("Press Start 2P"), url(~@/assets/fonts/Press_Start_2P/PressStart2P-Regular.ttf) format('truetype');
-}
-@font-face {
-  font-family: 'SweiAliasSans';
-  src: url(https://cdn.jsdelivr.net/gh/max32002/swei-alias-sans@2.0/WebFont/CJK%20TC/SweiAliasSansCJKtc-Regular.woff2) format("woff2")
-  , url(https://cdn.jsdelivr.net/gh/max32002/swei-alias-sans@2.0/WebFont/CJK%20TC/SweiAliasSansCJKtc-Regular.woff) format("woff");
+  font-display: swap;
 }
 
 html,body{
@@ -47,9 +44,6 @@ body{
  box-shadow: inset 7px 10px 12px #f0f0f0;
 }
 #app {
-  font-family: Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   width:100%;
   height: 100%;

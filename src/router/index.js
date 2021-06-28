@@ -31,6 +31,16 @@ const routes = [
     path: '/place-order',
     name: 'placeOrder',
     component: () => import(/* webpackChunkName: "place-order" */ '../views/PlaceOrder/index.vue')
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    component: () => import(/* webpackChunkName: "contact" */ '../views/Contact/index.vue')
+  },
+  {
+    path: '/*',
+    redirect: { name: 'Home' }
+
   }
 ]
 
