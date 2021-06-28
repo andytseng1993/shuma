@@ -16,12 +16,6 @@
   src: local("Press Start 2P"), url(~@/assets/fonts/Press_Start_2P/PressStart2P-Regular.ttf) format('truetype');
   font-display: swap;
 }
-@font-face {
-  font-family: 'SweiAliasSans';
-  src: url(https://cdn.jsdelivr.net/gh/max32002/swei-alias-sans@2.0/WebFont/CJK%20TC/SweiAliasSansCJKtc-Regular.woff2) format("woff2")
-  , url(https://cdn.jsdelivr.net/gh/max32002/swei-alias-sans@2.0/WebFont/CJK%20TC/SweiAliasSansCJKtc-Regular.woff) format("woff");
-  unicode-range: U+9996, U+9801, U+95DC, U+65BC, U+4F5C, U+54C1, U+96C6, U+5546, U+5E97,U+4E2D;
-}
 
 html,body{
   margin: 0%;
