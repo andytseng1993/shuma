@@ -3,9 +3,10 @@
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faInstagramSquare, faFacebookSquare, faArtstation } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 import Navigation from '@/components/Navigation/index.vue'
-library.add(faInstagramSquare, faFacebookSquare, faArtstation)
+library.add(faInstagramSquare, faFacebookSquare, faArtstation, faEnvelope)
 
 export default {
   components: {

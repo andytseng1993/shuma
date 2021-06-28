@@ -1,0 +1,79 @@
+<div id="contactform">
+  <transition name="fade">
+    <div
+      class="confirm"
+      v-if="show"
+    >
+      <div class="content">
+        <div class="send">
+          <font-awesome-icon :icon="['far','paper-plane']" />
+          <font-awesome-icon :icon="['fas','wind']" />
+          {{engControl?'Successfully send the message!!':'成功寄出訊息'}}
+  
+        </div>
+        <div class="context">
+          {{engControl?'Dear'+order.name+',':order.name+','}}<br>
+          {{engControl?'Thank you for getting in touch!':'感謝您的回饋！'}} <br>
+          {{engControl?'Have a great day!':'祝您有美好的一天！'}}<br>
+          SHUMA
+        </div>
+      </div>
+    </div>
+  </transition>
+  
+  
+  <div
+    class="content"
+    :class="{submit:show}"
+  >
+    <h2>{{engControl?'Hi, there!!!!':'Hello, 您好！！！'}}</h2>
+    <h3>{{engControl?'Have any questions?':''}} <span>{{engControl?'Please get in Touch with
+        me!':'有任何問題請與SHUMA聯係！'}}</span>
+    </h3>
+    <form
+      class="container"
+      @submit.prevent="send()"
+    >
+      <label>{{engControl?'Name*':'名字*'}}</label>
+      <input
+        ref="name"
+        v-model.trim="order.name"
+        type="text"
+        name="name"
+        :placeholder="engControl?'Your Name':'您的名字'"
+        required="required"
+      >
+      <label>{{engControl?'Email*':'電子郵件*'}}</label>
+      <input
+        v-model.trim="order.email"
+        type="email"
+        name="email"
+        :placeholder="engControl?'Your Email':'您的電子郵件'"
+        required="required"
+      >
+      <label>{{engControl?'Message*':'訊息*'}}</label>
+      <textarea
+        v-model.trim="order.message"
+        name="message"
+        cols="20"
+        rows="5"
+        :placeholder="engControl?'Your Message':'您的訊息'"
+        required="required"
+      />
+      <div
+        class="recaptcha"
+        :class="{recaptchaVerifyKey}"
+      >
+        <vue-recaptcha
+          sitekey="6LdcWpQaAAAAAKwlfSQfDE_ZYN1fe8fdTujNrhIy"
+          @verify="recaptchaverify"
+        />
+        <small :class="{recaptcha_failed:formEmpty}">{{engControl?'Please complete reCAPTCHA !':'請勾選驗證按鈕！'}}</small>
+      </div>
+      <input
+        type="submit"
+        :value="engControl?'Send':'傳送'"
+      >
+    </form>
+  </div>
+</div>
