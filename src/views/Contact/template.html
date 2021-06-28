@@ -1,0 +1,13 @@
+<div id="contact">
+  <div class="back">
+    <router-link to="/about">
+      <font-awesome-icon icon=chevron-left />
+      <span>{{engControl?'Back to About':'返回'}}</span>
+    </router-link>
+  </div>
+  <contact-form 
+    :engControl="engControl" 
+    :recaptchaVerifyKey.sync="recaptchaVerifyKey"
+    >
+  </contact-form>
+</div>

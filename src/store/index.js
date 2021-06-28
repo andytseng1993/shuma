@@ -9,7 +9,6 @@ const ENG = new LocalStorageEngControl('language')
 const STORE = new LocalStorage('shopList')
 
 export default new Vuex.Store({
-  strict: true,
   state: {
     cartList: [],
     artworks: [],
