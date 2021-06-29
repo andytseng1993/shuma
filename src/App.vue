@@ -5,12 +5,7 @@
 </template>
 
 <style>
-@font-face {
-  font-family: 'Gugi';
-  src: local("Gugi"),
-  url(~@/assets/fonts/Gugi/Gugi-Regular.ttf) format('truetype');
-  font-display: swap;
-  }
+
 @font-face {
   font-family:'Press Start 2P';
   src: local("Press Start 2P"), url(~@/assets/fonts/Press_Start_2P/PressStart2P-Regular.ttf) format('truetype');
