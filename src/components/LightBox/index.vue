@@ -58,6 +58,10 @@ export default {
     change (val) {
       this.setPlayId((val + this.total) % this.total)
     },
+    preload (val) {
+      const num = (val + this.total) % this.total
+      return this.artworkMenu.map[this.artworkMenu.sort[num]]
+    },
     lightboxNoScroll (val) {
       const el = document.body
       if (val === 'add') {

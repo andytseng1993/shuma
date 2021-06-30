@@ -151,6 +151,14 @@
               </span>
               {{engControl?price(artworkDetail.price[1]):price(artworkDetail.price[0])}}
             </div>
+            <img
+              :src="require('@/assets/img/'+preload(nowPlayId+1).src)"
+              style="display: none;"
+            >
+            <img
+              :src="require('@/assets/img/'+preload(nowPlayId-1).src)"
+              style="display: none;"
+            >
           </div>
         </div>
       </div>

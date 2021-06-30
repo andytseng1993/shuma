@@ -8,6 +8,7 @@
       v-for="(artwork,artid) in artworkMenu.sort"
       :style="bgcss(artworkMenu.map[artwork].thumbnail)"
       :key="artid"
+      :alt="artwork"
     >
       <div
         class="box"
@@ -19,7 +20,7 @@
   </div>
 
   <!-- lightBox -->
-    <transition name="fade">
+    <transition name="fade" mode="out-in">
       <div
         v-show="isLightboxOpen"
         class="lightbox isLightboxOpen"
@@ -30,9 +31,11 @@
           @click="controlLightBox(false),lightboxNoScroll('remove')"
           />
         </div>
-        <div class="nextButton">
+        <div class="nextButton"
+            @click="change(nowPlayId+1)"
+        >
           <font-awesome-icon icon=chevron-right
-          @click="change(nowPlayId+1)"
+          
           />
         </div>
         <div class="preButton">
@@ -49,6 +52,7 @@
               id="myPaint"
               :src="require('@/assets/img/'+artworkDetail.src)"
               @click="change(nowPlayId+1)"
+              :alt="selectArtwork"
             >
             <div
               class="words"
@@ -67,6 +71,14 @@
               </div>
             </div>
           </div>
+          <img
+            :src="require('@/assets/img/'+preload(nowPlayId+1).src)"
+            style="display: none;"
+          >
+          <img
+            :src="require('@/assets/img/'+preload(nowPlayId-1).src)"
+            style="display: none;"
+          >
         </div>
     </div>
   </transition>
