@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-
+import Contact from '../views/Contact/index.vue'
+import placeOrder from '../views/PlaceOrder/index.vue'
 Vue.use(VueRouter)
 
 const routes = [
@@ -30,12 +31,12 @@ const routes = [
   {
     path: '/place-order',
     name: 'placeOrder',
-    component: () => import(/* webpackChunkName: "place-order" */ '../views/PlaceOrder/index.vue')
+    component: placeOrder
   },
   {
     path: '/contact',
     name: 'Contact',
-    component: () => import(/* webpackChunkName: "contact" */ '../views/Contact/index.vue')
+    component: Contact
   },
   {
     path: '/*',

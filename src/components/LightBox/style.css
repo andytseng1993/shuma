@@ -23,7 +23,7 @@
   background-repeat: no-repeat;
   background-size: contain;
   filter: drop-shadow(3px 7px 3px rgba(0, 0, 0, 0.4));
-  transition:transform 0.2s ease-in-out,filter 0.1s ease-in-out;
+  transition:transform 0.2s ease-in-out,filter 0.2s ease-in-out;
 }
 
 #lightBox .artworks::after{
@@ -44,12 +44,13 @@
 }
 #lightBox .artworks .cover .box h3 {
   margin: 0;
+  font-size: 22px;
   display: block;
   transform: translateY(10px);
   opacity: 0;
-  transition: 0.2s ease-out;
   letter-spacing: 3px;
   text-align: center;
+  transition: 0.25s ease-in-out;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -61,8 +62,8 @@
   filter: none;
 }
 #lightBox .artworks .cover:hover .box {
-  background-color: rgba(0, 0, 0, 0.6);
-  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.5);
+  filter: drop-shadow(5px 5px 3px rgb(0 0 0 / 40%));
 }
 #lightBox .artworks .cover:hover .box h3 {
   color: white;
@@ -301,7 +302,7 @@
     font-size: 16px;
     letter-spacing: 0px;
     opacity: 1;
-    transition: 0.2s ease-out;
+    transition: transform 0.2s ease-out;
     text-align: center;
   }
   #lightBox .artworks .cover:hover {
@@ -311,6 +312,7 @@
   }
   #lightBox .artworks .cover:hover .box {
   background-color: transparent;
+  filter: none;
 }
   #lightBox .artworks .cover:hover .box h3 {
     color: black;

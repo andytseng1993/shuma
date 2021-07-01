@@ -5,13 +5,13 @@
 </template>
 
 <style>
-
 @font-face {
-  font-family:'Press Start 2P';
-  src: local("Press Start 2P"), url(~@/assets/fonts/Press_Start_2P/PressStart2P-Regular.ttf) format('truetype');
-  font-display: swap;
+    font-family: 'Press Start 2P';
+    src:
+        url(~@/assets/fonts/Nav/PressStart2P-Regular.woff) format('woff'),
+        url(~@/assets/fonts/Nav/PressStart2P-Regular.woff2) format('woff2'),
+        url(~@/assets/fonts/Nav/PressStart2P-Regular.ttf) format('truetype');
 }
-
 html,body{
   margin: 0%;
   width:100%;
@@ -37,6 +37,9 @@ body{
  background: #ffffff;
  border-radius: 15px;
  box-shadow: inset 7px 10px 12px #f0f0f0;
+}
+::-webkit-scrollbar-track:hover{
+  background: #d3d3d3;
 }
 #app {
   color: #2c3e50;
