@@ -82,6 +82,9 @@ export default {
     this.reCaptchaOnFocus()
   },
   methods: {
+    goBack () {
+      return this.$router.go(-1)
+    },
     focusInput () {
       this.$refs.name.focus()
     },
@@ -134,13 +137,12 @@ export default {
       }
     },
     reCaptchaOnFocus () {
-      window.addEventListener('load', () => {
-        var head = document.getElementsByTagName('head')[0]
-        var script = document.createElement('script')
-        script.type = 'text/javascript'
-        script.src = 'https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit'
-        head.appendChild(script)
-      })
+      var head = document.getElementsByTagName('head')[0]
+      var script = document.createElement('script')
+      script.type = 'text/javascript'
+      script.src = 'https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit'
+      script.defer = true
+      head.appendChild(script)
     },
     async recaptcha () {
       // (optional) Wait until recaptcha has been loaded.
