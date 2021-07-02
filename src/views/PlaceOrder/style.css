@@ -21,12 +21,15 @@
 }
 
 #placeOrder .order-content{
-  font-family:'Times New Roman','Taipei Sans TC';
+  font-family:'Times New Roman';
   margin-top: 30px;
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-evenly;
   align-items: flex-start;
+}
+#placeOrder .order-content.ch{
+  font-family:'Artwork_ch','Times New Roman';
 }
 #placeOrder .order-content.confirm{
   display: none;
@@ -216,8 +219,11 @@ input[type=submit] {
   border-radius: 4px;
   cursor: pointer;
   display: inline-block;
-
 }
+#placeOrder .order-content.ch .container input[type=submit]{
+  font-family:'Artwork_ch','Times New Roman';
+}
+
 
 input[type=submit]:hover {
   background-color: #45a049;
@@ -480,15 +486,17 @@ input[type=submit]:active{
 
 
 @font-face {
-  font-family:'Taipei Sans TC';
-  src:  local('Taipei Sans TC'),url(~@/assets/fonts/Taipei_Sans_TC/TaipeiSansTCBeta-Bold.ttf) format('truetype');
+  font-family:'Artwork_ch';
+  src:  url(~@/assets/fonts/Artwork_ch/TaipeiSansTCBeta-Bold.woff) format('woff'),
+        url(~@/assets/fonts/Artwork_ch/TaipeiSansTCBeta-Bold.woff2) format('woff2'),
+        url(~@/assets/fonts/Artwork_ch/TaipeiSansTCBeta-Bold.ttf) format('truetype');
   font-weight: bold;
-  font-display: swap;
 }
 @font-face {
-  font-family:'Taipei Sans TC';
-  src:  local('Taipei Sans TC'),url(~@/assets/fonts/Taipei_Sans_TC/TaipeiSansTCBeta-Regular.ttf) format('truetype');
+  font-family:'Artwork_ch';
+  src:  url(~@/assets/fonts/Artwork_ch/TaipeiSansTCBeta-Regular.woff) format('woff'),
+        url(~@/assets/fonts/Artwork_ch/TaipeiSansTCBeta-Regular.woff2) format('woff2'),
+        url(~@/assets/fonts/Artwork_ch/TaipeiSansTCBeta-Regular.ttf) format('truetype');
   font-weight: normal;
-  font-display: swap;
 }
 

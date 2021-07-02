@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-evenly;
   align-items: flex-start;
-  font-family:'Times New Roman','Taipei Sans TC';
+  font-family:'Times New Roman','Artwork_ch';
 }
 #shopList .items {
   width: 1050px;
@@ -66,6 +66,7 @@
 }
 /* shopping cart */
 #shopList .orderTotal{
+  font-family:'Times New Roman','Artwork_ch';
   border: rgba(0, 0, 0, 0.1) 2px solid;
   border-radius: 15px;
   position: sticky;

@@ -7,7 +7,7 @@
   background-position: 30% 20%;
 }
 .title {
-  font-family:'Times New Roman','Taipei Sans TC';
+  font-family:'Times New Roman','Artwork_ch';
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,7 +79,7 @@
     font-size: 16px;
     border-top: 1px rgba(0, 0, 0, 0.1) solid;
     height: initial;
-    font-family:  'Times New Roman','Taipei Sans TC';
+    font-family:  'Times New Roman','Artwork_ch';
   }
 @media only screen and (max-width: 992px){
   #TypeHandler{
@@ -131,14 +131,16 @@
 }
 
 @font-face {
-  font-family:'Taipei Sans TC';
-  src:  local('Taipei Sans TC'),url(~@/assets/fonts/Taipei_Sans_TC/TaipeiSansTCBeta-Bold.ttf) format('truetype');
+  font-family:'Artwork_ch';
+  src:  url(~@/assets/fonts/Artwork_ch/TaipeiSansTCBeta-Bold.woff) format('woff'),
+        url(~@/assets/fonts/Artwork_ch/TaipeiSansTCBeta-Bold.woff2) format('woff2'),
+        url(~@/assets/fonts/Artwork_ch/TaipeiSansTCBeta-Bold.ttf) format('truetype');
   font-weight: bold;
-  font-display: swap;
 }
 @font-face {
-  font-family:'Taipei Sans TC';
-  src:  local('Taipei Sans TC'),url(~@/assets/fonts/Taipei_Sans_TC/TaipeiSansTCBeta-Regular.ttf) format('truetype');
+  font-family:'Artwork_ch';
+  src:  url(~@/assets/fonts/Artwork_ch/TaipeiSansTCBeta-Regular.woff) format('woff'),
+        url(~@/assets/fonts/Artwork_ch/TaipeiSansTCBeta-Regular.woff2) format('woff2'),
+        url(~@/assets/fonts/Artwork_ch/TaipeiSansTCBeta-Regular.ttf) format('truetype');
   font-weight: normal;
-  font-display: swap;
 }
