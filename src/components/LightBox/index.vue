@@ -1,5 +1,6 @@
 
 <script>
+import ArtworkList from '@/components/ArtworkList/index.vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 import { faTimesCircle, faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons'
@@ -8,7 +9,8 @@ library.add(faTimesCircle, faChevronRight, faChevronLeft)
 export default {
   name: 'LightBox',
   components: {
-    FontAwesomeIcon
+    FontAwesomeIcon,
+    ArtworkList
   },
   props: {
     isLightboxOpen: {
@@ -30,6 +32,11 @@ export default {
       required: true
     }
   },
+  data () {
+    return {
+      observer: null
+    }
+  },
   computed: {
     total () {
       return this.artworkMenu.sort.length
@@ -45,6 +52,14 @@ export default {
       else return this.artworkDetail.material[0]
     }
   },
+  created () {
+    const options = {
+      root: this.$el,
+      threshold: 0
+    }
+    this.observer = new IntersectionObserver(this.callback, options)
+  },
+
   methods: {
     bgcss (url) {
       return { 'background-image': 'url(' + require('@/assets/thumbnail/' + url) + ')' }
@@ -69,8 +84,18 @@ export default {
       } else {
         el.classList.remove('noScroll')
       }
+    },
+    callback (entries) {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const img = entry.target
+          img.setAttribute('src', img.dataset.src)
+          img.classList.add('finish')
+          img.removeAttribute('data-src')
+          this.observer.unobserve(img)
+        }
+      })
     }
-
   }
 }
 </script>

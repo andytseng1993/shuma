@@ -42,7 +42,7 @@
 }
 #TypeHandler {
   margin-top: 15px;
-  left: 9%;
+  left: 5%;
   transition: left 0.1s;
 }
 .footer{
@@ -55,16 +55,21 @@
     height: initial;
     font-family:'Times New Roman','Artwork_ch';
   }
+@media only screen and (max-width: 1800px){
+  #TypeHandler{
+    left:8%;
+}
+}
 @media only screen and (max-width: 1350px) {
   #TypeHandler{
-    left:12%;
+    left:max(60px,8%);
 }
 }
 @media only screen and (max-width: 790px){
   #TypeHandler{
     margin-top: 30px;
     position: absolute;
-    width: 350px;
+    width: 380px;
 
     left: 50%;
     transform: translateX(-50%);

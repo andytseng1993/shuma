@@ -1,21 +1,22 @@
 <div id="lightBox">
   <div
+    ref="test"
     class="artworks"
     :class="{isLightboxOpen}"
   >
     <div
       class="cover"
+      :key="artwork"
       v-for="(artwork,artid) in artworkMenu.sort"
-      :style="bgcss(artworkMenu.map[artwork].thumbnail)"
-      :key="artid"
-      :alt="artwork"
+      @click="setPlayId(artid),controlLightBox(true),lightboxNoScroll('add')"
     >
-      <div
-        class="box"
-        @click="setPlayId(artid),controlLightBox(true),lightboxNoScroll('add')"
-      >
-        <h3>{{artwork}}</h3>
-      </div>
+      <h3>{{artwork}}</h3>
+      <ArtworkList
+        :artwork='artwork'
+        :artworkMenu='artworkMenu'
+        :engControl="engControl"
+        :observer='observer'
+      ></ArtworkList>
     </div>
   </div>
 

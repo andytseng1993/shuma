@@ -14,23 +14,39 @@
   transform: scale(0.99);
 }
 #lightBox .artworks .cover {
-  margin: calc(1px + 2%) calc(1px + 2%);
-  width: 20.8%;
+  width: 21%;
+  height: 370px;
+  position: relative;
+  margin: calc(1px + 1.5%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition:transform 0.2s ease-in-out
+}
+/* #lightBox .artworks .cover img{
+  width: 100%;
+  object-fit: contain;
   height: 370px;
   border-radius: 3px;
-  position: relative;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  
   filter: drop-shadow(3px 7px 3px rgba(0, 0, 0, 0.4));
   transition:transform 0.2s ease-in-out,filter 0.2s ease-in-out;
-}
+} */
 
 #lightBox .artworks::after{
   content: '';
   flex: 1 0 200px;
 }
-
+#lightBox .cover:after{
+  content: '';
+  height:100%;
+  width: 100%;
+  position: absolute;
+  transition: 0.2s ease-in ;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
 #lightBox .artworks .cover .box {
   position: relative;
@@ -38,11 +54,11 @@
   height: 100%;
   border-radius: 6px;
   transition: 0.2s ease-in;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
 }
-#lightBox .artworks .cover .box h3 {
+#lightBox .artworks .cover h3 {
+  position: absolute;
+  z-index: 200;
   margin: 0;
   font-size: 22px;
   display: block;
@@ -58,18 +74,30 @@
 }
 #lightBox .artworks .cover:hover {
   transform: translate(-5px, -5px);
-  cursor: pointer;
   filter: none;
 }
-#lightBox .artworks .cover:hover .box {
-  background-color: rgba(0, 0, 0, 0.5);
-  filter: drop-shadow(5px 5px 3px rgb(0 0 0 / 40%));
+#lightBox .artworks .cover:hover:after{
+  background-color: rgba(0, 0, 0, 0.4) ;
+  filter: drop-shadow(3px 7px 3px rgba(0, 0, 0, 0.5));
+  box-shadow: 5px 5px 5px 2px rgba(0, 0, 0, 0.2) ;
 }
-#lightBox .artworks .cover:hover .box h3 {
+#lightBox .artworks .cover:hover .box {
+  z-index: 100;
+  background: linear-gradient(
+          rgba(0, 0, 0, 0.7), 
+          rgba(0, 0, 0, 0.7));
+
+}
+#lightBox .artworks .cover:hover img{
+  filter: none;
+
+}
+#lightBox .artworks .cover:hover h3 {
   color: white;
   opacity: 1;
   transform: translateY(0px);
 }
+
 
 .lightbox {
   width: 100%;
@@ -169,7 +197,7 @@
   transition: 0.01s ease-out;
 }
 .fade-enter-active,.fade-leave-active{
-  transition: opacity 0.3s;
+  transition: opacity 0.2s;
 }
 .fade-enter,.fade-leave-to{
   opacity: 0;
@@ -248,20 +276,20 @@
 }
 @media only screen and (max-width: 1800px) {
   #lightBox .artworks .cover {
-  width: 29%;
+    width: 29%;
   }
   #lightBox .artworks {
-  margin: 0px 8%;
+    margin: 0px 8%;
   }
 }
 
 @media only screen and (max-width: 1350px) {
   #lightBox .artworks {
-    margin: 0px 10%;
+    margin: 0px max(60px,8%);
   }
   #lightBox .artworks .cover {
-    width: 45%;
-    height: 360px;
+    width: max(300px,40%);
+    height: 370px;
   }
 }
 
