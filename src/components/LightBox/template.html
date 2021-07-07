@@ -21,66 +21,67 @@
   </div>
 
   <!-- lightBox -->
-    <transition name="fade" mode="out-in">
-      <div
-        v-show="isLightboxOpen"
-        class="lightbox isLightboxOpen"
+  <transition name="fade" mode="out-in">
+    <div
+      v-show="isLightboxOpen"
+      class="lightbox"
+      key="lightbox"
+    >
+      <div class="closeButton" key="closeButton">
+        <div class="circle" key="circle"></div>
+        <font-awesome-icon icon=times-circle
+        @click="controlLightBox(false)" key="times-circle"
+        />
+      </div>
+      <div class="nextButton" key="nextButton"
+          @click="change(nowPlayId+1)"
       >
-        <div class="closeButton">
-          <div class="circle"></div>
-          <font-awesome-icon icon=times-circle
-          @click="controlLightBox(false),lightboxNoScroll('remove')"
-          />
-        </div>
-        <div class="nextButton"
+        <font-awesome-icon icon=chevron-right
+        />
+      </div>
+      <div class="preButton" key="preButton">
+        <font-awesome-icon icon=chevron-left
+        @click="change(nowPlayId-1)"
+        />
+      </div>
+      <div
+        class="myPainting"
+        v-if="isLightboxOpen"
+        key='myPainting'
+      >
+        <div class="all" key='detail'>
+          <img
+            id="myPaint"
+            :src="require('@/assets/img/'+artworkDetail.src)"
             @click="change(nowPlayId+1)"
-        >
-          <font-awesome-icon icon=chevron-right
-          
-          />
-        </div>
-        <div class="preButton">
-          <font-awesome-icon icon=chevron-left
-          @click="change(nowPlayId-1)"
-          />
-        </div>
-        <div
-          class="myPainting"
-          v-if="isLightboxOpen"
-        >
-          <div class="all">
-            <img
-              id="myPaint"
-              :src="require('@/assets/img/'+artworkDetail.src)"
-              @click="change(nowPlayId+1)"
-              :alt="selectArtwork"
-            >
-            <div
-              class="words"
-            >
-              <div class="name">
-                {{selectArtwork}}
-                <div class="year">
-                  , {{artworkDetail.year}}
-                </div>
+            :alt="selectArtwork"
+          >
+          <div
+            class="words"
+          >
+            <div class="name">
+              {{selectArtwork}}
+              <div class="year">
+                , {{artworkDetail.year}}
               </div>
-              <div class="material">
-                {{artworkMaterials}}
-                <div class="size">
-                  , {{artworkDetail.size}}
-                </div>
+            </div>
+            <div class="material">
+              {{artworkMaterials}}
+              <div class="size">
+                , {{artworkDetail.size}}
               </div>
             </div>
           </div>
-          <img
-            :src="require('@/assets/img/'+preload(nowPlayId+1).src)"
-            style="display: none;"
-          >
-          <img
-            :src="require('@/assets/img/'+preload(nowPlayId-1).src)"
-            style="display: none;"
-          >
         </div>
+        <img
+          :src="require('@/assets/img/'+preload(nowPlayId+1).src)"
+          style="display: none;"
+        >
+        <img
+          :src="require('@/assets/img/'+preload(nowPlayId-1).src)"
+          style="display: none;"
+        >
+      </div>
     </div>
   </transition>
 </div>
