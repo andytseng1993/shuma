@@ -1,0 +1,13 @@
+img.loading{
+  position: absolute;
+  width: 100%;
+  object-fit: contain;
+  height: 370px;
+  border-radius: 3px;
+  transition:transform 0.2s ease-in-out,filter 0.1s ease-in-out,opacity .4s ease-in-out;
+  opacity: 0;
+
+}
+img.loading.finish{
+  opacity: 1;
+}

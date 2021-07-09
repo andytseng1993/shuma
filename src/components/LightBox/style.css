@@ -1,36 +1,40 @@
 * {
-  font-family: "Times New Roman", 'Taipei Sans TC';
+  font-family: "Times New Roman", 'Artwork_ch';
 }
 #lightBox .artworks {
-  margin: 0px 5%;
+  padding: 0px 3.5vw 10px 5vw;
   height: 100%;
   flex-wrap: wrap;
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
-  transition: 0.3s ease-in-out;
-}
-#lightBox .artworks.isLightboxOpen {
-  transform: scale(0.99);
-}
-#lightBox .artworks .cover {
-  margin: calc(1px + 2%) calc(1px + 2%);
-  width: 20.8%;
-  height: 370px;
-  border-radius: 3px;
-  position: relative;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  filter: drop-shadow(3px 7px 3px rgba(0, 0, 0, 0.4));
-  transition:transform 0.2s ease-in-out,filter 0.1s ease-in-out;
+  justify-content: space-between;
+  transition: 0.2s ;
 }
 
+#lightBox .artworks .cover {
+  width: 23%;
+  height: 370px;
+  position: relative;
+  margin: calc(1px + 2%) 2% calc(1px + 2%) 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition:transform 0.1s;
+}
 #lightBox .artworks::after{
   content: '';
   flex: 1 0 200px;
 }
-
+#lightBox .cover:after{
+  content: '';
+  height:100%;
+  width: 100%;
+  position: absolute;
+  transition: 0.2s ease-in ;
+  border-radius: 5px;
+  cursor: pointer;
+}
 
 #lightBox .artworks .cover .box {
   position: relative;
@@ -38,18 +42,19 @@
   height: 100%;
   border-radius: 6px;
   transition: 0.2s ease-in;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
 }
-#lightBox .artworks .cover .box h3 {
+#lightBox .artworks .cover h3 {
+  position: absolute;
+  z-index: 200;
   margin: 0;
+  font-size: 22px;
   display: block;
   transform: translateY(10px);
   opacity: 0;
-  transition: 0.2s ease-out;
   letter-spacing: 3px;
   text-align: center;
+  transition: 0.2s ease-in-out;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -57,18 +62,19 @@
 }
 #lightBox .artworks .cover:hover {
   transform: translate(-5px, -5px);
-  cursor: pointer;
-  filter: none;
 }
-#lightBox .artworks .cover:hover .box {
-  background-color: rgba(0, 0, 0, 0.6);
-  box-shadow: 5px 10px 5px rgba(0, 0, 0, 0.2);
+#lightBox .artworks .cover:hover:after{
+  background-color: rgba(0, 0, 0, 0.4) ;
+  filter: drop-shadow(3px 7px 3px rgba(0, 0, 0, 0.5));
+  box-shadow: 5px 5px 4px 1px rgba(0, 0, 0, 0.2) ;
 }
-#lightBox .artworks .cover:hover .box h3 {
+
+#lightBox .artworks .cover:hover h3 {
   color: white;
   opacity: 1;
   transform: translateY(0px);
 }
+
 
 .lightbox {
   width: 100%;
@@ -78,15 +84,11 @@
   top: 0;
   background-color: rgba(0, 0, 0, 0.9);
   color: #eee;
-  pointer-events: none;
-}
-.lightbox.isLightboxOpen {
-  pointer-events: initial;
   z-index: 250;
 }
 
 .closeButton {
-  position: fixed;
+  position: absolute;
   right: 3vw;
   top: 2vw;
   z-index: 100;
@@ -100,13 +102,13 @@
   position: absolute;
   z-index: -1;
   opacity: 0;
-  transition: 0.2s ease-out;
+  transition: 0.2s;
 }
 .closeButton .fa-times-circle {
   font-size: calc(25px + 1.5vw);
   color: rgba(247, 255, 247, 0.9);
   cursor: pointer;
-  transition: 0.2s ease-in-out;
+  transition: 0.2s;
 }
 
 .closeButton:hover .fa-times-circle {
@@ -119,29 +121,29 @@
 }
 
 .nextButton {
-  position: fixed;
+  position: absolute;
   right: calc(15px + 1.5vw);
   top: 50vh;
   transform: translate(50%, -50%);
   padding-left: -1px;
+  cursor: pointer;
 }
 .nextButton .fa-chevron-right {
   font-size: calc(35px + 1.5vw);
   color: rgba(247, 255, 247, 0.4);
-  cursor: pointer;
   transition: 0.2s ease-out;
 }
 
 .preButton {
-  position: fixed;
+  position: absolute;
   left: calc(15px + 1.5vw);
   top: 50vh;
   transform: translate(-50%, -50%);
+  cursor: pointer;
 }
 .preButton .fa-chevron-left {
   font-size: calc(35px + 1.5vw);
   color: rgba(247, 255, 247, 0.4);
-  cursor: pointer;
   transition: 0.1s ease-out;
 }
 
@@ -168,11 +170,12 @@
   transition: 0.01s ease-out;
 }
 .fade-enter-active,.fade-leave-active{
-  transition: opacity 0.3s;
+  transition: opacity 0.35s;
 }
 .fade-enter,.fade-leave-to{
   opacity: 0;
 }
+
 /*lightBox img */
 
 .myPainting {
@@ -245,21 +248,23 @@
   font-weight: 400;
 }
 @media only screen and (max-width: 1800px) {
-  #lightBox .artworks .cover {
-  width: 29%;
-  }
   #lightBox .artworks {
-  margin: 0px 8%;
+    padding: 0px 3vw 10px 9vw;
   }
+  #lightBox .artworks .cover {
+    width: calc(85%/3);
+    margin: calc(1px + 2%) 5% calc(1px + 2%) 0px;
+  }
+  
 }
 
 @media only screen and (max-width: 1350px) {
   #lightBox .artworks {
-    margin: 0px 10%;
+    padding: 0px max(60px,8%);
   }
   #lightBox .artworks .cover {
-    width: 45%;
-    height: 360px;
+    width: max(290px,38%);
+    height: 370px;
   }
 }
 
@@ -278,40 +283,43 @@
   /* artworks */
   #lightBox .artworks {
     justify-content: center;
-    margin: 10px;
+    padding: 10px;
     border: none;
   }
   #lightBox .artworks .cover {
-    margin-bottom: 55px;
+    margin-bottom: 60px;
     filter: none;
-    background-size: cover;
     transition: box-shadow 0.2s ease-out,transform 0.2s;
     width: 80%;
+    justify-content: flex-end
   }
-  #lightBox .artworks .cover .box {
-    align-items: flex-end;
-  }
-  #lightBox .artworks .cover .box h3 {
+
+  #lightBox .artworks .cover h3 {
     padding: 20px;
     bottom: -15px;
     color: black;
     position: relative;
     transform: translateY(40px);
-    font-size: 16px;
+    font-size: 20px;
     letter-spacing: 0px;
     opacity: 1;
-    transition: 0.2s ease-out;
+    transition: transform 0.2s ease-out;
     text-align: center;
+  }
+  #lightBox .artworks .cover img{
+    object-fit: cover;
   }
   #lightBox .artworks .cover:hover {
     transform: translate(-2px, -2px);
     filter: none;
     box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);
   }
-  #lightBox .artworks .cover:hover .box {
-  background-color: transparent;
-}
-  #lightBox .artworks .cover:hover .box h3 {
+  #lightBox .artworks .cover:hover:after{
+    background-color: transparent;
+    filter: none;
+  }
+
+  #lightBox .artworks .cover:hover h3 {
     color: black;
     transform: translateY(35px);
   }
@@ -342,9 +350,7 @@
 
   }
   /* lightBox img*/
-  .myPainting .all{
-
-  }
+ 
   .myPainting img {
     max-width: 83vw;
     max-height: 74vh;

@@ -1,20 +1,28 @@
 #contact{
-  font-family:'Times New Roman','Taipei Sans TC';
+  font-family:'Times New Roman';
   display: flex;
   flex-direction: column;
   height: 100%;
 }
+#contact.ch{
+  font-family:'Contact_ch';
+}
 .back{
+  font-family: 'Press Start 2P';
   padding:15px 30px;
   font-weight: 700;
-  font-size: 20px;
-  display: inline-block;
-}
-.back a{
+  font-size: 17px;
+  letter-spacing: 0.5px;
   display: flex;
   align-items: center;
-  text-decoration:none;
-  color: black;
+  cursor: pointer;
+}
+#contact.ch .back{
+  font-family:'Contact_ch';
+  font-size: 20px;
+}
+.back:hover{
+  color: #fb80d6;
 }
 .back .fa-chevron-left{
   font-weight: 700;
@@ -29,19 +37,15 @@
 
 @media only screen and (max-width: 481px){
   .back{
+    letter-spacing: 0.5px;
     padding: 8px 15px;
     font-size: 18px;
   }
 }
 @font-face {
-  font-family:'Taipei Sans TC';
-  src:  local('Taipei Sans TC'),url(~@/assets/fonts/Taipei_Sans_TC/TaipeiSansTCBeta-Bold.ttf) format('truetype');
-  font-weight: bold;
-  font-display: swap;
+  font-family:'Contact_ch';
+  src:  url(~@/assets/fonts/Contact_ch/TaipeiSansTCBeta-Bold.woff) format('woff'),
+        url(~@/assets/fonts/Contact_ch/TaipeiSansTCBeta-Bold.woff2) format('woff2'),
+        url(~@/assets/fonts/Contact_ch/TaipeiSansTCBeta-Bold.ttf) format('truetype');
 }
-@font-face {
-  font-family:'Taipei Sans TC';
-  src:  local('Taipei Sans TC'),url(~@/assets/fonts/Taipei_Sans_TC/TaipeiSansTCBeta-Regular.ttf) format('truetype');
-  font-weight: normal;
-  font-display: swap;
-}
+

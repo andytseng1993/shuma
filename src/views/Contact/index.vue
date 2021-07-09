@@ -26,6 +26,9 @@ export default {
     this.$store.dispatch('GET_LANGUAGE')
   },
   methods: {
+    goBack () {
+      return this.$router.go(-1)
+    }
   }
 }
 </script>
