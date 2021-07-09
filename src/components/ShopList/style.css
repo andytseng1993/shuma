@@ -13,10 +13,6 @@
   margin: 0px 3%;
   transition: 0.2s;
 }
-#shopList .items.isLightboxOpen {
-  transform: scale(0.99);
-  transition: 0.2s;
-}
 #shopList .items .cover {
   margin: 10px 15px;
   margin-top: 20px;
@@ -120,7 +116,7 @@
   padding-bottom: 5px;
 }
 #shopList .orderTotal .orderList ul li .details .title .name{
-  width: 210px;
+  width: 190px;
   font-size: 18px;
   font-weight: 600;
   padding-right: 15px;
@@ -207,6 +203,7 @@
   box-shadow: 0px 2px 1px rgba(0,0,0,0.7);
 }
 #shopList .orderTotal .orderList .emptyCart{
+  box-sizing:content-box;
   width:399px;
   height: 120px;
   font-size: 20px;
@@ -630,9 +627,18 @@
 }
 
 .fade-enter-active,.fade-leave-active{
-  transition: opacity .3s;
+  transition: opacity 0.3s;
 }
 .fade-enter,.fade-leave-to{
+  opacity: 0;
+}
+.fade-orderList-enter-active{
+  transition: all 0.1s;
+}
+.fade-orderList-leave-active{
+  transition: all .2s;
+}
+.fade-orderList-enter,.fade-orderList-leave-to{
   opacity: 0;
 }
 

@@ -2,7 +2,6 @@
   <div
     ref="test"
     class="artworks"
-    :class="{isLightboxOpen}"
   >
     <div
       class="cover"
@@ -30,7 +29,8 @@
       <div class="closeButton" key="closeButton">
         <div class="circle" key="circle"></div>
         <font-awesome-icon icon=times-circle
-        @click="controlLightBox(false)" key="times-circle"
+        @click="controlLightBox(false),lightboxNoScroll('remove')" 
+        key="times-circle"
         />
       </div>
       <div class="nextButton" key="nextButton"

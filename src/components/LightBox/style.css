@@ -2,27 +2,25 @@
   font-family: "Times New Roman", 'Artwork_ch';
 }
 #lightBox .artworks {
-  margin: 0px 5%;
+  padding: 0px 3.5vw 10px 5vw;
   height: 100%;
   flex-wrap: wrap;
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
-  transition: 0.2s ease-in-out;
+  justify-content: space-between;
+  transition: 0.2s ;
 }
-#lightBox .artworks.isLightboxOpen {
-  /* transform: scale(0.99); */
-}
+
 #lightBox .artworks .cover {
-  width: 21%;
+  width: 23%;
   height: 370px;
   position: relative;
-  margin: calc(1px + 1.5%);
+  margin: calc(1px + 2%) 2% calc(1px + 2%) 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  transition:transform 0.2s ease-in-out
+  transition:transform 0.1s;
 }
 #lightBox .artworks::after{
   content: '';
@@ -64,19 +62,11 @@
 }
 #lightBox .artworks .cover:hover {
   transform: translate(-5px, -5px);
-  filter: none;
 }
 #lightBox .artworks .cover:hover:after{
   background-color: rgba(0, 0, 0, 0.4) ;
   filter: drop-shadow(3px 7px 3px rgba(0, 0, 0, 0.5));
   box-shadow: 5px 5px 4px 1px rgba(0, 0, 0, 0.2) ;
-}
-#lightBox .artworks .cover:hover .box {
-  z-index: 100;
-  background: linear-gradient(
-          rgba(0, 0, 0, 0.7), 
-          rgba(0, 0, 0, 0.7));
-
 }
 
 #lightBox .artworks .cover:hover h3 {
@@ -87,14 +77,13 @@
 
 
 .lightbox {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   position: fixed;
   left: 0;
   top: 0;
   background-color: rgba(0, 0, 0, 0.9);
   color: #eee;
-  pointer-events: initial;
   z-index: 250;
 }
 
@@ -113,13 +102,13 @@
   position: absolute;
   z-index: -1;
   opacity: 0;
-  transition: 0.2s ease-out;
+  transition: 0.2s;
 }
 .closeButton .fa-times-circle {
   font-size: calc(25px + 1.5vw);
   color: rgba(247, 255, 247, 0.9);
   cursor: pointer;
-  transition: 0.2s ease-in-out;
+  transition: 0.2s;
 }
 
 .closeButton:hover .fa-times-circle {
@@ -259,20 +248,22 @@
   font-weight: 400;
 }
 @media only screen and (max-width: 1800px) {
-  #lightBox .artworks .cover {
-    width: 29%;
-  }
   #lightBox .artworks {
-    margin: 0px 8%;
+    padding: 0px 3vw 10px 9vw;
   }
+  #lightBox .artworks .cover {
+    width: calc(85%/3);
+    margin: calc(1px + 2%) 5% calc(1px + 2%) 0px;
+  }
+  
 }
 
 @media only screen and (max-width: 1350px) {
   #lightBox .artworks {
-    margin: 0px max(60px,8%);
+    padding: 0px max(60px,8%);
   }
   #lightBox .artworks .cover {
-    width: max(300px,40%);
+    width: max(290px,38%);
     height: 370px;
   }
 }
@@ -292,41 +283,43 @@
   /* artworks */
   #lightBox .artworks {
     justify-content: center;
-    margin: 10px;
+    padding: 10px;
     border: none;
   }
   #lightBox .artworks .cover {
-    margin-bottom: 55px;
+    margin-bottom: 60px;
     filter: none;
-    background-size: cover;
     transition: box-shadow 0.2s ease-out,transform 0.2s;
     width: 80%;
+    justify-content: flex-end
   }
-  #lightBox .artworks .cover .box {
-    align-items: flex-end;
-  }
-  #lightBox .artworks .cover .box h3 {
+
+  #lightBox .artworks .cover h3 {
     padding: 20px;
     bottom: -15px;
     color: black;
     position: relative;
     transform: translateY(40px);
-    font-size: 16px;
+    font-size: 20px;
     letter-spacing: 0px;
     opacity: 1;
     transition: transform 0.2s ease-out;
     text-align: center;
+  }
+  #lightBox .artworks .cover img{
+    object-fit: cover;
   }
   #lightBox .artworks .cover:hover {
     transform: translate(-2px, -2px);
     filter: none;
     box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);
   }
-  #lightBox .artworks .cover:hover .box {
-  background-color: transparent;
-  filter: none;
-}
-  #lightBox .artworks .cover:hover .box h3 {
+  #lightBox .artworks .cover:hover:after{
+    background-color: transparent;
+    filter: none;
+  }
+
+  #lightBox .artworks .cover:hover h3 {
     color: black;
     transform: translateY(35px);
   }

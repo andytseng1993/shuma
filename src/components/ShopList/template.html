@@ -1,7 +1,6 @@
 <div id="shopList">
   <div
     class="items"
-    :class="{isLightboxOpen}"
   >
     <div
       class="cover"
@@ -35,8 +34,8 @@
       </div>
     </div>
     <div class="orderList">
-      <ul>
-        <li v-for="(item,itemId) in cartList" :key="itemId">
+      <transition-group name='fade-orderList' tag='ul'>
+        <li v-for="(item,itemId) in cartList" :key="item.title[0]">
           <div class="img" :style="{ 'background-image': 'url(' + require('@/assets/thumbnail/' + item.thumbnail) + ')' }"></div>
           <div class="details">
             <div class="title">
@@ -55,13 +54,15 @@
             </div>
           </div>
         </li>
-        <li class="emptyCart" v-if="!cartList.length">
-          <font-awesome-icon icon=shopping-cart />
-          <div>
-            {{engControl?'Your Cart is empty.':'無商品'}}
-          </div>
-        </li>
-      </ul>
+      </transition-group>
+        <transition name='fade' mode='out-in' appear>
+          <li class="emptyCart" v-if="!cartList.length" key='emptyCart'>
+            <font-awesome-icon icon=shopping-cart />
+              <div>
+                {{engControl?'Your Cart is empty.':'無商品'}}
+              </div>
+          </li>
+        </transition>
     </div>
     <div class="subTotal" v-if="cartList.length">
       <div

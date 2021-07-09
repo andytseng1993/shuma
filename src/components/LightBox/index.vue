@@ -59,7 +59,9 @@ export default {
     }
     this.observer = new IntersectionObserver(this.callback, options)
   },
-
+  beforeDestroy () {
+    this.observer.disconnect()
+  },
   methods: {
     bgcss (url) {
       return { 'background-image': 'url(' + require('@/assets/thumbnail/' + url) + ')' }
