@@ -1,11 +1,9 @@
 <div id="placeOrder">
-    <div class="back">
-      <router-link to="/shop">
+    <div class="back" @click="goBack">
       <font-awesome-icon
         icon=chevron-left
       />
-      <span>{{engControl?'Back to Shop':'返回商店'}}</span>
-      </router-link>
+      <span>{{engControl?'Back':'返回'}}</span>
     </div>
 
   <!-- order complete -->
@@ -29,7 +27,7 @@
     </div>
   </transition>
 
-  <div class="order-content" :class="{confirm:show}">
+  <div class="order-content" :class="{confirm:show, ch:!engControl}">
 
      <!-- order list -->
     <div class="orderList">
@@ -111,7 +109,7 @@
           name="message"
           cols="20"
           rows="3"
-          :placeholder="engControl?'Message':'訊息'"
+          :placeholder="engControl?'Your Message':'您的訊息'"
         />
         <div
           class="recaptcha"

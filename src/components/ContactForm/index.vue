@@ -37,6 +37,7 @@ export default {
   },
   mounted () {
     this.focusInput()
+    this.reCaptchaOnFocus()
   },
   methods: {
     focusInput () {
@@ -76,6 +77,14 @@ export default {
       } else {
         this.formEmpty = true
       }
+    },
+    reCaptchaOnFocus () {
+      var head = document.getElementsByTagName('head')[0]
+      var script = document.createElement('script')
+      script.type = 'text/javascript'
+      script.src = 'https://www.google.com/recaptcha/api.js?onload=vueRecaptchaApiLoaded&render=explicit'
+      script.defer = true
+      head.appendChild(script)
     },
     async recaptcha () {
       // (optional) Wait until recaptcha has been loaded.

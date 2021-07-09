@@ -55,7 +55,7 @@
   font-size: max(1.5vw, 22px);
 }
 #Home .translate label .ch {
-  font-family: 'SweiAliasSans';
+  font-family: 'Home_ch';
   font-weight: 700;
   width: max(2vw, 24px);
   height: max(2vw, 24px);
@@ -132,7 +132,7 @@
 #Home .word .name:nth-of-type(5) {
   background-image: url("../../assets/thumbnail/Winter-in-Taiwan-min.jpg");
 }
-#Home .word img {
+#Home .word video {
   width: auto;
   height: 60vmin;
 }
@@ -165,7 +165,7 @@
   border: solid 3px #0adaff;
 }
 #Home .nav .ch{
-  font-family: 'SweiAliasSans';
+  font-family: 'Home_ch';
   margin: 5vw 5px 0px 5px;
   padding: 10px 35px;
   font-size: min(3vw, 32px);
@@ -203,7 +203,7 @@
   #Home .word .name {
     font-size: 10vh;
   }
-  #Home .word img {
+  #Home .word video {
     display: none;
   }
   #Home .word .num4 {
@@ -212,7 +212,7 @@
   #Home .image {
     display: flex;
   }
-  #Home .image img {
+  #Home .image video {
     margin-top: 2.5vh;
     height: 40vh;
   }
@@ -241,11 +241,18 @@
   }
 }
 
+@font-face {
+    font-family: 'Home_ch';
+    src:
+        url(~@/assets/fonts/Home/SweiAliasSansCJKtc-Bold.woff) format('woff'),
+        url(~@/assets/fonts/Home/SweiAliasSansCJKtc-Bold.woff2) format('woff2'),
+        url(~@/assets/fonts/Home/SweiAliasSansCJKtc-Bold.ttf) format('truetype');
+}
 
 @font-face {
-  font-family: 'SweiAliasSans';
-  src: url(https://cdn.jsdelivr.net/gh/max32002/swei-alias-sans@2.0/WebFont/CJK%20TC/SweiAliasSansCJKtc-Regular.woff2) format("woff2")
-  , url(https://cdn.jsdelivr.net/gh/max32002/swei-alias-sans@2.0/WebFont/CJK%20TC/SweiAliasSansCJKtc-Regular.woff) format("woff");
-  font-display: swap;
-  unicode-range: U+9996, U+9801, U+95DC, U+65BC, U+4F5C, U+54C1, U+96C6, U+5546, U+5E97,U+4E2D;
-}
+  font-family: 'Gugi';
+  src:
+    url(~@/assets/fonts/Home/Gugi-Regular.woff) format('woff'),
+    url(~@/assets/fonts/Home/Gugi-Regular.woff2) format('woff2'),
+    url(~@/assets/fonts/Home/Gugi-Regular.ttf) format('truetype');
+  }

@@ -33,12 +33,16 @@
   border-radius: 5px;
   margin-bottom: 60px;
 }
+.container.ch label{
+  font-family:'Contact_ch'
+}
 .container label {
   font-size: 20px;
   padding: 5px 5px;
   font-weight: 600;
 }
 input[type=text], [type=email], textarea{
+  font-family: 'Times New Roman';
   width: 100%;
   padding: 10px 15px;
   font-size: 18px;
@@ -67,6 +71,7 @@ textarea{
   display: none;
 }
 input[type=submit] {
+  font-family: 'Times New Roman';
   background-color: #4CAF50;
   width: 100%;
   font-size: 18px;
@@ -77,9 +82,10 @@ input[type=submit] {
   border-radius: 4px;
   cursor: pointer;
   display: inline-block;
-
 }
-
+.container.ch input[type=submit]{
+  font-family:'Contact_ch'
+}
 input[type=submit]:hover {
   background-color: #45a049;
 }
@@ -101,6 +107,7 @@ input[type=submit]:active{
   z-index: 100;
 }
 .confirm .content{
+  font-family:  'Times New Roman',Georgia, Times, serif;
   display: flex;
   flex-direction: column;
   font-weight: 600;
@@ -131,6 +138,7 @@ input[type=submit]:active{
   font-size: max(20px,1.5vw);
   display: flex;
   align-self: flex-start;
+  line-height: 1.5em;
 }
 .fade-enter-active, .fade-leave-active{
   transition: opacity .2s;

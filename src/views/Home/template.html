@@ -16,17 +16,41 @@
     <span class="name">S</span>
     <span class="name">H</span>
     <span class="name">U</span>
-    <img
-      src="@/assets/Artwork.gif"
-      alt=""
-    />
+    <video
+      autoplay
+      loop
+      muted
+      playsinline
+    >
+      <source
+        src="@/assets/Artwork.webm"
+        type="video/webm"
+      >
+      <source
+        src="@/assets/Artwork.mp4"
+        type="video/mp4"
+      >
+    </video>
+   
     <span class="name">M</span>
     <span class="name">A</span></div>
   <div class="image">
-    <img
-      src="@/assets/Artwork.gif"
-      alt=""
-    /></div>
+    <video
+      autoplay
+      loop
+      muted
+      playsinline
+    >
+      <source
+        src="@/assets/Artwork_mobile.webm"
+        type="video/webm"
+      >
+      <source
+        src="@/assets/Artwork_mobile.mp4"
+        type="video/mp4"
+      >
+    </video>
+  </div>
 
   <div class="nav" >
     <router-link to="/" :class={ch:!engControl}>

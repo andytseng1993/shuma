@@ -70,6 +70,10 @@ export default {
     change (val) {
       this.setPlayId((val + this.total) % this.total)
     },
+    preload (val) {
+      const num = (val + this.total) % this.total
+      return this.artworkMenu.map[this.artworkMenu.sort[num]]
+    },
     addList (val) {
       const list = this.artworkMenu.map[val]
       this.$emit('add-to-cart', { item: list })
