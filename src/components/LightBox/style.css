@@ -84,7 +84,7 @@
   top: 0;
   background-color: rgba(0, 0, 0, 0.9);
   color: #eee;
-  z-index: 250;
+  z-index: 450;
 }
 
 .closeButton {

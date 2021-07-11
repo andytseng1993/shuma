@@ -19,24 +19,25 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-animation: change 2s both;
-          animation: change 2s both;
+  animation-delay: 1s;
+  -webkit-animation: change 3.5s both;
+          animation: change 3.5s both;
   z-index: 0;
 }
 @-webkit-keyframes change {
   0% {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 1);
   }
   100% {
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: rgba(0, 0, 0, 0.55);
   }
 }
 @keyframes change {
   0% {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 1);
   }
   100% {
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: rgba(0, 0, 0, 0.55);
   }
 }
 #Home .translate {
