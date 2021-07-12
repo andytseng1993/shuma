@@ -1,5 +1,17 @@
+const productionGzipExtensions = ['js', 'css']
+
 module.exports = {
   pluginOptions: {
+    compression: {
+      gzip: {
+        filename: '[file].gz[query]',
+        algorithm: 'gzip',
+        test: new RegExp('\\.(' + productionGzipExtensions.join('|') + ')$'),
+        include: /\.(js|css|html|svg|json)(\?.*)?$/i,
+        minRatio: 0.8,
+        deleteOriginalAssets: false
+      }
+    },
     webpackBundleAnalyzer: {
       openAnalyzer: false
     }
