@@ -49,8 +49,6 @@
 }
 .link a.contact{
   font-family: 'Press Start 2P' ;
-  display: flex;
-  align-items: center;
   color: rgba(255, 255, 255, 0.7);
   text-decoration: none;
   cursor: pointer;
