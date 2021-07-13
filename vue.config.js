@@ -11,9 +11,6 @@ module.exports = {
         minRatio: 0.8,
         deleteOriginalAssets: false
       }
-    },
-    webpackBundleAnalyzer: {
-      openAnalyzer: false
     }
   },
   css: {
