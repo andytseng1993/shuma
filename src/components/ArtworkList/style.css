@@ -13,6 +13,7 @@ img.loading.finish{
 
 @media screen and (max-width: 480px) {
   img.loading{
+  height: 250px;
   transition:transform 0.2s ease-in-out,opacity .25s ease-in-out;
-}
+  }
 }

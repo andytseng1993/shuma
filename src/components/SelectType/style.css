@@ -164,5 +164,7 @@
   }
   #viewbtn:checked ~ .options{
     font-size: 17px;
+    padding: 2px;
   }
+  
 }
