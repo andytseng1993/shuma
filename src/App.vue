@@ -38,9 +38,14 @@ body {
   height: 100vh;
   /* mobile viewport bug fix */
   height: calc(var(--vh, 1vh) * 100);
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: transparent;
 }
 body.noScroll{
+  position:relative;
   overflow-y: hidden;
+  touch-action: none;
+  -ms-touch-action: none;
 }
 body{
   overflow-x: hidden;

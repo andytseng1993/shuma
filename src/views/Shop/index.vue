@@ -108,6 +108,7 @@ export default {
     this.$store.dispatch('GET_LANGUAGE')
     this.$store.dispatch('GETARTWORK')
     this.$store.dispatch('READ_SHOPLIST')
+    this.Scroll()
   },
   methods: {
     addList (val) {
@@ -119,6 +120,10 @@ export default {
     date: function () {
       const nowDate = new Date()
       return nowDate.getFullYear()
+    },
+    Scroll () {
+      const el = document.body
+      el.classList.remove('noScroll')
     }
 
   }

@@ -81,6 +81,7 @@ export default {
     this.$store.dispatch('GET_LANGUAGE')
     this.focusInput()
     this.reCaptchaOnFocus()
+    this.Scroll()
   },
   methods: {
     goBack () {
@@ -101,7 +102,7 @@ export default {
     },
     clear () {
       this.$store.dispatch('CLEAR_SHOLIST')
-      this.recaptchaVerifyKey = ''
+      this.$emit('update:recaptchaVerifyKey', '')
     },
     send () {
       if (this.order.name && this.order.email && this.recaptchaVerifyKey && this.order.title.length) {
@@ -153,6 +154,10 @@ export default {
       const token = await this.$recaptcha('login')
 
       // Do stuff with the received token.
+    },
+    Scroll () {
+      const el = document.body
+      el.classList.remove('noScroll')
     }
   }
 }
