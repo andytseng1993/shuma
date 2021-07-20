@@ -2,8 +2,10 @@
 <script>
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faInstagramSquare, faFacebookSquare, faArtstation } from '@fortawesome/free-brands-svg-icons'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { faInstagramSquare } from '@fortawesome/free-brands-svg-icons/faInstagramSquare'
+import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons/faFacebookSquare'
+import { faArtstation } from '@fortawesome/free-brands-svg-icons/faArtstation'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope'
 
 import Navigation from '@/components/Navigation/index.vue'
 library.add(faInstagramSquare, faFacebookSquare, faArtstation, faEnvelope)

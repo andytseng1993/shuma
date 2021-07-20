@@ -1,6 +1,6 @@
 #Home {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   position: relative;
   background-image: url("../../assets/img/The_Night_Citizen.jpg");
   background-position: center center;
@@ -19,24 +19,25 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-animation: change 2s both;
-          animation: change 2s both;
+  animation-delay: 1s;
+  -webkit-animation: change 3.5s both;
+          animation: change 3.5s both;
   z-index: 0;
 }
 @-webkit-keyframes change {
   0% {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 1);
   }
   100% {
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: rgba(0, 0, 0, 0.55);
   }
 }
 @keyframes change {
   0% {
-    background-color: rgba(0, 0, 0, 0.9);
+    background-color: rgba(0, 0, 0, 1);
   }
   100% {
-    background-color: rgba(0, 0, 0, 0.65);
+    background-color: rgba(0, 0, 0, 0.55);
   }
 }
 #Home .translate {
@@ -146,6 +147,8 @@
   justify-content: center;
 }
 #Home .nav a{
+  display: flex;
+  justify-content: center;
   font-family: 'Press Start 2P';
   margin: 5vw 3.5px 0px 3.5px;
   background: rgba(0, 0, 0, 0.4);
@@ -213,7 +216,7 @@
     display: flex;
   }
   #Home .image video {
-    margin-top: 2.5vh;
+    margin-top: .5vh;
     height: 40vh;
   }
   #Home .nav{
@@ -224,12 +227,11 @@
     padding: 10px 16px;
     font-size: 4vw;
     margin: 0px;
-    margin-top: 2vh;
-    text-align: center;
+    margin-top: 1.5vh;
+    
   }
   #Home .nav .ch{
-  margin-left: 0px;
-  margin-top: 2vh;
+  margin:2vh 0 0 0 ;
   padding: 8px 30px;
   font-size: 4.5vw;
 }

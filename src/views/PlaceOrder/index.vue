@@ -2,9 +2,10 @@
 <script>
 import axios from 'axios'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faWind, faChevronLeft } from '@fortawesome/free-solid-svg-icons'
+import { faWind } from '@fortawesome/free-solid-svg-icons/faWind'
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons/faChevronLeft'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faPaperPlane } from '@fortawesome/free-regular-svg-icons'
+import { faPaperPlane } from '@fortawesome/free-regular-svg-icons/faPaperPlane'
 import VueRecaptcha from 'vue-recaptcha'
 import emailjs from 'emailjs-com'
 import Navigation from '@/components/Navigation/index.vue'
@@ -80,6 +81,7 @@ export default {
     this.$store.dispatch('GET_LANGUAGE')
     this.focusInput()
     this.reCaptchaOnFocus()
+    this.Scroll()
   },
   methods: {
     goBack () {
@@ -100,7 +102,7 @@ export default {
     },
     clear () {
       this.$store.dispatch('CLEAR_SHOLIST')
-      this.recaptchaVerifyKey = ''
+      this.$emit('update:recaptchaVerifyKey', '')
     },
     send () {
       if (this.order.name && this.order.email && this.recaptchaVerifyKey && this.order.title.length) {
@@ -152,6 +154,10 @@ export default {
       const token = await this.$recaptcha('login')
 
       // Do stuff with the received token.
+    },
+    Scroll () {
+      const el = document.body
+      el.classList.remove('noScroll')
     }
   }
 }

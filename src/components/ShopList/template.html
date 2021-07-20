@@ -55,14 +55,13 @@
           </div>
         </li>
       </transition-group>
-        <transition name='fade' mode='out-in' appear>
           <li class="emptyCart" v-if="!cartList.length" key='emptyCart'>
             <font-awesome-icon icon=shopping-cart />
               <div>
                 {{engControl?'Your Cart is empty.':'無商品'}}
               </div>
           </li>
-        </transition>
+
     </div>
     <div class="subTotal" v-if="cartList.length">
       <div
@@ -137,20 +136,24 @@
                 , {{artworkDetail.year}}
               </div>
             </div>
-            <div class="material">
-              {{artworkMaterials}}
+            <div class="detail">
+              <div class="materials">
+                {{artworkMaterials}}
+              </div>
               <div class="size">
-                , {{artworkDetail.size}}
+                {{artworkDetail.size}}
               </div>
-              <div class="add" @click="addList(selectArtwork)">
-                {{engControl?'Add to Cart':'加入購物車'}}
+              <div class="add">
+                <div class="price">
+                  <span class="price-symbol">
+                    {{engControl?'&#36':'NT&#36'}}
+                  </span>
+                  {{engControl?price(artworkDetail.price[1]):price(artworkDetail.price[0])}}
+                </div>
+                <div class="cart" @click="addList(selectArtwork)">
+                  {{engControl?'Add to Cart':'加入購物車'}}
+                </div>
               </div>
-            </div>
-            <div class="price">
-              <span class="price-symbol">
-                {{engControl?'&#36':'NT&#36'}}
-              </span>
-              {{engControl?price(artworkDetail.price[1]):price(artworkDetail.price[0])}}
             </div>
             <img
               :src="require('@/assets/img/'+preload(nowPlayId+1).src)"
