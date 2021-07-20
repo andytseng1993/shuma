@@ -343,6 +343,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     max-width: 90vw;
   }
 .myPainting img {
@@ -416,11 +417,11 @@
 }
 .words .detail .add .cart{
   letter-spacing: 1px;
-  padding: 10px 25px;
+  padding: 10px 28px;
   border-radius: 5px;
   background: linear-gradient(to top,rgba(216, 0, 43,0.9),rgba(239, 45, 84,0.9) ) ;
   color: white;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   margin-right: 10px;
   cursor: pointer;
@@ -711,7 +712,7 @@
   }
   .words {
     width: 100%;
-    min-width: 250px;
+    min-width: 200px;
   }
   .words .name{
     letter-spacing: 1px;
