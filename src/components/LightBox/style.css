@@ -65,7 +65,6 @@
 }
 #lightBox .artworks .cover:hover:after{
   background-color: rgba(0, 0, 0, 0.4) ;
-  filter: drop-shadow(3px 7px 3px rgba(0, 0, 0, 0.5));
   box-shadow: 5px 5px 4px 1px rgba(0, 0, 0, 0.2) ;
 }
 
@@ -84,7 +83,7 @@
   top: 0;
   background-color: rgba(0, 0, 0, 0.9);
   color: #eee;
-  z-index: 250;
+  z-index: 450;
 }
 
 .closeButton {
@@ -180,7 +179,7 @@
 
 .myPainting {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -193,9 +192,6 @@
 .myPainting .all{
     display: flex;
     flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
     max-width: 90vw;
   }
 .myPainting img {
@@ -206,8 +202,6 @@
   max-width: 80vw;
   max-height: 80vh;
   cursor: pointer;
-  margin-left: auto;
-  margin-right: auto;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
@@ -225,7 +219,7 @@
   padding: 10px 15px;
   letter-spacing: 1px;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 22px;
 }
 .words .name .year {
   display: inline-block;
@@ -237,14 +231,14 @@
   color: rgba(255, 255, 255, 0.8);
   text-align: left;
   padding: 0px 15px;
-  font-size: 17px;
+  font-size: 20px;
   letter-spacing: 2px;
   font-weight: 400;
 }
 .words .material .size {
   display: inline-block;
   margin-right: 0px;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 400;
 }
 @media only screen and (max-width: 1800px) {
@@ -287,20 +281,22 @@
     border: none;
   }
   #lightBox .artworks .cover {
+    width: 75%;
+    height: 250px;
     margin-bottom: 60px;
+    margin-right: initial;
     filter: none;
     transition: box-shadow 0.2s ease-out,transform 0.2s;
-    width: 80%;
     justify-content: flex-end
   }
 
   #lightBox .artworks .cover h3 {
-    padding: 20px;
-    bottom: -15px;
+    padding: 5px;
+    bottom: -5px;
     color: black;
     position: relative;
-    transform: translateY(40px);
-    font-size: 20px;
+    transform: translateY(30px);
+    font-size: 18px;
     letter-spacing: 0px;
     opacity: 1;
     transition: transform 0.2s ease-out;
@@ -338,7 +334,8 @@
   }
 
   .nextButton {
-    top: 94vh;
+    top: auto;
+    bottom: 0px;
   }
   .nextButton .fa-chevron-right,.preButton .fa-chevron-left{
     color: rgba(247, 255, 247, 0.6);
@@ -346,14 +343,15 @@
   }
 
   .preButton {
-    top: 94vh;
+    top: auto;
+    bottom: 0px;
 
   }
   /* lightBox img*/
  
   .myPainting img {
-    max-width: 83vw;
-    max-height: 74vh;
+    max-width: 78vw;
+    max-height: 68vh;
   }
   .words .name{
     letter-spacing: 1px;
@@ -365,9 +363,8 @@
     font-size: 13px;
     letter-spacing: 0px;
    }
-  .words .material{
-    padding: 0px 4vw;
-    font-size: 15px;
+  .words .material,.words .material .size{
+    font-size: 12px;
     letter-spacing: 1px;
   }
   .nextButton .fa-chevron-right, .preButton .fa-chevron-left {

@@ -1,7 +1,7 @@
 <script>
 import ContactForm from '@/components/ContactForm/index.vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { faChevronLeft } from '@fortawesome/free-solid-svg-icons'
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons/faChevronLeft'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 library.add(faChevronLeft)
 export default {

@@ -4,10 +4,16 @@ img.loading{
   object-fit: contain;
   height: 370px;
   border-radius: 3px;
-  transition:transform 0.2s ease-in-out,filter 0.1s ease-in-out,opacity .4s ease-in-out;
+  transition:transform 0.2s ease-in-out,opacity .4s ease-in-out;
   opacity: 0;
-
 }
 img.loading.finish{
   opacity: 1;
+}
+
+@media screen and (max-width: 480px) {
+  img.loading{
+  height: 250px;
+  transition:transform 0.2s ease-in-out,opacity .25s ease-in-out;
+  }
 }

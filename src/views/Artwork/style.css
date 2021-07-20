@@ -3,17 +3,17 @@
 }
 #nav{
   background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),url("../../assets/thumbnail/The-Night-Citizen-min.jpg");
-  z-index: 50;
+  z-index: 300;
   background-position: 30% 20%;
 }
 .title {
-  margin: 10px 0px;
   font-family:'Times New Roman','Artwork_ch';
   display: flex;
   justify-content: center;
   align-items: center;
   color: black;
   margin-top: 20px;
+  margin-bottom: 10px;
 }
 .title .beforeLine {
   flex: 1 1;
@@ -44,6 +44,7 @@
   margin-top: 15px;
   left: 5%;
   transition: left 0.1s;
+  z-index: 250;
 }
 .footer{
     padding: 20px 0px;
@@ -81,17 +82,18 @@
 @media only screen and (max-width: 480px) {
   .title{
     position: relative;
-    top: 10px;
+    padding-top: 10px;
+    margin-top:0px;
   }
   .title h1 {
-    font-size: 9vw;
+    font-size: 8vw;
   }
   #TypeHandler{
-    margin-top: 30px;
-    width:70vw;
+    margin-top: 15px;
+    width: 80vw;
   }
   #lightBox{
-  margin-top: 100px;
+    margin-top: 70px;
   }
   .footer{
     height: 60px;

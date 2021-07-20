@@ -2,7 +2,10 @@
 <script>
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faHome, faUserCircle, faPalette, faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import { faHome } from '@fortawesome/free-solid-svg-icons/faHome'
+import { faUserCircle } from '@fortawesome/free-solid-svg-icons/faUserCircle'
+import { faPalette } from '@fortawesome/free-solid-svg-icons/faPalette'
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons/faShoppingCart'
 library.add(faHome, faUserCircle, faPalette, faShoppingCart)
 
 export default {

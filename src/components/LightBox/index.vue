@@ -3,7 +3,9 @@
 import ArtworkList from '@/components/ArtworkList/index.vue'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
-import { faTimesCircle, faChevronRight, faChevronLeft } from '@fortawesome/free-solid-svg-icons'
+import { faTimesCircle } from '@fortawesome/free-solid-svg-icons/faTimesCircle'
+import { faChevronRight } from '@fortawesome/free-solid-svg-icons/faChevronRight'
+import { faChevronLeft } from '@fortawesome/free-solid-svg-icons/faChevronLeft'
 library.add(faTimesCircle, faChevronRight, faChevronLeft)
 
 export default {

@@ -56,7 +56,7 @@
   top: 14px;
 }
 #TypeHandler .options {
-  padding: 0px;
+  padding: 0px ;
   display: -webkit-box;
   display: flex;
   -webkit-box-pack: center;
@@ -106,6 +106,7 @@
 }
 
 #viewbtn:checked ~ .options {
+  padding: 5px ;
   height: 30px;
   -webkit-animation: focus 0.2s ease-in-out both;
           animation: focus 0.2s ease-in-out both;
@@ -163,5 +164,7 @@
   }
   #viewbtn:checked ~ .options{
     font-size: 17px;
+    padding: 2px;
   }
+  
 }
