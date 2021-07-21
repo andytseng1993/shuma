@@ -126,9 +126,10 @@
 
 #shopList .orderTotal .orderList ul li .details .title .price{
   font-weight: 600;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 1.2em;
-  width: 64px;
+  min-width: 67px;
+  text-align: end;
 }
 #shopList .orderTotal .orderList ul li .details .detail{
   font-size: 15px;

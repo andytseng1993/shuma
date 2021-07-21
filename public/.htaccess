@@ -11,7 +11,7 @@
     <filesmatch "\.(ico|flv|gif|swf|eot|woff|otf|ttf|svg)$">
         Header set Cache-Control "max-age=2592000, public"
     </filesmatch>
-    <filesmatch "\.(jpg|jpeg|png)$">
+    <filesmatch "\.(jpg|jpeg|png|webm|mp4)$">
         Header set Cache-Control "max-age=1209600, public"
     </filesmatch>
     # css and js should use private for proxy caching https://developers.google.com/speed/docs/best-practices/caching#LeverageProxyCaching
