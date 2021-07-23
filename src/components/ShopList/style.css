@@ -182,7 +182,7 @@
 #shopList .orderTotal .subTotal .submit{
   padding: 10px 30px;
   border-radius: 10px;
-  background: linear-gradient(to top,rgb(216, 0, 43),rgb(239, 45, 84) ) ;
+  background: linear-gradient(to bottom,rgb(243, 21, 65),rgb(189, 1, 39) ) ;
   font-size: 18px;
   font-weight: 600;
   margin: 20px 0px 20px 0px;
@@ -424,16 +424,37 @@
   color: white;
   font-size: 20px;
   font-weight: 700;
-  margin-right: 10px;
   cursor: pointer;
   transition: 0.2s ease-out;
 }
 .words .detail .cart:hover{
-  background: linear-gradient(to top,rgba(216, 0, 43,0.7),rgba(239, 45, 84,0.7) ) ;
+  background: linear-gradient(to top,rgb(240, 31, 73),rgb(136, 0, 27) ) ;
 }
 .words .detail .cart:active{
   transition-duration: 0.01s;
   transform: translateY(2px);
+}
+.words .detail .add .added-cart{
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to top,rgb(173, 17, 48),rgb(139, 9, 35) );
+  letter-spacing: 1px;
+  padding: 10px 28px;
+  border-radius: 5px;
+  cursor: auto;
+  font-size: 20px;
+  font-weight: 700;
+  color: white;
+}
+
+.words .detail .add .added-cart .added-image{
+  background-image: url('../../../public/safari-pinned-tab.svg');
+  height: 25px;
+  width: 25px;
+  margin-left: 5px;
+  background-size: contain;
+  display: inline-block;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(233deg) brightness(105%) contrast(101%);
 }
 
 .fade-enter-active,.fade-leave-active{
@@ -504,7 +525,9 @@
   #shopList .orderTotal.open .shopCart{
     position: relative;
     padding: 2.5vh 0px;
-    display: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #fff;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   }
@@ -518,11 +541,9 @@
   
   #shopList .orderTotal.open .shopCart .close_btn{
   display: block;
-  float: right;
   right: 0;
-  top: 2.5vh;
   position: absolute;
-  margin-right:30px ;
+  margin-right:30px;
 }
 #shopList .orderTotal .orderList{
   background-color: #fff;
@@ -562,12 +583,24 @@
   cursor: pointer;
   display: initial;
 }
+#shopList .orderTotal .subTotal .shopControl:hover{
+    color: rgb(209, 2, 2);
+    transform: scale(1.1) translateY(-1px);
+  }
 
 #shopList .orderTotal .subTotal .shopControl .fa-shopping-cart{
   font-size: 30px;
   color: rgba(0, 0, 0, 0.8);
 }
-  
+#shopList .orderTotal .subTotal .shopControl:hover .fa-shopping-cart{
+  color: rgb(209, 2, 2);
+}
+#shopList .orderTotal .subTotal .shopControl .num{
+  font-size: 20px;
+  font-weight: 700;
+  margin-left: 5px;
+}
+
 }
 @media only screen and (max-width: 768px){
   #shopList .items{
@@ -614,6 +647,7 @@
   #shopList .orderTotal .subTotal .shopControl .fa-shopping-cart{
     font-size: 6vw;
   }
+  
   #shopList .orderTotal .subTotal .total h4{
     font-size: 4vw;
     margin: 0px;
@@ -624,7 +658,7 @@
   #shopList .orderTotal .subTotal .submit{
     font-size: 4vw;
     margin: 0px;
-    padding: 7px 30px;
+    padding: 5px 30px;
     letter-spacing: 1px;
   }
   #shopList .orderTotal.open .shopCart{
@@ -658,6 +692,8 @@
     font-weight: 900;
     font-size: 14px;
   }
+  
+
   #shopList .orderTotal .orderList ul li .details .size .remove:hover{
   transform: translateY(-2px);
   background-color: rgba(0, 0, 0, 0.1);
@@ -744,8 +780,17 @@
   }
   .words .detail .add .cart{
     padding: 7px 15px;
-    font-size: 12px;
+    font-size: 14px;
     letter-spacing: 0px;
-    margin-right: 5px;
+
+  }
+  .words .detail .add .added-cart{
+    letter-spacing: 0px;
+    padding: 6px 15px;
+    font-size: 14px;
+  }
+  .words .detail .add .added-cart .added-image{
+    height: 20px;
+    width: 20px;
   }
 }

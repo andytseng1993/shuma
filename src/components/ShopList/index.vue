@@ -58,6 +58,25 @@ export default {
     },
     subTotal () {
       if (this.engControl) { return this.cartList.map(workart => workart.price[1]).reduce((accumulator, currentValue) => parseInt(accumulator) + parseInt(currentValue), 0) } else { return this.cartList.map(workart => workart.price[0]).reduce((accumulator, currentValue) => parseInt(accumulator) + parseInt(currentValue), 0) }
+    },
+    cartCount () {
+      const obj = {}
+      this.cartList.forEach(({ title }) => {
+        if (this.engControl) {
+          if (!obj[title[1]]) {
+            obj[title[1]] = 1
+          } else {
+            obj[title[1]]++
+          }
+        } else {
+          if (!obj[title[0]]) {
+            obj[title[0]] = 1
+          } else {
+            obj[title[0]]++
+          }
+        }
+      })
+      return obj
     }
   },
   methods: {
