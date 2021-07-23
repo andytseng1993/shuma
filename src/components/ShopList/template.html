@@ -35,7 +35,7 @@
     </div>
     <div class="orderList">
       <transition-group name='fade-orderList' tag='ul'>
-        <li v-for="(item,itemId) in cartList" :key="item.title[0]">
+        <li v-for="(item,itemId) in cartList" :key="item.index">
           <div class="img" :style="{ 'background-image': 'url(' + require('@/assets/thumbnail/' + item.thumbnail) + ')' }"></div>
           <div class="details">
             <div class="title">
@@ -150,9 +150,13 @@
                   </span>
                   {{engControl?price(artworkDetail.price[1]):price(artworkDetail.price[0])}}
                 </div>
-                <div class="cart" @click="addList(selectArtwork)">
-                  {{engControl?'Add to Cart':'加入購物車'}}
-                </div>
+                  <div v-if='!cartCount[selectArtwork]' class="cart" @click="addList(selectArtwork)" key='cart'>
+                    {{engControl?'Add to Cart':'加入購物車'}}
+                  </div>
+                  <div v-else class="added-cart" key='added-cart'>
+                    {{engControl?'Added to Cart':'已加入購物車'}}
+                    <span class="added-image"></span>
+                  </div>
               </div>
             </div>
             <img
