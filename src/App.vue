@@ -69,7 +69,6 @@ body{
   background: #d3d3d3;
 }
 #app {
-  color: #2c3e50;
   width:100%;
   height: 100%;
 }
