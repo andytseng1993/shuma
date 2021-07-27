@@ -2,7 +2,7 @@
   width: 100vw;
   height: 100%;
   position: relative;
-  background-image: url("../../assets/img/The_Night_Citizen.jpg");
+  background-image: url("../../assets/The-Night-Citizen-big.jpg");
   background-position: center center;
   background-size: cover;
   display: flex;
@@ -180,8 +180,20 @@
   color: white;
   background-color: rgba(0, 0, 0, 0.6);
 }
+@media screen and (max-width: 1000px) {
+  #Home {
+  background-image: url("../../assets/The-Night-Citizen-median.jpg");
+  }
+  #Home .word {
+    align-items: baseline;
+    transition-duration: 2s;
+  }
+}
 @media screen and (max-width: 480px) {
-  #Home .translate {
+#Home {
+  background-image: url("../../assets/The-Night-Citizen-small.jpg");
+  }  
+#Home .translate {
   right: 10px;
   bottom: 15px;
   top: initial
@@ -238,12 +250,7 @@
   font-size: 4.5vw;
 }
 }
-@media screen and (max-width: 1000px) {
-  #Home .word {
-    align-items: baseline;
-    transition-duration: 2s;
-  }
-}
+
 
 @font-face {
     font-family: 'Home_ch';
