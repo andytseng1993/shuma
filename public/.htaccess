@@ -9,12 +9,11 @@
 <IfModule mod_headers.c>
     Header set Connection keep-alive
     <filesmatch "\.(ico|flv|gif|swf|eot|woff|otf|ttf|svg)$">
-        Header set Cache-Control "max-age=2592000, public"
+        Header set Cache-Control "max-age=12096000, public"
     </filesmatch>
     <filesmatch "\.(jpg|jpeg|png|webm|mp4)$">
-        Header set Cache-Control "max-age=1209600, public"
+        Header set Cache-Control "max-age=12096000, public"
     </filesmatch>
-    # css and js should use private for proxy caching https://developers.google.com/speed/docs/best-practices/caching#LeverageProxyCaching
     <filesmatch "\.(css)$">
         Header set Cache-Control "max-age=31536000, private"
     </filesmatch>
@@ -24,6 +23,13 @@
     <filesMatch "\.(x?html?|php)$">
         Header set Cache-Control "max-age=600, private, must-revalidate"
       </filesMatch>
+    <Files artwork.json>
+        FileETag None
+        Header unset ETag
+        Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expires "Wed, 11 Jan 1984 05:00:00 GMT"
+    </Files>
 </IfModule>
 
 # BEGIN GZIP COMPRESSION
