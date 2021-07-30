@@ -41,4 +41,5 @@ mod_gzip_item_excluderspheader^Content-Encoding:.*gzip.*
 </IfModule>
 # END GZIP COMPRESSION
 
+# To make MP3 streaming on Safari with Cloudflare CF
 SetEnvIfNoCase Request_URI .(?:mp4|webm)$ no-gzip dont-vary

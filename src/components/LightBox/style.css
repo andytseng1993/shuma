@@ -59,6 +59,7 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+  cursor: pointer;
 }
 #lightBox .artworks .cover:hover {
   transform: translate(-5px, -5px);
@@ -193,6 +194,7 @@
     display: flex;
     flex-direction: column;
     max-width: 90vw;
+    align-items: center;
   }
 .myPainting img {
   display: block;
@@ -275,6 +277,9 @@
 }
 @media only screen and (max-width: 480px) {
   /* artworks */
+  .lightbox{
+    background-color: rgba(0, 0, 0, 0.95);
+  }
   #lightBox .artworks {
     justify-content: center;
     padding: 10px;
@@ -306,18 +311,16 @@
     position: relative;
   }
   #lightBox .artworks .cover:hover {
-    transform: translate(-2px, -2px);
+    transform: translate(0px, 0px);
     filter: none;
-    box-shadow: 3px 5px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: none;
   }
-  #lightBox .artworks .cover:hover:after{
-    background-color: transparent;
-    filter: none;
+  #lightBox .artworks .cover:after{
+    display: none;
   }
 
   #lightBox .artworks .cover:hover h3 {
     color: black;
-    transform: translateY(35px);
   }
 
   /* lightBox btn*/
