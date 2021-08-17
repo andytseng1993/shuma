@@ -9,13 +9,13 @@
       v-for="(artwork,artid) in artworkMenu.sort"
       @click="setPlayId(artid),controlLightBox(true),lightboxNoScroll('add')"
     >
-      <h3>{{artwork}}</h3>
       <ArtworkList
         :artwork='artwork'
         :artworkMenu='artworkMenu'
         :engControl="engControl"
         :observer='observer'
       ></ArtworkList>
+      <h3>{{artwork}}</h3>
     </div>
   </div>
 
