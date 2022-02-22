@@ -2,9 +2,9 @@
   user-select: none; 
 }
 #nav{
-  background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),url("../../assets/thumbnail/The-Night-Citizen-min.jpg");
+  background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),url("../../assets/Navigation.jpg");
   z-index: 300;
-  background-position: 30% 20%;
+  background-position: 220% 2%;
 }
 .title {
   font-family:'Times New Roman','Artwork_ch';

@@ -2,6 +2,7 @@
   width: 100vw;
   height: 100%;
   position: relative;
+  background-color: black;
   background-image: url("../../assets/The-Night-Citizen-big.jpg");
   background-position: center center;
   background-size: cover;
@@ -20,8 +21,8 @@
   width: 100%;
   height: 100%;
   animation-delay: 1s;
-  -webkit-animation: change 3.5s both;
-          animation: change 3.5s both;
+  -webkit-animation: change 2.5s both;
+          animation: change 2.5s both;
   z-index: 0;
 }
 @-webkit-keyframes change {
@@ -54,6 +55,8 @@
   display: flex;
   align-items: center;
   font-size: max(1.5vw, 22px);
+  opacity: 0;
+  animation: fade 0.5s ease-in 0.5s both;
 }
 #Home .translate label .ch {
   cursor: pointer;
@@ -106,6 +109,16 @@
   align-items: center;
   justify-content: center;
   transition-duration: 2s;
+  animation: fade 0.5s ease-in 0.5s both;
+  opacity: 0;
+}
+@keyframes fade {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 #Home .word .name {
   font-family: "Gugi", 'cursive';
@@ -115,7 +128,7 @@
           background-clip: text;
   letter-spacing: 2vw;
   font-weight: 600;
-  filter: drop-shadow(3px 0px 0px #fc6ace) drop-shadow(-3px 0px 0px #fc6ace) drop-shadow(0px 3px 0px #fc6ace) drop-shadow(0px -3px 0px #fc6ace) drop-shadow(0px 0px 7px rgba(251, 128, 214, 0.8)) drop-shadow(0px 0px 3px #ff006e);
+  filter: drop-shadow(3px 0px 0px #ff6bd0) drop-shadow(-3px 0px 0px #ff6bd0) drop-shadow(0px 3px 0px #ff80d7) drop-shadow(0px -3px 0px #ff80d7) drop-shadow(0px 0px 7px rgba(255, 144, 222, 0.8)) drop-shadow(0px 0px 10px #ee0268) drop-shadow(0px 0px 10px rgba(255, 144, 222, 0.6));
 }
 #Home .word .name:nth-of-type(1) {
   background-image: url("../../assets/thumbnail/Raining-in-Taiwan-min.jpg");
@@ -147,6 +160,8 @@
   z-index: 10;
   display: flex;
   justify-content: center;
+  animation: fade 0.5s ease-in 0.5s both;
+  opacity: 0;
 }
 #Home .nav a{
   display: flex;
@@ -160,13 +175,13 @@
   padding: 12px 25px;
   font-size: min(2vw, 25px);
   border: solid 3px #fb80d6;
-  box-shadow: 0px 0px 20px #fb80d6;
+  box-shadow: 0px 0px 5px #fb80d6, 0px 0px 10px #fb80d6,0px 0px 30px #ffa7e5de;
   text-decoration-line: none;
 }
 #Home .nav a:hover {
   background: black;
   color: white;
-  box-shadow: 0px 0px 20px #0adaff;
+  box-shadow: 0px 0px 5px #0adaff, 0px 0px 10px #0adaff;
   border: solid 3px #0adaff;
 }
 #Home .nav .ch{

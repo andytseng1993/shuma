@@ -48,7 +48,12 @@ export default {
         map: { }
       }
       this.artworks.forEach(({ thumbnail, type, title, src, year, material, size, sell, soldout, price }, index) => {
+        thumbnail = thumbnail.trim()
+        src = src.trim()
+        size = size.trim()
         if (!this.engControl) {
+          type[0] = type[0].trim()
+          title[0] = title[0].trim()
           if (!obj.map[type[0]]) {
             obj.sort.push(type[0])
             obj.map[type[0]] = {
@@ -57,8 +62,10 @@ export default {
             }
           }
           obj.map[type[0]].sort.push(title[0])
-          obj.map[type[0]].map[title[0]] = { index, thumbnail, src, year, material, size, sell, soldout, price }
+          obj.map[type[0]].map[title[0]] = { index, thumbnail: thumbnail, src, year, material: material[0].trim(), size, sell, soldout, price }
         } else {
+          type[1] = type[1].trim()
+          title[1] = title[1].trim()
           if (!obj.map[type[1]]) {
             obj.sort.push(type[1])
             obj.map[type[1]] = {
@@ -67,7 +74,7 @@ export default {
             }
           }
           obj.map[type[1]].sort.push(title[1])
-          obj.map[type[1]].map[title[1]] = { index, thumbnail, src, year, material, size, sell, soldout, price }
+          obj.map[type[1]].map[title[1]] = { index, thumbnail, src: src, year, material: material[1].trim(), size, sell, soldout, price }
         }
       })
 
@@ -82,10 +89,15 @@ export default {
           map: {}
         }
         this.artworks.forEach(({ title, thumbnail, src, year, material, size, sell, soldout, price }, index) => {
+          src = src.trim()
+          thumbnail = thumbnail.trim()
+          size = size.trim()
           if (!this.engControl) {
+            title[0] = title[0].trim()
             el.sort.push(title[0])
             el.map[title[0]] = { index, thumbnail, src, year, material, size, sell, soldout, price }
           } else {
+            title[1] = title[1].trim()
             el.sort.push(title[1])
             el.map[title[1]] = { index, thumbnail, src, year, material, size, sell, soldout, price }
           }
@@ -98,7 +110,7 @@ export default {
   watch: {
 
   },
-  mounted () {
+  created () {
     this.$store.dispatch('GETARTWORK')
     this.$store.dispatch('GET_LANGUAGE')
     this.$store.dispatch('CLEAR_TYPE')

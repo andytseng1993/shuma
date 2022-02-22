@@ -93,11 +93,21 @@ export default {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           const img = entry.target
+          img.previousElementSibling.classList.add('loading')
           img.setAttribute('src', img.dataset.src)
-          img.classList.add('finish')
           img.removeAttribute('data-src')
+          img.addEventListener('load', this.removeMockup)
+          img.classList.add('finish')
           this.observer.unobserve(img)
         }
+      })
+    },
+    removeMockup (event) {
+      const mackup = event.target.previousElementSibling
+      mackup.classList.remove('loading')
+      mackup.classList.add('fade')
+      mackup.addEventListener('transitionend', function () {
+        mackup.remove()
       })
     }
   }

@@ -11,7 +11,7 @@ export default {
       }
     }
   },
-  mounted () {
+  created () {
     this.$store.dispatch('GET_LANGUAGE')
   }
 }

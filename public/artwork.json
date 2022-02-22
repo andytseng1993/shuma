@@ -1,5 +1,629 @@
 [ 
   {
+    "thumbnail": " Star_Weasel_min.jpg ",
+    "src": " Star_Weasel.jpg",
+    "type": [
+      "  數位繪圖 ",
+      "Digital Painting"
+    ],
+    "title": [
+      "  星空貂 ",
+      "Star Weasel"
+    ],
+    "year": 2021,
+    "material": [
+      "數位繪圖",
+      "Digital Painting"
+    ],
+    "size": "  297×210 mm ",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]
+  },
+  {
+    "thumbnail": "Star_Trace_Tiger_min.jpg",
+    "src": "Star_Trace_Tiger.jpg",
+    "type": [
+      "數位繪圖",
+      "Digital Painting"
+    ],
+    "title": [
+      "星痕虎",
+      "Star Trace Tiger"
+    ],
+    "year": 2022,
+    "material": [
+      "數位繪圖",
+      "Digital Painting"
+    ],
+    "size": "6×4 inches",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]
+  },
+  {
+    "thumbnail": "To_Be_Loved_min.jpg",
+    "src": "To_Be_Loved.jpg",
+    "type": [
+      "數位繪圖",
+      "Digital Painting"
+    ],
+    "title": [
+      "自我",
+      "To Be Loved"
+    ],
+    "year": 2022,
+    "material": [
+      "數位繪圖",
+      "Digital Painting"
+    ],
+    "size": "2388×1688 px",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]
+  },
+  {
+    "thumbnail": "Sleepy_Cat_min.jpg",
+    "src": "Sleepy_Cat.jpg",
+    "type": [
+      "壓克力顏料系列",
+      "Acrylic Painting"
+    ],
+    "title": [
+      "睡覺的貓",
+      "Sleepy Cat"
+    ],
+    "year": 2021,
+    "material": [
+      "壓克力, 畫布",
+      "Acrylic, Canvas"
+    ],
+    "size": "9×12 inches",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]
+  },
+  {
+    "thumbnail": "Consciousness_min.jpg",
+    "src": "Consciousness.jpg",
+    "type": [
+      "壓克力顏料系列",
+      "Acrylic Painting"
+    ],
+    "title": [
+      "覺悟",
+      "Consciousness"
+    ],
+    "year": 2021,
+    "material": [
+      "壓克力 , 畫布",
+      "Acrylic , Canvas"
+    ],
+    "size": "11×14 inches",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]
+  },
+  {
+    "thumbnail": "Compass_min.jpg",
+    "src": "Compass.jpg",
+    "type": [
+      "墨水系列",
+      "Ink Drawing"
+    ],
+    "title": [
+      "羅盤",
+      "Compass"
+    ],
+    "year": 2021,
+    "material": [
+      "墨筆, 水彩紙",
+      "Ink, Paper"
+    ],
+    "size": "9×12 inches",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]
+  },
+  {
+    "thumbnail": "Connect_min.jpg",
+    "src": "Connect.jpg",
+    "type": [
+      "墨水系列",
+      "Ink Drawing"
+    ],
+    "title": [
+      "連結",
+      "Connect"
+    ],
+    "year": 2021,
+    "material": [
+      "墨筆, 水彩紙",
+      "Ink, Paper"
+    ],
+    "size": "9×12 inches",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]
+  },
+  {
+    "thumbnail": "Crystal_min.jpg",
+    "src": "Crystal.jpg",
+    "type": [
+      "墨水系列",
+      "Ink Drawing"
+    ],
+    "title": [
+      "水晶",
+      "Crystal"
+    ],
+    "year": 2021,
+    "material": [
+      "墨筆, 水彩紙",
+      "Ink, Paper"
+    ],
+    "size": "9×12 inches",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]
+  },
+  {
+    "thumbnail": "Extinct_min.jpg",
+    "src": "Extinct.jpg",
+    "type": [
+      "墨水系列",
+      "Ink Drawing"
+    ],
+    "title": [
+      "滅絕",
+      "Extinct"
+    ],
+    "year": 2021,
+    "material": [
+      "墨筆, 水彩紙",
+      "Ink, Paper"
+    ],
+    "size": "9×12 inches",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]
+  },
+  {
+    "thumbnail": "Fan_min.jpg",
+    "src": "Fan.jpg",
+    "type": [
+      "墨水系列",
+      "Ink Drawing"
+    ],
+    "title": [
+      "扇子",
+      "Fan"
+    ],
+    "year": 2021,
+    "material": [
+      "墨筆, 水彩紙",
+      "Ink, Paper"
+    ],
+    "size": "9×12 inches",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]
+  },
+  {
+    "thumbnail": "Fuzzy_min.jpg",
+    "src": "Fuzzy.jpg",
+    "type": [
+      "墨水系列",
+      "Ink Drawing"
+    ],
+    "title": [
+      "捲",
+      "Fuzzy"
+    ],
+    "year": 2021,
+    "material": [
+      "墨筆, 水彩紙",
+      "Ink, Paper"
+    ],
+    "size": "9×12 inches",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]
+  },
+  {
+    "thumbnail": "Helmet_min.jpg",
+    "src": "Helmet.jpg",
+    "type": [
+      "墨水系列",
+      "Ink Drawing"
+    ],
+    "title": [
+      "頭盔",
+      "Helmet"
+    ],
+    "year": 2021,
+    "material": [
+      "墨筆, 水彩紙",
+      "Ink, Paper"
+    ],
+    "size": "9×12 inches",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]
+  },
+  {
+    "thumbnail": "Leak_min.jpg",
+    "src": "Leak.jpg",
+    "type": [
+      "墨水系列",
+      "Ink Drawing"
+    ],
+    "title": [
+      "漏水",
+      "Leak"
+    ],
+    "year": 2021,
+    "material": [
+      "墨筆, 水彩紙",
+      "Ink, Paper"
+    ],
+    "size": "9×12 inches",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]
+  },
+  {
+    "thumbnail": "Moon_min.jpg",
+    "src": "Moon.jpg",
+    "type": [
+      "墨水系列",
+      "Ink Drawing"
+    ],
+    "title": [
+      "月亮",
+      "Moon"
+    ],
+    "year": 2021,
+    "material": [
+      "墨筆 , 水彩紙",
+      "Ink , Paper"
+    ],
+    "size": "9×12 inches",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]
+  },
+  {
+    "thumbnail": "Open_min.jpg",
+    "src": "Open.jpg",
+    "type": [
+      "墨水系列",
+      "Ink Drawing"
+    ],
+    "title": [
+      "開啟",
+      "Open"
+    ],
+    "year": 2021,
+    "material": [
+      "墨筆, 水彩紙",
+      "Ink, Paper"
+    ],
+    "size": "9×12 inches",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]
+  },
+  {
+    "thumbnail": "Patch_min.jpg",
+    "src": "Patch.jpg",
+    "type": [
+      "墨水系列",
+      "Ink Drawing"
+    ],
+    "title": [
+      "修補",
+      "Patch"
+    ],
+    "year": 2021,
+    "material": [
+      "墨筆, 水彩紙",
+      "Ink, Paper"
+    ],
+    "size": "9×12 inches",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]
+  },
+  {
+    "thumbnail": "Raven_min.jpg",
+    "src": "Raven.jpg",
+    "type": [
+      "墨水系列",
+      "Ink Drawing"
+    ],
+    "title": [
+      "渡鴉",
+      "Raven"
+    ],
+    "year": 2021,
+    "material": [
+      "墨筆, 水彩紙",
+      "Ink, Paper"
+    ],
+    "size": "9×12 inches",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]
+  },
+  {
+    "thumbnail": "Risk_min.jpg",
+    "src": "Risk.jpg",
+    "type": [
+      "墨水系列",
+      "Ink Drawing"
+    ],
+    "title": [
+      "風險",
+      "Risk"
+    ],
+    "year": 2021,
+    "material": [
+      "墨筆, 水彩紙",
+      "Ink, Paper"
+    ],
+    "size": "9×12 inches",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]
+  },
+  {
+    "thumbnail": "Roof_min.jpg",
+    "src": "Roof.jpg",
+    "type": [
+      "墨水系列",
+      "Ink Drawing"
+    ],
+    "title": [
+      "屋頂",
+      "Roof"
+    ],
+    "year": 2021,
+    "material": [
+      "墨筆, 水彩紙",
+      "Ink, Paper"
+    ],
+    "size": "9×12 inches",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]
+  },
+  {
+    "thumbnail": "Sour_min.jpg",
+    "src": "Sour.jpg",
+    "type": [
+      "墨水系列",
+      "Ink Drawing"
+    ],
+    "title": [
+      "酸",
+      "Sour"
+    ],
+    "year": 2021,
+    "material": [
+      "墨筆, 水彩紙",
+      "Ink, Paper"
+    ],
+    "size": "9×12 inches",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]
+  },
+  {
+    "thumbnail": "Spirit_min.jpg",
+    "src": "Spirit.jpg",
+    "type": [
+      "墨水系列",
+      "Ink Drawing"
+    ],
+    "title": [
+      "精神",
+      "Spirit"
+    ],
+    "year": 2021,
+    "material": [
+      "墨筆, 水彩紙",
+      "Ink, Paper"
+    ],
+    "size": "9×12 inches",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]
+  },
+  {
+    "thumbnail": "Sprout_min.jpg",
+    "src": "Sprout.jpg",
+    "type": [
+      "墨水系列",
+      "Ink Drawing"
+    ],
+    "title": [
+      "初芽",
+      "Sprout"
+    ],
+    "year": 2021,
+    "material": [
+      "墨筆, 水彩紙",
+      "Ink, Paper"
+    ],
+    "size": "9×12 inches",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]
+  },
+  {
+    "thumbnail": "Stuck_min.jpg",
+    "src": "Stuck.jpg",
+    "type": [
+      "墨水系列",
+      "Ink Drawing"
+    ],
+    "title": [
+      "卡住",
+      "Stuck "
+    ],
+    "year": 2021,
+    "material": [
+      "墨筆, 水彩紙",
+      "Ink, Paper"
+    ],
+    "size": "9×12 inches",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]
+  },
+  {
+    "thumbnail": "Tick_min.jpg",
+    "src": "Tick.jpg",
+    "type": [
+      "墨水系列",
+      "Ink Drawing"
+    ],
+    "title": [
+      "滴答",
+      "Tick"
+    ],
+    "year": 2021,
+    "material": [
+      "墨筆, 水彩紙",
+      "Ink, Paper"
+    ],
+    "size": "9×12 inches",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]
+  },
+  {
+    "thumbnail": "Vessel_min.jpg",
+    "src": "Vessel.jpg",
+    "type": [
+      "墨水系列",
+      "Ink Drawing"
+    ],
+    "title": [
+      "船心",
+      "Vessel"
+    ],
+    "year": 2021,
+    "material": [
+      "墨筆, 水彩紙",
+      "Ink, Paper"
+    ],
+    "size": "9×12 inches",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]
+  },
+  {
+    "thumbnail": "Watch_min.jpg",
+    "src": "Watch.jpg",
+    "type": [
+      "墨水系列",
+      "Ink Drawing"
+    ],
+    "title": [
+      "注視",
+      "Watch"
+    ],
+    "year": 2021,
+    "material": [
+      "墨筆, 水彩紙",
+      "Ink, Paper"
+    ],
+    "size": "9×12 inches",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]
+  },
+  {
     "thumbnail": "Legend_of_Tiger_min.jpg",
     "src": "Legend_of_Tiger.jpg",
     "type": [

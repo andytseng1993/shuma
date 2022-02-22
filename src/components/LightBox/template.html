@@ -9,6 +9,7 @@
       v-for="(artwork,artid) in artworkMenu.sort"
       @click="setPlayId(artid),controlLightBox(true),lightboxNoScroll('add')"
     >
+      <div class="mackup"></div>
       <ArtworkList
         :artwork='artwork'
         :artworkMenu='artworkMenu'
