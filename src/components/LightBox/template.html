@@ -7,7 +7,7 @@
       class="cover"
       :key="artwork"
       v-for="(artwork,artid) in artworkMenu.sort"
-      @click="setPlayId(artid),controlLightBox(true),lightboxNoScroll('add')"
+      @click="setPlayId(artid),controlLightBox(true),lightboxNoScroll('add'),clickImage(artid)"
     >
       <div class="mackup"></div>
       <ArtworkList
@@ -35,54 +35,64 @@
         />
       </div>
       <div class="nextButton" key="nextButton"
-          @click="change(nowPlayId+1)"
+          @click="change(nowPlayId+1),loadingImg(nowPlayId+1)"
       >
         <font-awesome-icon icon=chevron-right
         />
       </div>
       <div class="preButton" key="preButton">
         <font-awesome-icon icon=chevron-left
-        @click="change(nowPlayId-1)"
+        @click="change(nowPlayId-1),loadingImg(nowPlayId-1)"
         />
       </div>
-      <div
-        class="myPainting"
-        v-if="isLightboxOpen"
-        key='myPainting'
-      >
-        <div class="all" key='detail'>
-          <img
-            id="myPaint"
-            :src="require('@/assets/img/'+artworkDetail.src)"
-            @click="change(nowPlayId+1)"
-            :alt="selectArtwork"
-          >
-          <div
-            class="words"
-          >
-            <div class="name">
-              {{selectArtwork}}
-              <div class="year">
-                , {{artworkDetail.year}}
-              </div>
-            </div>
-            <div class="material">
-              {{artworkMaterials}}
-              <div class="size">
-                , {{artworkDetail.size}}
-              </div>
-            </div>
-          </div>
+      <transition-group name="show-image" mode="out-in" appear>
+        <div class="loading3" v-show="load" key="loading">
+          <span v-for="n in 20" :style="'--i:'+n" :key="n"></span>
+          <img src='@/assets/android-chrome-192x192.png' alt="">
         </div>
-        <img
-          :src="require('@/assets/img/'+preload(nowPlayId+1).src)"
-          style="display: none;"
+        <div
+          v-show="!load && isLightboxOpen"
+          class="myPainting"
+          v-if="artworkDetail"
+          key='myPainting'
         >
-        <img
-          :src="require('@/assets/img/'+preload(nowPlayId-1).src)"
-          style="display: none;"
-        >
-      </div>
+            <div class="all" key='detail'>
+                <img
+                id="myPaint"
+                :src="require('@/assets/img/'+artworkDetail.src)"
+                @click="change(nowPlayId+1),loadingImg(nowPlayId+1)"
+                :alt="selectArtwork"
+                key="selectArtwork"
+                >
+              
+              <div
+                class="words"
+              >
+                <div class="name">
+                  {{selectArtwork}}
+                  <div class="year">
+                    , {{artworkDetail.year}}
+                  </div>
+                </div>
+                <div class="material">
+                  {{artworkMaterials}}
+                  <div class="size">
+                    , {{artworkDetail.size}}
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          <!-- <img
+            :src="require('@/assets/img/'+preload(nowPlayId+1).src)"
+            style="display: none;"
+          >
+          <img
+            :src="require('@/assets/img/'+preload(nowPlayId-1).src)"
+            style="display: none;"
+          > -->
+        </div>
+      </transition-group>
     </div>
   </transition>
 </div>

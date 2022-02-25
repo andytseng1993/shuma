@@ -3,7 +3,6 @@ img{
   width: 100%;
   object-fit: contain;
   height: 370px;
-  transition: opacity .4s ease-in-out;
   opacity: 0;
 }
 img.finish{

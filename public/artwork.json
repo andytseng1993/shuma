@@ -1,13 +1,13 @@
 [ 
   {
-    "thumbnail": " Star_Weasel_min.jpg ",
-    "src": " Star_Weasel.jpg",
+    "thumbnail": "Star_Weasel_min.jpg",
+    "src": "Star_Weasel.jpg",
     "type": [
-      "  數位繪圖 ",
+      "數位繪圖",
       "Digital Painting"
     ],
     "title": [
-      "  星空貂 ",
+      "星空貂",
       "Star Weasel"
     ],
     "year": 2021,
@@ -15,7 +15,7 @@
       "數位繪圖",
       "Digital Painting"
     ],
-    "size": "  297×210 mm ",
+    "size": "297×210 mm ",
     "sell": false,
     "soldOut": false,
     "price": [

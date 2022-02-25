@@ -36,7 +36,8 @@ export default {
   },
   data () {
     return {
-      observer: null
+      observer: null,
+      load: false
     }
   },
   computed: {
@@ -104,11 +105,36 @@ export default {
     },
     removeMockup (event) {
       const mackup = event.target.previousElementSibling
-      mackup.classList.remove('loading')
-      mackup.classList.add('fade')
       mackup.addEventListener('transitionend', function () {
         mackup.remove()
       })
+      mackup.classList.remove('loading')
+      mackup.classList.add('fade')
+    },
+    loadingImg (id) {
+      this.load = true
+      const vm = this
+      const img = document.getElementById('myPaint')
+      img.addEventListener('load', function () {
+        vm.load = false
+        const image1 = new Image()
+        const image2 = new Image()
+        image1.setAttribute('src', require('@/assets/img/' + vm.preload(id + 1).src))
+        image2.setAttribute('src', require('@/assets/img/' + vm.preload(id - 1).src))
+      }, { once: true })
+    },
+    clickImage (id) {
+      this.load = true
+      const vm = this
+      const image = new Image()
+      image.setAttribute('src', require('@/assets/img/' + this.preload(id).src))
+      image.addEventListener('load', function () {
+        const image1 = new Image()
+        const image2 = new Image()
+        image1.setAttribute('src', require('@/assets/img/' + vm.preload(id + 1).src))
+        image2.setAttribute('src', require('@/assets/img/' + vm.preload(id - 1).src))
+        vm.load = false
+      }, { once: true })
     }
   }
 }
