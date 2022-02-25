@@ -506,7 +506,7 @@
 
 .show-image-enter-active,
 .show-image-leave-active {
-  transition: opacity 0.2s;
+  transition: opacity 0.5s;
 }
 .show-image-enter,
 .show-image-leave-to {

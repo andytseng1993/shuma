@@ -1,11 +1,8 @@
 #Home {
   width: 100vw;
-  height: 100%;
+  height: 100vh;
   position: relative;
   background-color: black;
-  background-image: url("../../assets/The-Night-Citizen-big.jpg");
-  background-position: center center;
-  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,30 +12,43 @@
       -ms-user-select: none;
           user-select: none;
 }
+img.bgImage{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit:cover;
+  object-position: center center;
+}
+.preloadBgi{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../assets/The-Night-Citizen_big_min.jpg");
+  background-size: cover;
+  background-position: center center;
+  filter: blur(1px);
+  transition: opacity 0.5s;
+  opacity: 1;
+}
 #Home::after {
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
   animation-delay: 1s;
-  -webkit-animation: change 2.5s both;
-          animation: change 2.5s both;
+  -webkit-animation: change 2.5s ease 0.5s both;
+          animation: change 2.5s ease 0.5s both;
   z-index: 0;
+  background-color: rgba(0, 0, 0, 1);
 }
 @-webkit-keyframes change {
-  0% {
-    background-color: rgba(0, 0, 0, 1);
-  }
   100% {
-    background-color: rgba(0, 0, 0, 0.55);
+    background-color: rgba(0, 0, 0, 0.4);
   }
 }
 @keyframes change {
-  0% {
-    background-color: rgba(0, 0, 0, 1);
-  }
   100% {
-    background-color: rgba(0, 0, 0, 0.55);
+    background-color: rgba(0, 0, 0, 0.4);
   }
 }
 #Home .translate {
@@ -109,17 +119,8 @@
   align-items: center;
   justify-content: center;
   transition-duration: 2s;
-  animation: fade 0.5s ease-in 0.5s both;
-  opacity: 0;
 }
-@keyframes fade {
-  0%{
-    opacity: 0;
-  }
-  100%{
-    opacity: 1;
-  }
-}
+
 #Home .word .name {
   font-family: "Gugi", 'cursive';
   color: transparent;
@@ -128,29 +129,44 @@
           background-clip: text;
   letter-spacing: 2vw;
   font-weight: 600;
+  opacity: 0;
   filter: drop-shadow(3px 0px 0px #ff6bd0) drop-shadow(-3px 0px 0px #ff6bd0) drop-shadow(0px 3px 0px #ff80d7) drop-shadow(0px -3px 0px #ff80d7) drop-shadow(0px 0px 7px rgba(255, 144, 222, 0.8)) drop-shadow(0px 0px 10px #ee0268) drop-shadow(0px 0px 10px rgba(255, 144, 222, 0.6));
 }
 #Home .word .name:nth-of-type(1) {
-  background-image: url("../../assets/thumbnail/Raining-in-Taiwan-min.jpg");
-  background-position: 80% 20%;
+  background-image: url("../../assets/Raining-in-Taiwan-min.jpg");
+  background-size: cover;
+  background-position: 60% 0%;
+  animation: fadeIn 0.7s ease 1s both;
 }
 #Home .word .name:nth-of-type(2) {
-  background-image: url("../../assets/thumbnail/Fall-In-Taiwan-min.jpg");
-  background-position: 80% 10%;
+  background-image: url("../../assets/Fall-In-Taiwan-min.jpg");
+  background-position: 195% 10%;
+  background-size: cover;
+  animation: fadeIn 0.7s ease 1.3s both;
 }
 #Home .word .name:nth-of-type(3) {
-  background-image: url("../../assets/thumbnail/Fall-In-Taiwan-min.jpg");
+  background-image: url("../../assets/Fall-In-Taiwan-min.jpg");
+  animation: fadeIn 0.7s ease 1.6s both;
 }
 #Home .word .name:nth-of-type(4) {
   margin-left: 2vw;
-  background-image: url("../../assets/thumbnail/Spring-In-Taiwan-min.jpg");
+  background-image: url("../../assets/Spring-In-Taiwan-min.jpg");
+  animation: fadeIn 0.7s ease 1.9s both;
 }
 #Home .word .name:nth-of-type(5) {
-  background-image: url("../../assets/thumbnail/Winter-in-Taiwan-min.jpg");
+  background-image: url("../../assets/Winter-in-Taiwan-min.jpg");
+  animation: fadeIn 0.7s ease 2.1s both;
+}
+@keyframes fadeIn {
+  100%{
+    opacity: 1;
+  }
 }
 #Home .word video {
   width: auto;
   height: 60vmin;
+  opacity: 0;
+  animation: fadeIn 0.5s ease 1.7s both;
 }
 #Home .image {
   z-index: 5;
@@ -160,7 +176,7 @@
   z-index: 10;
   display: flex;
   justify-content: center;
-  animation: fade 0.5s ease-in 0.5s both;
+  animation: fade 1s ease-in 1s both;
   opacity: 0;
 }
 #Home .nav a{
@@ -177,6 +193,32 @@
   border: solid 3px #fb80d6;
   box-shadow: 0px 0px 5px #fb80d6, 0px 0px 10px #fb80d6,0px 0px 30px #ffa7e5de;
   text-decoration-line: none;
+  transform: translateY(100px);
+}
+#Home .nav a:nth-child(1){
+  animation: moveIn 1s linear 0.7s both;
+}
+#Home .nav a:nth-child(2){
+  animation: moveIn 1s linear 0.8s both;
+}
+#Home .nav a:nth-child(3){
+  animation: moveIn 1s linear 0.9s both;
+}
+#Home .nav a:nth-child(4){
+  animation: moveIn 1s linear 1s both;
+}
+@keyframes fade {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+@keyframes moveIn {
+  100%{
+    transform: translateY(0px);
+  }
 }
 #Home .nav a:hover {
   background: black;
@@ -196,41 +238,38 @@
   background-color: rgba(0, 0, 0, 0.6);
 }
 @media screen and (max-width: 1000px) {
-  #Home {
-  background-image: url("../../assets/The-Night-Citizen-median.jpg");
-  }
   #Home .word {
     align-items: baseline;
     transition-duration: 2s;
   }
 }
 @media screen and (max-width: 480px) {
-#Home {
-  background-image: url("../../assets/The-Night-Citizen-small.jpg");
-  }  
-#Home .translate {
-  right: 10px;
-  bottom: 15px;
-  top: initial
-}
-#Home .translate label {
-  display: flex;
-  align-items: center;
-  font-size: 17px;
-}
-#Home .translate label .ch {
-  width: 20px;
-  height: 22p;
-  padding: 0px 2px;
-}
-#Home .translate label span {
-  font-size: 20px;
-  font-weight: 800;
-}
-#Home .translate label .eg {
-  width: 22px;
-  height: 22px;
-}
+  .preloadBgi{
+    background-image: url("../../assets/The-Night-Citizen-small_min.jpg");
+  }
+  #Home .translate {
+    right: 10px;
+    bottom: 15px;
+    top: initial
+  }
+  #Home .translate label {
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+  }
+  #Home .translate label .ch {
+    width: 20px;
+    height: 22p;
+    padding: 0px 2px;
+  }
+  #Home .translate label span {
+    font-size: 20px;
+    font-weight: 800;
+  }
+  #Home .translate label .eg {
+    width: 22px;
+    height: 22px;
+  }
 
   #Home .word .name {
     font-size: 10vh;
@@ -247,7 +286,14 @@
   #Home .image video {
     margin-top: .5vh;
     height: 40vh;
+    opacity: 0;
+    animation: fadeIn 0.5s ease 1.7s both;
   }
+  @keyframes fadeIn {
+  100%{
+    opacity: 1;
+  }
+}
   #Home .nav{
     flex-direction: column;
     margin: 0px;
