@@ -4,21 +4,29 @@
   display: flex;
   overflow: hidden;
   flex-direction: column;
-  background: no-repeat url("../../assets/About_selfie.jpg");
-  background-size: cover;
+  background-color: #f9ed00;
   background-attachment: fixed;
   background-position: center;
   -webkit-user-select: none;
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  background-position: 62% 52%;
 }
 #nav{
   background-color:rgba(0, 0, 0, 0.5);
   z-index: 50;
 }
-.image.loading.fade{
+.preloadBgi{
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  object-position: 62% 52%;
+  filter: blur(2px);
+  transition: opacity 0.5s ease;
+  opacity: 0;
+}
+.preloadBgi.loaded.fade{
   opacity: 0;
 }
 .image{
@@ -27,12 +35,8 @@
   height: 100vh;
   object-fit: cover;
   object-position:62% 52%;
-  overflow-y: hidden;
-  filter: blur(2px);
-  transition: opacity 0.2s ease;
-  opacity: 0;
 }
-.loading{
+.loaded{
   opacity: 1;
 }
 
@@ -141,10 +145,8 @@
   letter-spacing: 0.8px;
 }
 @media screen and (max-width: 1200px) and (min-width: 481px) {
-  #about {
-  background: no-repeat url("../../assets/About_selfie_median.jpg");
-  background-size: cover;
-  background-position: 49% 68%;
+  .preloadBgi{
+    object-position:49% 68%;
   }
   .image{
     object-position:49% 68%;
@@ -224,10 +226,10 @@
 }
 @media screen and (max-width: 480px) {
   #about {
-    background-position: 30% 50%;
     justify-content: space-between;
-    background: no-repeat url("../../assets/About_selfie_small.jpg");
-    background-size: cover;
+  }
+  .preloadBgi{
+    object-position:0%;
   }
   .image{
     object-position:0%;

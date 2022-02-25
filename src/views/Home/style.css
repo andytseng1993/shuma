@@ -157,16 +157,17 @@ img.bgImage{
   background-image: url("../../assets/Winter-in-Taiwan-min.jpg");
   animation: fadeIn 0.7s ease 2.1s both;
 }
-@keyframes fadeIn {
-  100%{
-    opacity: 1;
-  }
-}
+
 #Home .word video {
   width: auto;
   height: 60vmin;
   opacity: 0;
-  animation: fadeIn 0.5s ease 1.7s both;
+  animation: fadeIn 1s ease 1.2s both;
+}
+@keyframes fadeIn {
+  100%{
+    opacity: 1;
+  }
 }
 #Home .image {
   z-index: 5;

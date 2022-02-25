@@ -29,21 +29,21 @@ export default {
   methods: {
     image () {
       const width = window.innerWidth
-      const selfi = new Image()
+      const preloadBgi = document.querySelector('.preloadBgi')
       const image = document.querySelector('.image')
-      if (width > 1200) image.setAttribute('src', require('../../assets/About_selfie_low.jpg'))
-      else if (width > 480 && width <= 1200) image.setAttribute('src', require('../../assets/About_selfie_median_low.jpg'))
-      else image.setAttribute('src', require('../../assets/About_selfie_small_low.jpg'))
-      image.onload = function () {
-        image.classList.add('loading')
+      if (width > 1200) preloadBgi.setAttribute('src', require('../../assets/About_selfie_low.jpg'))
+      else if (width > 480 && width <= 1200) preloadBgi.setAttribute('src', require('../../assets/About_selfie_median_low.jpg'))
+      else preloadBgi.setAttribute('src', require('../../assets/About_selfie_small_low.jpg'))
+      preloadBgi.onload = function () {
+        preloadBgi.classList.add('loaded')
+        if (width > 1200) image.setAttribute('src', require('../../assets/About_selfie.jpg'))
+        else if (width > 480 && width <= 1200) image.setAttribute('src', require('../../assets/About_selfie_median.jpg'))
+        else image.setAttribute('src', require('../../assets/About_selfie_small.jpg'))
+        image.addEventListener('load', function () {
+          preloadBgi.addEventListener('transitionend', preloadBgi.remove)
+          preloadBgi.classList.add('fade')
+        }, { once: true })
       }
-      if (width > 1200) selfi.setAttribute('src', require('../../assets/About_selfie.jpg'))
-      else if (width > 480 && width <= 1200) selfi.setAttribute('src', require('../../assets/About_selfie_median.jpg'))
-      else selfi.setAttribute('src', require('../../assets/About_selfie_small.jpg'))
-      selfi.addEventListener('load', function () {
-        image.addEventListener('transitionend', image.remove)
-        image.classList.add('fade')
-      })
     }
   }
 
