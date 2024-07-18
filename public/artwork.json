@@ -1,5 +1,501 @@
 [ 
   {
+    "thumbnail": "sky_min.jpg",
+    "src": "sky.jpg",
+    "type": [
+      "壓克力顏料系列",
+      "Acrylic Painting"
+    ],
+    "title": [
+      "天空",
+      "Sky"
+    ],
+    "year":2022,
+    "material": [
+      "壓克力, 畫布 ",
+      "Acrylic, Canvas"
+    ],
+    "size": " 18 × 24 inch ",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]  
+},
+{
+    "thumbnail": "Good eveningVivi_min.jpg",
+    "src": "Good eveningViVi.jpg",
+    "type": [
+      "壓克力顏料系列",
+      "Acrylic Painting"
+    ],
+    "title": [
+      "  午安！薇薇！ ",
+      " Good Evening! ViVi!"
+    ],
+    "year":2022,
+    "material": [
+      "壓克力, 畫布",
+      "Acrylic, Canvas"
+    ],
+    "size": " 12 ×  9inch ",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]  
+},
+{
+    "thumbnail": "Good_Morning_ChiChi_min.jpg",
+    "src": "Good_Morning_ChiChi.jpg",
+    "type": [
+      "壓克力顏料系列",
+      "Acrylic Painting"
+    ],
+    "title": [
+      "  早安！琪琪！ ",
+      "  Good Morning! ChiChi! "
+    ],
+    "year":2022,
+    "material": [
+      "壓克力, 畫布 ",
+      "Acrylic, Canvas"
+    ],
+    "size": " 12 × 9 inch ",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]  
+},
+{
+    "thumbnail": "Good_Night_NiNi_min.jpg",
+    "src": "Good_Night_NiNi.jpg",
+    "type": [
+      "壓克力顏料系列",
+      "Acrylic Painting"
+    ],
+    "title": [
+      "晚安！尼尼！",
+      "Good Night! NiNi!"
+    ],
+    "year":2022,
+    "material": [
+      "壓克力, 畫布",
+      "Acrylic, Canvas,"
+    ],
+    "size": " 12 × 9 inch ",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]  
+},
+
+
+{
+    "thumbnail": "Thunder Girl_min.jpg",
+    "src": "Thunder Girl.jpg",
+    "type": [
+      "壓克力顏料系列",
+      "Acrylic Painting"
+    ],
+    "title": [
+      "  雷電少女 ",
+      "  Thunder Girl "
+    ],
+    "year":2022,
+    "material": [
+      "壓克力, 畫布 ",
+      "Acrylic, Canvas"
+    ],
+    "size": " 10 × 10 inch ",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]  
+},
+
+{
+    "thumbnail": "Reflection_Past_min.jpg",
+    "src": "Reflection_Past.jpg",
+    "type": [
+      "壓克力顏料系列",
+      "Acrylic Painting"
+    ],
+    "title": [
+      "  粉色倒影＿憧憬 ",
+      " Reflection_Past "
+    ],
+    "year":2022,
+    "material": [
+      "壓克力, 畫布 ",
+      "Acrylic, Canvas"
+    ],
+    "size": " 24 × 12 inch ",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]  
+},
+
+
+{
+    "thumbnail": "Reflection_Future_min.jpg",
+    "src": "Reflection_Future.jpg",
+    "type": [
+      "壓克力顏料系列",
+      "Acrylic Painting"
+    ],
+    "title": [
+      "  粉色倒影＿翱翔 ",
+      "  Reflection_Future "
+    ],
+    "year":2022,
+    "material": [
+      "壓克力, 畫布 ",
+      "Acrylic, Canvas"
+    ],
+    "size": " 24 × 12 inch ",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]  
+},
+
+{
+    "thumbnail": "Golden Cat_min.jpg",
+    "src": "Golden Cat.jpg",
+    "type": [
+      "壓克力顏料系列",
+      "Acrylic Painting"
+    ],
+    "title": [
+      "  金色貓咪 ",
+      "  Golden Cat "
+    ],
+    "year":2021,
+    "material": [
+      "壓克力, 水彩紙 ",
+      "Acrylic, Paper,"
+    ],
+    "size": " 9.5 × 11.8 inch ",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]  
+},
+
+
+{
+    "thumbnail": "Dream of Desert_min.jpg",
+    "src": "Dream of Desert.jpg",
+    "type": [
+      "壓克力顏料系列",
+      "Acrylic Painting"
+    ],
+    "title": [
+      "  星辰沙漠 ",
+      "  Dream of Desert "
+    ],
+    "year":2022,
+    "material": [
+      "壓克力, 畫布 ",
+      "Acrylic, Canvas"
+    ],
+    "size": " 60 × 30 inch ",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]  
+},
+
+{
+    "thumbnail": "Rabbits in the Galaxy_min.jpg",
+    "src": "Rabbits in the Galaxy.jpg",
+    "type": [
+      "數位繪圖",
+     "Digital Painting"
+    ],
+    "title": [
+      "  星雲兔",
+      " Rabbits in the Galaxy  "
+    ],
+    "year":2023,
+    "material": [
+      "數位繪圖",
+      "Digital Painting"
+    ],
+    "size": " 6 × 4 inch ",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]  
+},
+
+
+{
+    "thumbnail": "Child of Island_min.jpg",
+    "src": "Child of Island.jpg",
+    "type": [
+     "廣告顏料系列",
+     "Gouache Painting"
+    ],
+    "title": [
+      "  島之子 ",
+      "  Child of Island  "
+    ],
+    "year":2022,
+    "material": [
+      "廣告顏料, 水彩紙 ",
+      "Gouache, Paper"
+    ],
+    "size": " 15.5 × 11 inch ",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]  
+},
+
+{
+    "thumbnail": "Fairy_min.jpg",
+    "src": "Fairy.jpg",
+    "type": [
+      "墨水系列",
+      "Ink Drawing"
+    ],
+    "title": [
+      "  精靈的溫柔 ",
+      "  Fairy "
+    ],
+    "year":2022,
+    "material": [
+      "水彩紙, 墨筆 ",
+      "Paper, Ink"
+    ],
+    "size": " 12 × 9 inch ",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]  
+},
+
+
+{
+    "thumbnail": "Scrape_min.jpg",
+    "src": "Scrape.jpg",
+    "type": [
+      "墨水系列",
+      "Ink Drawing"
+    ],
+    "title": [
+      "  可愛猛獸的逆襲 ",
+      "  Scrape "
+    ],
+    "year":2022,
+    "material": [
+      "水彩紙, 墨筆 ",
+      "Paper, Ink"
+    ],
+    "size": " 12 × 9 inch ",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]  
+},
+{
+    "thumbnail": "Salty_min.jpg",
+    "src": "Salty.jpg",
+    "type": [
+      "墨水系列",
+      "Ink Drawing"
+    ],
+    "title": [
+      "  吃著鹹味洋芋片 ",
+      "   Salty "
+    ],
+    "year":2022,
+    "material": [
+      "水彩紙, 墨筆 ",
+      "Paper, Ink"
+    ],
+    "size": " 8 × 9 inch ",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]  
+},
+{
+    "thumbnail": "Ponytail_min.jpg",
+    "src": "Ponytail.jpg",
+    "type": [
+      "墨水系列",
+      "Ink Drawing"
+    ],
+    "title": [
+      "  馬尾少女與寵物鳥 ",
+      "  Ponytail "
+    ],
+    "year":2022,
+    "material": [
+      "水彩紙, 墨筆 ",
+      "Paper, Ink"
+    ],
+    "size": " 12 × 9 inch ",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]  
+},
+{
+    "thumbnail": "Bad Dog_min.jpg",
+    "src": "Bad Dog.jpg",
+    "type": [
+      "墨水系列",
+      "Ink Drawing"
+    ],
+    "title": [
+      "  調皮的界線 ",
+      "  Bad Dog "
+    ],
+    "year":2022,
+    "material": [
+      "水彩紙, 墨筆 ",
+      "Paper, Ink"
+    ],
+    "size": " 12 × 9 inch ",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]  
+},
+{
+    "thumbnail": "Farm_min.jpg",
+    "src": "Farm.jpg",
+    "type": [
+      "墨水系列",
+      "Ink Drawing"
+    ],
+    "title": [
+      "  遠眺 ",
+      "  Farm "
+    ],
+    "year":2022,
+    "material": [
+      "水彩紙, 墨筆 ",
+      "Paper, Ink"
+    ],
+    "size": " 12 × 9 inch ",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]  
+},
+{
+    "thumbnail": "Raining Dance_min.jpg",
+    "src": "Raining Dance.jpg",
+    "type": [
+      "墨水系列",
+      "Ink Drawing"
+    ],
+    "title": [
+      "  雨中之舞 ",
+      "  Raining Dance "
+    ],
+    "year":2022,
+    "material": [
+      "水彩紙, 墨筆 ",
+      "Paper, Ink"
+    ],
+    "size": " 12 × 9 inch ",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]  
+},
+
+{
+    "thumbnail": "River Dress_min.jpg",
+    "src": "River Dress.jpg",
+    "type": [
+      "墨水系列",
+      "Ink Drawing"
+    ],
+    "title": [
+      "  河神的洋裝 ",
+      "  River Dress "
+    ],
+    "year":2022,
+    "material": [
+      "水彩紙, 墨筆 ",
+      "Paper, Ink"
+    ],
+    "size": " 12 × 9 inch ",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]  
+},
+
+{
+    "thumbnail": "Legend of Snake_min.jpg",
+    "src": "Legend of Snake.jpg",
+    "type": [
+    "12生肖傳說",
+    "Legend of Zodiac"
+    ],
+    "title": [
+      "  蛇的傳說 ",
+      "  Legend of Snake "
+    ],
+    "year":2022,
+    "material": [
+      "壓克力, 畫布 ",
+      "Acrylic, Canvas"
+    ],
+    "size": " 40 × 30 inch ",
+    "sell": false,
+    "soldOut": false,
+    "price": [
+      0,
+      0
+    ]  
+},
+  {
     "thumbnail": "Star_Weasel_min.jpg",
     "src": "Star_Weasel.jpg",
     "type": [

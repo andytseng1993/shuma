@@ -62,7 +62,7 @@ export default {
             }
           }
           obj.map[type[0]].sort.push(title[0])
-          obj.map[type[0]].map[title[0]] = { index, thumbnail: thumbnail, src, year, material: material[0].trim(), size }
+          obj.map[type[0]].map[title[0]] = { index, thumbnail: thumbnail, src, year, material: material, size }
         } else {
           type[1] = type[1].trim()
           title[1] = title[1].trim()
@@ -74,7 +74,7 @@ export default {
             }
           }
           obj.map[type[1]].sort.push(title[1])
-          obj.map[type[1]].map[title[1]] = { index, thumbnail, src: src, year, material: material[1].trim(), size }
+          obj.map[type[1]].map[title[1]] = { index, thumbnail, src: src, year, material: material, size }
         }
       })
 
